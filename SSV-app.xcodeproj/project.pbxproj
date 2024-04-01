@@ -21,6 +21,7 @@
 		272D32012BBA7EE8001D7875 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D32002BBA7EE8001D7875 /* UIView.swift */; };
 		272D32042BBA7F3A001D7875 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D32032BBA7F3A001D7875 /* UIStackView.swift */; };
 		272D32072BBA7FD5001D7875 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D32062BBA7FD5001D7875 /* Images.swift */; };
+		272D320A2BBA8787001D7875 /* Texts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D32092BBA8787001D7875 /* Texts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		272D32002BBA7EE8001D7875 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		272D32032BBA7F3A001D7875 /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 		272D32062BBA7FD5001D7875 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		272D32092BBA8787001D7875 /* Texts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Texts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,8 @@
 		272D31DC2BBA4FED001D7875 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				272D320B2BBA88A7001D7875 /* Labels */,
+				272D32082BBA877F001D7875 /* Texts */,
 				272D32052BBA7FCE001D7875 /* Images */,
 				272D31FC2BBA5F34001D7875 /* Utils */,
 				272D31F42BBA5705001D7875 /* Buttons */,
@@ -236,6 +240,21 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		272D32082BBA877F001D7875 /* Texts */ = {
+			isa = PBXGroup;
+			children = (
+				272D32092BBA8787001D7875 /* Texts.swift */,
+			);
+			path = Texts;
+			sourceTree = "<group>";
+		};
+		272D320B2BBA88A7001D7875 /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -314,6 +333,7 @@
 				272D31F62BBA5739001D7875 /* SSVButton.swift in Sources */,
 				272D31CB2BBA4F7D001D7875 /* SceneDelegate.swift in Sources */,
 				272D31FE2BBA5F43001D7875 /* CodableView.swift in Sources */,
+				272D320A2BBA8787001D7875 /* Texts.swift in Sources */,
 				272D31E72BBA5351001D7875 /* AppConfigurator.swift in Sources */,
 				272D31FA2BBA582B001D7875 /* HomeView.swift in Sources */,
 				272D31F82BBA5802001D7875 /* HomeViewController.swift in Sources */,
