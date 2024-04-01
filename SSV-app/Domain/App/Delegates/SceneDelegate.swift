@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  SSV-app
-//
-//  Created by Rafael Oliveira on 31/03/24.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {

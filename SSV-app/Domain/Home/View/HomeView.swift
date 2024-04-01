@@ -12,7 +12,7 @@ protocol HomeViewDelegate: AnyObject {
 }
 
 // MARK: - View
-final class HomeView: UIView {
+final class HomeView: GreenView {
     
     private lazy var contentStackView: UIStackView = {
         let stack = UIStackView()
@@ -60,15 +60,15 @@ final class HomeView: UIView {
         return imageView
     }()
     
-    private lazy var createGoalButton: SVVButton = {
-        let button = SVVButton(type: .primary)
+    private lazy var createGoalButton: MyPigButton = {
+        let button = MyPigButton(type: .primary)
         button.title = Text.NEW_GOAL
         button.addTarget(self, action: #selector(didTouchCreate), for: .touchUpInside)
         return button
     }()
     
-    private lazy var achivementsButton: SVVButton = {
-        let button = SVVButton(type: .secondary)
+    private lazy var achivementsButton: MyPigButton = {
+        let button = MyPigButton(type: .secondary)
         button.title = Text.ACHIEVEMENT
         button.addTarget(self, action: #selector(didTouchSummary), for: .touchUpInside)
         return button
@@ -101,10 +101,6 @@ extension HomeView {
 // MARK: - CodableView
 extension HomeView: CodableViews {
     
-    func configView() {
-        backgroundColor = ColorTheme.primaryFacelift
-    }
-    
     func setupHiearchy() {
         textStackView.addArrangedSubviews(helloLabel, nameLabel)
         topLeadingStackView.addArrangedSubviews(textStackView)
@@ -130,4 +126,4 @@ extension HomeView: CodableViews {
         NSLayoutConstraint.activate(constraints)
     }
     
-}   
+}

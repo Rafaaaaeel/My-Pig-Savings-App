@@ -1,6 +1,6 @@
 import UIKit
 
-public class SVVButton: UIButton {
+public class MyPigButton: UIButton {
     
     public enum ButtonType {
         case primary
@@ -59,7 +59,7 @@ public class SVVButton: UIButton {
     
 }
 
-extension SVVButton {
+extension MyPigButton {
     
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         UIView.animate(withDuration: 0.1) {
@@ -80,5 +80,5 @@ extension SVVButton {
 
 
 #Preview {
-    SVVButton(type: .primary)
+    MyPigButton(type: .primary)
 }
