@@ -2,17 +2,52 @@ import UIKit
 
 public class SVVButton: UIButton {
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        backgroundColor = ColorTheme.primaryAction
-        layer.cornerRadius = 6
+    public enum ButtonType {
+        case primary
+        case secondary
+    }
+    
+    public var title: String? {
+        didSet {
+            configTitle()
+        }
+    }
+    
+    private let type: ButtonType
+    
+    public init(type: ButtonType) {
+        self.type = type
+        super.init(frame: .zero)
+        render()
+    }
+    
+    required init?(coder: NSCoder) { nil }
+    
+    
+    private func configTitle() {
+        guard let title else { return }
         let attributes: [NSAttributedString.Key: Any] = [
             .foregroundColor: UIColor.white,
             .font: UIFont.systemFont(ofSize: 12, weight: .medium),
         ]
-        let attributedText = NSAttributedString(string: "NEW GOAL", attributes: attributes)
+        let attributedText = NSAttributedString(string: title, attributes: attributes)
         setAttributedTitle(attributedText, for: [])
-        
+    }
+    
+    private func button() {
+        switch type {
+        case .primary:
+            backgroundColor = ColorTheme.primaryAction
+        case .secondary:
+            backgroundColor = .clear
+            layer.borderWidth = 1
+            layer.borderColor = UIColor.white.cgColor
+        }
+    }
+    
+    private func render() {
+        button()
+        layer.cornerRadius = 6
         translatesAutoresizingMaskIntoConstraints = false
         
         let constraint = [
@@ -21,8 +56,6 @@ public class SVVButton: UIButton {
         
         NSLayoutConstraint.activate(constraint)
     }
-    
-    required init?(coder: NSCoder) { nil }
     
 }
 
@@ -47,5 +80,5 @@ extension SVVButton {
 
 
 #Preview {
-    SVVButton()
+    SVVButton(type: .primary)
 }

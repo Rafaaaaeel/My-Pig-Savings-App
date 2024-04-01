@@ -1,10 +1,12 @@
 import UIKit
 
+// MARK: - Delegate
 protocol HomeViewDelegate: AnyObject {
     func didTouchCreate()
     func didTouchSummary()
 }
 
+// MARK: - View
 final class HomeView: UIView {
     
     private lazy var contentStackView: UIStackView = {
@@ -22,14 +24,16 @@ final class HomeView: UIView {
     }()
     
     private lazy var createGoalButton: SVVButton = {
-        let button = SVVButton()
+        let button = SVVButton(type: .primary)
         button.addTarget(self, action: #selector(didTouchCreate), for: .touchUpInside)
+        button.title = "NEW GOAL"
         return button
     }()
     
     private lazy var achivementsButton: SVVButton = {
-        let button = SVVButton()
+        let button = SVVButton(type: .secondary)
         button.addTarget(self, action: #selector(didTouchSummary), for: .touchUpInside)
+        button.title = "ACHIEVEMENT"
         return button
     }()
     
@@ -41,6 +45,11 @@ final class HomeView: UIView {
     }
     
     required init?(coder: NSCoder) { nil }
+
+}
+
+// MARK: - Actions
+extension HomeView {
     
     @objc func didTouchCreate() {
         delegate?.didTouchCreate()
@@ -49,8 +58,10 @@ final class HomeView: UIView {
     @objc func didTouchSummary() {
         delegate?.didTouchSummary()
     }
+    
 }
 
+// MARK: - CodableView
 extension HomeView: CodableViews {
     
     func configView() {
@@ -80,4 +91,4 @@ extension HomeView: CodableViews {
         NSLayoutConstraint.activate(constraints)
     }
     
-}
+}   
