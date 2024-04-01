@@ -17,8 +17,7 @@ final class HomeView: UIView {
     private lazy var contentStackView: UIStackView = {
         let stack = UIStackView()
         stack.axis = .vertical
-        stack.spacing = 8
-
+        stack.spacing = 16
         return stack
     }()
     
@@ -36,12 +35,11 @@ final class HomeView: UIView {
         return stack
     }()
     
-    // TODO: CREATE A FACTORY FOR LABELS OR AN BASE FONT
     private lazy var helloLabel: UILabel = {
         let label = UILabel()
         label.text = Text.HELLO
         label.numberOfLines = 1
-        label.font = .systemFont(ofSize: 30, weight: .semibold)
+        label.font = Fonts.subTitle
         label.textColor = ColorTheme.primaryAction
         return label
     }()
@@ -51,7 +49,7 @@ final class HomeView: UIView {
         label.text = "Rafael" //TODO: GET NAME FROM USER AND PASS IT HERE IN THE FUTURE
         label.numberOfLines = 1
         label.textColor = .white
-        label.font = .systemFont(ofSize: 34, weight: .semibold)
+        label.font = Fonts.title
         return label
     }()
     
