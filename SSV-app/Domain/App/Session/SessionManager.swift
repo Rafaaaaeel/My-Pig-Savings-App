@@ -1,5 +1,6 @@
 import Foundation
 
+
 public protocol SessionManagerProtocol {
     var isFirstTime: Bool { get set }
     var userName: String { get set }

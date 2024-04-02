@@ -1,6 +1,7 @@
 // MARK: - Imports
 import UIKit
 
+
 // MARK: - Alias
 private typealias Image = Images.Home
 private typealias Text = Texts.Home

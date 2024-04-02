@@ -21,6 +21,7 @@ final class IntroViewController: UIViewController {
         introView.delegate = self
         self.view = introView
     }
+    
 }
 
 
@@ -31,6 +32,5 @@ extension IntroViewController: IntroViewDelegate {
             self?.router.presentHome()
         }
     }
-    
     
 }

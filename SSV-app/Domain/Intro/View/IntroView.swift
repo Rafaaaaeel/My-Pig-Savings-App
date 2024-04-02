@@ -1,12 +1,17 @@
+// MARK: - Imports
 import UIKit
 
+
+// MARK: - Alias
 private typealias Image = Images.Intro
 private typealias Text = Texts.Intro
 
+// MARK: - Delegate
 protocol IntroViewDelegate: AnyObject {
     func didText(_ text: String)
 }
 
+// MARK: - View
 final class IntroView: GreenView {
     
     private var topConstraint = NSLayoutConstraint()
@@ -61,6 +66,8 @@ final class IntroView: GreenView {
     
 }
 
+
+// MARK: - Actions
 extension IntroView {
     
     @objc func didTouchContinue() {
@@ -70,6 +77,7 @@ extension IntroView {
     
 }
 
+// MARK: - CodableView
 extension IntroView: CodableViews {
     
     func setupHiearchy() {
@@ -99,6 +107,7 @@ extension IntroView: CodableViews {
     
 }
 
+// MARK: - MyPigTextfieldDelegate
 extension IntroView: MyPigTextfieldDelegate {
     
     func didBeginEditing() {
@@ -117,6 +126,7 @@ extension IntroView: MyPigTextfieldDelegate {
     
 }
 
+// MARK: - Private Methods
 extension IntroView {
     
     private func isNameFieldValid() -> Bool {
