@@ -2,7 +2,11 @@ import UIKit
 
 final class AppConfigurator {
     static func view() -> UIViewController {
-        let router = HomeRouter()
-        return IntroViewController()//HomeViewController(router: router)
+        
+        guard false else {// SessionManager.shared.isFirstTime else {
+            return IntroViewController(interactor: IntroInteractor(), router: IntroRouter())//HomeViewController(router: router)
+        }
+        
+        return HomeViewController(router: HomeRouter())
     }
 }

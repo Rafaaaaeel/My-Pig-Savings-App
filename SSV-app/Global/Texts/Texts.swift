@@ -2,7 +2,9 @@ struct Texts {
 
     struct Intro {
         static let NAME = "Name"
-        static let QUESTION = "What would you like to be called?"
+        static let GET_STARTED = "Get Started"
+        static let QUESTION = "How would you like to be called?"
+        static let ERROR_MESSAGE = "Please enter only letters"
     }
     
     struct Home {

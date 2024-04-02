@@ -33,6 +33,12 @@
 		272D322B2BBB5149001D7875 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D322A2BBB5149001D7875 /* IntroView.swift */; };
 		272D322E2BBB526B001D7875 /* Textfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D322D2BBB526B001D7875 /* Textfield.swift */; };
 		272D32322BBB5547001D7875 /* GreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D32312BBB5547001D7875 /* GreenView.swift */; };
+		272D32352BBB6280001D7875 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D32342BBB6280001D7875 /* Regex.swift */; };
+		272D32372BBCA5F1001D7875 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D32362BBCA5F1001D7875 /* String.swift */; };
+		272D32392BBCACAF001D7875 /* IntroInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D32382BBCACAF001D7875 /* IntroInteractor.swift */; };
+		272D323B2BBCAE60001D7875 /* IntroRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D323A2BBCAE60001D7875 /* IntroRouter.swift */; };
+		272D323E2BBCB07D001D7875 /* HomeConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D323D2BBCB07D001D7875 /* HomeConfigurator.swift */; };
+		272D32402BBCB490001D7875 /* Intro+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D323F2BBCB490001D7875 /* Intro+Protocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +70,12 @@
 		272D322A2BBB5149001D7875 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		272D322D2BBB526B001D7875 /* Textfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Textfield.swift; sourceTree = "<group>"; };
 		272D32312BBB5547001D7875 /* GreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenView.swift; sourceTree = "<group>"; };
+		272D32342BBB6280001D7875 /* Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
+		272D32362BBCA5F1001D7875 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		272D32382BBCACAF001D7875 /* IntroInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroInteractor.swift; sourceTree = "<group>"; };
+		272D323A2BBCAE60001D7875 /* IntroRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroRouter.swift; sourceTree = "<group>"; };
+		272D323D2BBCB07D001D7875 /* HomeConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeConfigurator.swift; sourceTree = "<group>"; };
+		272D323F2BBCB490001D7875 /* Intro+Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Intro+Protocol.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +117,7 @@
 		272D31DC2BBA4FED001D7875 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				272D32332BBB6278001D7875 /* Regex */,
 				272D322F2BBB5535001D7875 /* Base */,
 				272D322C2BBB5261001D7875 /* Textfield */,
 				272D320C2BBB3F8C001D7875 /* Fonts */,
@@ -173,6 +186,7 @@
 		272D31E22BBA51D5001D7875 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				272D323C2BBCB070001D7875 /* Configurator */,
 				272D32152BBB49B2001D7875 /* Protocols */,
 				272D321A2BBB4C10001D7875 /* Controller */,
 				272D32192BBB4C0A001D7875 /* View */,
@@ -351,6 +365,7 @@
 			isa = PBXGroup;
 			children = (
 				272D321F2BBB4F5C001D7875 /* Optional+String.swift */,
+				272D32362BBCA5F1001D7875 /* String.swift */,
 			);
 			path = String;
 			sourceTree = "<group>";
@@ -374,6 +389,7 @@
 		272D32252BBB5037001D7875 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				272D32382BBCACAF001D7875 /* IntroInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -381,6 +397,7 @@
 		272D32262BBB503C001D7875 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				272D323A2BBCAE60001D7875 /* IntroRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -388,6 +405,7 @@
 		272D32272BBB504D001D7875 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				272D323F2BBCB490001D7875 /* Intro+Protocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -414,6 +432,22 @@
 				272D32312BBB5547001D7875 /* GreenView.swift */,
 			);
 			path = UIView;
+			sourceTree = "<group>";
+		};
+		272D32332BBB6278001D7875 /* Regex */ = {
+			isa = PBXGroup;
+			children = (
+				272D32342BBB6280001D7875 /* Regex.swift */,
+			);
+			path = Regex;
+			sourceTree = "<group>";
+		};
+		272D323C2BBCB070001D7875 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				272D323D2BBCB07D001D7875 /* HomeConfigurator.swift */,
+			);
+			path = Configurator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -487,7 +521,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				272D320E2BBB3F93001D7875 /* Fonts.swift in Sources */,
+				272D323B2BBCAE60001D7875 /* IntroRouter.swift in Sources */,
 				272D32012BBA7EE8001D7875 /* UIView.swift in Sources */,
+				272D323E2BBCB07D001D7875 /* HomeConfigurator.swift in Sources */,
 				272D321D2BBB4DB6001D7875 /* SessionManager.swift in Sources */,
 				272D32072BBA7FD5001D7875 /* Images.swift in Sources */,
 				272D32172BBB49C8001D7875 /* Home+Protocols.swift in Sources */,
@@ -500,6 +536,7 @@
 				272D32292BBB5092001D7875 /* IntroViewController.swift in Sources */,
 				272D32222BBB4F88001D7875 /* Keys.swift in Sources */,
 				272D31F62BBA5739001D7875 /* MyPigButton.swift in Sources */,
+				272D32372BBCA5F1001D7875 /* String.swift in Sources */,
 				272D32202BBB4F5C001D7875 /* Optional+String.swift in Sources */,
 				272D322E2BBB526B001D7875 /* Textfield.swift in Sources */,
 				272D31CB2BBA4F7D001D7875 /* SceneDelegate.swift in Sources */,
@@ -507,6 +544,9 @@
 				272D31FE2BBA5F43001D7875 /* CodableView.swift in Sources */,
 				272D320A2BBA8787001D7875 /* Texts.swift in Sources */,
 				272D31E72BBA5351001D7875 /* AppConfigurator.swift in Sources */,
+				272D32352BBB6280001D7875 /* Regex.swift in Sources */,
+				272D32392BBCACAF001D7875 /* IntroInteractor.swift in Sources */,
+				272D32402BBCB490001D7875 /* Intro+Protocol.swift in Sources */,
 				272D31FA2BBA582B001D7875 /* HomeView.swift in Sources */,
 				272D31F82BBA5802001D7875 /* HomeViewController.swift in Sources */,
 				272D31F12BBA54CF001D7875 /* UIColor+Hex.swift in Sources */,
@@ -660,6 +700,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -687,6 +728,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

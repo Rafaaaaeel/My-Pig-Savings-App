@@ -1,6 +1,7 @@
 import Foundation
 
 public protocol SessionManagerProtocol {
+    var isFirstTime: Bool { get set }
     var userName: String { get set }
 }
 
@@ -18,6 +19,15 @@ final class SessionManager: SessionManagerProtocol {
         }
         set {
             userDefaults.setValue(newValue, forKey: UserDefaultsKeys.userLogin)
+        }
+    }
+    
+    var isFirstTime: Bool {
+        get {
+            userDefaults.bool(forKey: UserDefaultsKeys.isFirstTime)
+        }
+        set {
+            userDefaults.setValue(newValue, forKey: UserDefaultsKeys.isFirstTime)
         }
     }
     

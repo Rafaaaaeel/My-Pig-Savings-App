@@ -3,12 +3,20 @@ import UIKit
 private typealias Image = Images.Intro
 private typealias Text = Texts.Intro
 
+protocol IntroViewDelegate: AnyObject {
+    func didText(_ text: String)
+}
+
 final class IntroView: GreenView {
+    
+    private var topConstraint = NSLayoutConstraint()
+    private var nameText: String = .empty
     
     private lazy var contentStackView: UIStackView = {
         let stack = UIStackView()
         stack.axis = .vertical
-        stack.spacing = 0
+        stack.spacing = 8
+        stack.distribution = .equalSpacing
         return stack
     }()
     
@@ -29,6 +37,21 @@ final class IntroView: GreenView {
         return label
     }()
     
+    private lazy var nameTextfield: MyPigTextfield = {
+        let textfield = MyPigTextfield()
+        textfield.textfieldDelegate = self
+        return textfield
+    }()
+    
+    private lazy var continueButton: MyPigButton = {
+        let button = MyPigButton(type: .primary)
+        button.title = Text.GET_STARTED
+        button.addTarget(self, action: #selector(didTouchContinue), for: .touchUpInside)
+        return button
+    }()
+    
+    weak var delegate: IntroViewDelegate?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -38,10 +61,21 @@ final class IntroView: GreenView {
     
 }
 
+extension IntroView {
+    
+    @objc func didTouchContinue() {
+        guard isNameFieldValid() else { return }
+        delegate?.didText(nameText)
+    }
+    
+}
+
 extension IntroView: CodableViews {
     
     func setupHiearchy() {
-        contentStackView.addArrangedSubviews(thoughtsImageView, questionLabel)
+        contentStackView.addArrangedSubviews(thoughtsImageView, questionLabel, nameTextfield, continueButton)
+        contentStackView.setCustomSpacing(0, after: thoughtsImageView)
+        contentStackView.setCustomSpacing(48, after: nameTextfield)
         addSubviews(contentStackView)
     }
     
@@ -49,17 +83,52 @@ extension IntroView: CodableViews {
         let padding: CGFloat = 48
         let imageSize: CGFloat = 300
         
+        topConstraint = contentStackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 150)
+        
         let constraints = [
-            contentStackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 50),
+            topConstraint,
             contentStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: padding),
             contentStackView.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -padding),
-            contentStackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -58),
             
             thoughtsImageView.widthAnchor.constraint(equalToConstant: imageSize),
             thoughtsImageView.heightAnchor.constraint(equalToConstant: imageSize)
         ]
         
         NSLayoutConstraint.activate(constraints)
+    }
+    
+}
+
+extension IntroView: MyPigTextfieldDelegate {
+    
+    func didBeginEditing() {
+        animate()
+    }
+    
+    func didReturn() {
+        endEditing(true)
+    }
+    
+    func didTextFieldDidEndEditing(_ textfield: UITextField) {
+        animate()
+        guard let input = textfield.text else { return }
+        nameText = input
+    }
+    
+}
+
+extension IntroView {
+    
+    private func isNameFieldValid() -> Bool {
+        return nameText.isNotEmpty && Regex.validate(input: nameText, .onlyCharactersToTen)
+    }
+    
+    private func animate() {
+        DispatchQueue.main.async { [weak self] in
+            UIView.animate(withDuration: 0.2) {
+                self?.topConstraint.constant = self?.topConstraint.constant ?? 0 > 0 ? -40 : 150
+            }
+        }
     }
     
 }

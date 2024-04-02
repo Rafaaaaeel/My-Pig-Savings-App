@@ -6,7 +6,7 @@ final class HomeViewController: UIViewController {
     
     private let router: HomeRouterInput
     
-    init(router: HomeRouterInput) {
+    init<Router: HomeRouterInput>(router: Router) {
         self.router = router
         super.init(nibName: nil, bundle: nil)
     }
