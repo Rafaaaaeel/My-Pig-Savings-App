@@ -4,6 +4,8 @@ import Foundation
 public protocol SessionManagerProtocol {
     var isFirstTime: Bool { get set }
     var userName: String { get set }
+    
+    func logged()
 }
 
 final public class SessionManager: SessionManagerProtocol {
@@ -30,6 +32,10 @@ final public class SessionManager: SessionManagerProtocol {
         set {
             userDefaults.setValue(newValue, forKey: UserDefaultsKeys.isFirstTime)
         }
+    }
+    
+    public func logged() {
+        isFirstTime = false
     }
     
 }

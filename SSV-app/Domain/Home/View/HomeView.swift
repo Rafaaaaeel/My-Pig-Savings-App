@@ -15,6 +15,8 @@ internal protocol HomeViewDelegate: AnyObject {
 // MARK: - View
 final internal class HomeView: GreenView {
     
+    private let userName: String
+    
     private lazy var contentStackView: UIStackView = {
         let stack = UIStackView()
         stack.axis = .vertical
@@ -47,7 +49,7 @@ final internal class HomeView: GreenView {
     
     private lazy var nameLabel: UILabel = {
         let label = UILabel()
-        label.text = "Rafael" //TODO: GET NAME FROM USER AND PASS IT HERE IN THE FUTURE
+        label.text = userName
         label.numberOfLines = 1
         label.textColor = .white
         label.font = Fonts.title
@@ -77,8 +79,9 @@ final internal class HomeView: GreenView {
     
     internal weak var delegate: HomeViewDelegate?
     
-    internal override init(frame: CGRect) {
-        super.init(frame: frame)
+    internal init(user name: String) {
+        self.userName = name
+        super.init(frame: .zero)
         setup()
     }
     

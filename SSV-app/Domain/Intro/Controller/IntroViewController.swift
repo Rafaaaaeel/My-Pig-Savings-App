@@ -24,7 +24,6 @@ final internal class IntroViewController: UIViewController {
     
 }
 
-
 extension IntroViewController: IntroViewDelegate {
     
     internal func didText(_ text: String) {

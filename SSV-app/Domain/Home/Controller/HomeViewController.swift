@@ -3,13 +3,16 @@ import UIKit
 
 final internal class HomeViewController: UIViewController {
     
-    private lazy var homeView = HomeView()
+    private lazy var homeView = HomeView(user: session.userName)
     
     private let router: HomeRouterInput
+    private let session: SessionManagerProtocol
     
-    internal init<Router: HomeRouterInput>(router: Router) {
+    internal init<Router: HomeRouterInput, Session: SessionManagerProtocol>(router: Router, session: Session = SessionManager.shared) {
         self.router = router
+        self.session = session
         super.init(nibName: nil, bundle: nil)
+        self.session.logged()
     }
     
     required init?(coder: NSCoder) { nil }
