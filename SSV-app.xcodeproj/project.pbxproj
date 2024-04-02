@@ -186,8 +186,8 @@
 		272D31E22BBA51D5001D7875 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				272D323C2BBCB070001D7875 /* Configurator */,
 				272D32152BBB49B2001D7875 /* Protocols */,
+				272D323C2BBCB070001D7875 /* Configurator */,
 				272D321A2BBB4C10001D7875 /* Controller */,
 				272D32192BBB4C0A001D7875 /* View */,
 				272D32182BBB4C06001D7875 /* Router */,

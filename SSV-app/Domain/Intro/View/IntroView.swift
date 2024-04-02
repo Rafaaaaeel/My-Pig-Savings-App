@@ -55,9 +55,9 @@ final class IntroView: GreenView {
         return button
     }()
     
-    weak var delegate: IntroViewDelegate?
+    internal weak var delegate: IntroViewDelegate?
     
-    override init(frame: CGRect) {
+    internal override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
     }
@@ -70,7 +70,7 @@ final class IntroView: GreenView {
 // MARK: - Actions
 extension IntroView {
     
-    @objc func didTouchContinue() {
+    @objc internal func didTouchContinue() {
         guard isNameFieldValid() else { return }
         delegate?.didText(nameText)
     }
@@ -80,14 +80,14 @@ extension IntroView {
 // MARK: - CodableView
 extension IntroView: CodableViews {
     
-    func setupHiearchy() {
+    internal func setupHiearchy() {
         contentStackView.addArrangedSubviews(thoughtsImageView, questionLabel, nameTextfield, continueButton)
         contentStackView.setCustomSpacing(0, after: thoughtsImageView)
         contentStackView.setCustomSpacing(48, after: nameTextfield)
         addSubviews(contentStackView)
     }
     
-    func setupContraints() {
+    internal func setupContraints() {
         let padding: CGFloat = 48
         let imageSize: CGFloat = 300
         
@@ -110,15 +110,15 @@ extension IntroView: CodableViews {
 // MARK: - MyPigTextfieldDelegate
 extension IntroView: MyPigTextfieldDelegate {
     
-    func didBeginEditing() {
+    internal func didBeginEditing() {
         animate()
     }
     
-    func didReturn() {
+    internal func didReturn() {
         endEditing(true)
     }
     
-    func didTextFieldDidEndEditing(_ textfield: UITextField) {
+    internal func didTextFieldDidEndEditing(_ textfield: UITextField) {
         animate()
         guard let input = textfield.text else { return }
         nameText = input

@@ -7,13 +7,13 @@ private typealias Image = Images.Home
 private typealias Text = Texts.Home
 
 // MARK: - Delegate
-protocol HomeViewDelegate: AnyObject {
+internal protocol HomeViewDelegate: AnyObject {
     func didTouchCreate()
     func didTouchSummary()
 }
 
 // MARK: - View
-final class HomeView: GreenView {
+final internal class HomeView: GreenView {
     
     private lazy var contentStackView: UIStackView = {
         let stack = UIStackView()
@@ -75,9 +75,9 @@ final class HomeView: GreenView {
         return button
     }()
     
-    weak var delegate: HomeViewDelegate?
+    internal weak var delegate: HomeViewDelegate?
     
-    override init(frame: CGRect) {
+    internal override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
     }
@@ -89,11 +89,11 @@ final class HomeView: GreenView {
 // MARK: - Actions
 extension HomeView {
     
-    @objc func didTouchCreate() {
+    @objc internal func didTouchCreate() {
         delegate?.didTouchCreate()
     }
     
-    @objc func didTouchSummary() {
+    @objc internal func didTouchSummary() {
         delegate?.didTouchSummary()
     }
     
@@ -102,14 +102,14 @@ extension HomeView {
 // MARK: - CodableView
 extension HomeView: CodableViews {
     
-    func setupHiearchy() {
+    internal func setupHiearchy() {
         textStackView.addArrangedSubviews(helloLabel, nameLabel)
         topLeadingStackView.addArrangedSubviews(textStackView)
         contentStackView.addArrangedSubviews(topLeadingStackView, pigImageView, createGoalButton, achivementsButton)
         addSubviews(contentStackView)
     }
     
-    func setupContraints() {
+    internal func setupContraints() {
         let padding: CGFloat = 48
         let imageSize: CGFloat = 300
         

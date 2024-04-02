@@ -6,7 +6,7 @@ public protocol SessionManagerProtocol {
     var userName: String { get set }
 }
 
-final class SessionManager: SessionManagerProtocol {
+final public class SessionManager: SessionManagerProtocol {
 
     static let shared = SessionManager()
 
@@ -23,7 +23,7 @@ final class SessionManager: SessionManagerProtocol {
         }
     }
     
-    var isFirstTime: Bool {
+    public var isFirstTime: Bool {
         get {
             userDefaults.bool(forKey: UserDefaultsKeys.isFirstTime)
         }

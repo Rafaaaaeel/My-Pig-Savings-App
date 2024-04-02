@@ -1,7 +1,7 @@
 import UIKit
 
 
-final class AppConfigurator {
+final public class AppConfigurator {
     static func view() -> UIViewController {
         
         guard false else {// SessionManager.shared.isFirstTime else {

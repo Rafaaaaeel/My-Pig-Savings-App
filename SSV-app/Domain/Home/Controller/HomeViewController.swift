@@ -1,19 +1,20 @@
 import UIKit
 
-final class HomeViewController: UIViewController {
+
+final internal class HomeViewController: UIViewController {
     
     private lazy var homeView = HomeView()
     
     private let router: HomeRouterInput
     
-    init<Router: HomeRouterInput>(router: Router) {
+    internal init<Router: HomeRouterInput>(router: Router) {
         self.router = router
         super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) { nil }
     
-    override func loadView() {
+    internal override func loadView() {
         super.loadView()
         homeView.delegate = self
         self.view = homeView
@@ -23,11 +24,11 @@ final class HomeViewController: UIViewController {
 
 extension HomeViewController: HomeViewDelegate {
     
-    func didTouchCreate() {
+    internal func didTouchCreate() {
         router.presentCreation()
     }
     
-    func didTouchSummary() {
+    internal func didTouchSummary() {
         router.presentAchivements()
     }
     

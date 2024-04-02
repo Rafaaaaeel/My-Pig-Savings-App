@@ -1,6 +1,6 @@
-final class IntroRouter: AppRouter, IntroRouterInput {
+final internal class IntroRouter: AppRouter, IntroRouterInput {
     
-    func presentHome() {
+    internal func presentHome() {
         rootViewController(HomeConfigurator.view())
     }
     

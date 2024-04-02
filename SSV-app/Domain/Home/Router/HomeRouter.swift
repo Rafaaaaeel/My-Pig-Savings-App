@@ -1,10 +1,10 @@
-final class HomeRouter: AppRouter, HomeRouterInput {
+final internal class HomeRouter: AppRouter, HomeRouterInput {
     
-    func presentAchivements() {
+    internal func presentAchivements() {
         print("a")
     }
     
-    func presentCreation() {
+    internal func presentCreation() {
         print("b")
     }
     

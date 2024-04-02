@@ -1,10 +1,10 @@
-protocol IntroInteractorInput: AnyObject {
+internal protocol IntroInteractorInput: AnyObject {
     
     func didSaveUserName(_ input: String, completion: @escaping () -> Void)
     
 }
 
-protocol IntroRouterInput {
+internal protocol IntroRouterInput {
     
     func presentHome()
     

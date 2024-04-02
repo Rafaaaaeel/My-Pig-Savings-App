@@ -1,8 +1,8 @@
 import UIKit
 
-final class HomeConfigurator {
+final internal class HomeConfigurator {
     
-    static func view() -> UIViewController {
+    static internal func view() -> UIViewController {
         let router = HomeRouter()
         return HomeViewController(router: router)
     }
