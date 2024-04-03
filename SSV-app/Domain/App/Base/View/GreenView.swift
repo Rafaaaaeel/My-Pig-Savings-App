@@ -15,4 +15,10 @@ public class GreenView: UIView {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(UIView.endEditing))
         addGestureRecognizer(tapGesture)
     }
+    
+    public func roundConer() {
+        clipsToBounds = true
+        layer.cornerRadius = 30
+        layer.maskedCorners = [.layerMinXMinYCorner]
+    }
 }

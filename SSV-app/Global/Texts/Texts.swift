@@ -13,4 +13,8 @@ struct Texts {
         static let HELLO = "Hello,"
     }
     
+    struct Creation {
+        static let LETS_DO_IT =  "Let's do it"
+    }
+    
 }

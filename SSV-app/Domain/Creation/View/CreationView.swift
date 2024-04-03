@@ -26,7 +26,7 @@ extension CreationView: CodableViews {
     
     internal func setupContraints() {
         let constraints = [
-            firstStepView.topAnchor.constraint(equalTo: topAnchor, constant: Frame.height / 2.5),
+            firstStepView.topAnchor.constraint(equalTo: topAnchor, constant: Frame.height / 3),
             firstStepView.leadingAnchor.constraint(equalTo: leadingAnchor),
             firstStepView.trailingAnchor.constraint(equalTo: trailingAnchor),
             firstStepView.bottomAnchor.constraint(equalTo: bottomAnchor)

@@ -2,9 +2,12 @@ import UIKit
 
 public class MyPigButton: UIButton {
     
+    private var height: CGFloat = 60
+    
     public enum ButtonType {
         case primary
         case secondary
+        case main
     }
     
     public var title: String? {
@@ -37,21 +40,27 @@ public class MyPigButton: UIButton {
     private func button() {
         switch type {
         case .primary:
+            layer.cornerRadius = 6
             backgroundColor = ColorTheme.primaryAction
         case .secondary:
             backgroundColor = .clear
             layer.borderWidth = 1
+            layer.cornerRadius = 6
             layer.borderColor = UIColor.white.cgColor
+        case .main:
+            height = 30
+            layer.cornerRadius = 15
+            backgroundColor = ColorTheme.secondaryFacelift
         }
     }
     
     private func render() {
         button()
-        layer.cornerRadius = 6
+        
         translatesAutoresizingMaskIntoConstraints = false
         
         let constraint = [
-            heightAnchor.constraint(equalToConstant: 60)
+            heightAnchor.constraint(equalToConstant: height)
         ]
         
         NSLayoutConstraint.activate(constraint)
