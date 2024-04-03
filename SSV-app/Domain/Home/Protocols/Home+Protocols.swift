@@ -1,4 +1,4 @@
-internal protocol HomeRouterInput: AnyObject {
+internal protocol HomeRouterInput: AppRouterProtocol {
     func presentAchivements()
     func presentCreation()
 }

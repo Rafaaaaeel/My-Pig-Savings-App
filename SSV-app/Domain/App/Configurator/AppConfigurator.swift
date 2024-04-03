@@ -5,18 +5,11 @@ final public class AppConfigurator {
     
     static func view() -> UIViewController {
         guard !SessionManager.shared.isFirstTime else {
-            let router = IntroRouter()
-            let controller = IntroViewController(interactor: IntroInteractor())
-            router.currentViewController = controller
-            controller.router = router
-            return controller
+            return IntroViewController(interactor: IntroInteractor(), router: IntroRouter())
         }
         
-        let controller = HomeViewController()
-        let router = HomeRouter()
-        router.currentViewController = controller
-        controller.router = router
-        return controller
+        
+        return HomeViewController(router: HomeRouter())
     }
     
 }

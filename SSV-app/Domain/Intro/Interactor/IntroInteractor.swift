@@ -1,5 +1,5 @@
 final internal class IntroInteractor: IntroInteractorInput {
-    
+        
     private var session: SessionManagerProtocol
     
     internal init<Session: SessionManagerProtocol>(session: Session = SessionManager.shared) {

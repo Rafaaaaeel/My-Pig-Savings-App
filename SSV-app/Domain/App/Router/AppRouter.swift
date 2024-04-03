@@ -1,6 +1,10 @@
 import UIKit
 
-public class AppRouter {
+public protocol AppRouterProtocol: AnyObject {
+    var currentViewController: UIViewController? { get set }
+}
+
+public class AppRouter: AppRouterProtocol {
     
     public var currentViewController: UIViewController?
     

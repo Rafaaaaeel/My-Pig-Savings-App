@@ -2,15 +2,17 @@ import UIKit
 
 
 final internal class HomeViewController: UIViewController {
-
-    internal var router: HomeRouterInput?
     
     private lazy var homeView = HomeView(user: session.userName)
+    
+    private let router: HomeRouterInput
     private let session: SessionManagerProtocol
     
-    internal init<Session: SessionManagerProtocol>(session: Session = SessionManager.shared) {
+    internal init<Router: HomeRouterInput, Session: SessionManagerProtocol>(router: Router, session: Session = SessionManager.shared) {
+        self.router = router
         self.session = session
         super.init(nibName: nil, bundle: nil)
+        self.router.currentViewController = self
         self.session.logged()
     }
     
@@ -27,11 +29,11 @@ final internal class HomeViewController: UIViewController {
 extension HomeViewController: HomeViewDelegate {
     
     internal func didTouchCreate() {
-        router?.presentCreation()
+        router.presentCreation()
     }
     
     internal func didTouchSummary() {
-        router?.presentAchivements()
+        router.presentAchivements()
     }
     
 }
