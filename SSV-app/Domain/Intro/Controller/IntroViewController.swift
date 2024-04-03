@@ -1,7 +1,7 @@
 import UIKit
 
 
-final internal class IntroViewController: UIViewController {
+final internal class IntroViewController: MyPigViewController {
     
     private let interactor: IntroInteractorInput
     private let router: IntroRouterInput

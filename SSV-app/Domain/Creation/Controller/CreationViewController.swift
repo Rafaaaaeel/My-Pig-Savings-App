@@ -1,7 +1,7 @@
 import UIKit
 
 
-final internal class CreationViewController: UIViewController {
+final internal class CreationViewController: MyPigViewController {
     
     private let creationView = CreationView()
     

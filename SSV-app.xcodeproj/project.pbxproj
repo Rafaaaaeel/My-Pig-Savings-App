@@ -50,6 +50,8 @@
 		27D5D5532BBCE9A900746611 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5D5522BBCE9A900746611 /* DataManager.swift */; };
 		27D5D5592BBCEED100746611 /* CreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5D5582BBCEED100746611 /* CreationView.swift */; };
 		27D5D55B2BBCEF0B00746611 /* CreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5D55A2BBCEF0B00746611 /* CreationViewController.swift */; };
+		27D5D55F2BBCF8CF00746611 /* MyPigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5D55E2BBCF8CF00746611 /* MyPigViewController.swift */; };
+		27D5D5622BBCF91200746611 /* IntroConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5D5612BBCF91200746611 /* IntroConfigurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +100,8 @@
 		27D5D5522BBCE9A900746611 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		27D5D5582BBCEED100746611 /* CreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationView.swift; sourceTree = "<group>"; };
 		27D5D55A2BBCEF0B00746611 /* CreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationViewController.swift; sourceTree = "<group>"; };
+		27D5D55E2BBCF8CF00746611 /* MyPigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPigViewController.swift; sourceTree = "<group>"; };
+		27D5D5612BBCF91200746611 /* IntroConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroConfigurator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +161,7 @@
 		272D31DD2BBA5060001D7875 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				27D5D55D2BBCF8B100746611 /* Base */,
 				272D31DF2BBA50E9001D7875 /* App */,
 				272D31E32BBA5316001D7875 /* Intro */,
 				272D31E22BBA51D5001D7875 /* Home */,
@@ -227,6 +232,7 @@
 		272D31E32BBA5316001D7875 /* Intro */ = {
 			isa = PBXGroup;
 			children = (
+				27D5D5602BBCF90700746611 /* Configurator */,
 				272D32272BBB504D001D7875 /* Protocols */,
 				272D32262BBB503C001D7875 /* Router */,
 				272D32252BBB5037001D7875 /* Interactor */,
@@ -453,18 +459,17 @@
 		272D322F2BBB5535001D7875 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				272D32302BBB5540001D7875 /* UIView */,
 			);
 			path = Base;
 			sourceTree = "<group>";
 		};
-		272D32302BBB5540001D7875 /* UIView */ = {
+		272D32302BBB5540001D7875 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				272D32312BBB5547001D7875 /* GreenView.swift */,
 				272D324C2BBCC0F5001D7875 /* WhiteView.swift */,
 			);
-			path = UIView;
+			path = View;
 			sourceTree = "<group>";
 		};
 		272D32332BBB6278001D7875 /* Regex */ = {
@@ -555,6 +560,31 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		27D5D55C2BBCF8A400746611 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				27D5D55E2BBCF8CF00746611 /* MyPigViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		27D5D55D2BBCF8B100746611 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				27D5D55C2BBCF8A400746611 /* Controller */,
+				272D32302BBB5540001D7875 /* View */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		27D5D5602BBCF90700746611 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				27D5D5612BBCF91200746611 /* IntroConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -630,6 +660,7 @@
 				272D323B2BBCAE60001D7875 /* IntroRouter.swift in Sources */,
 				272D32012BBA7EE8001D7875 /* UIView.swift in Sources */,
 				272D323E2BBCB07D001D7875 /* HomeConfigurator.swift in Sources */,
+				27D5D5622BBCF91200746611 /* IntroConfigurator.swift in Sources */,
 				272D321D2BBB4DB6001D7875 /* SessionManager.swift in Sources */,
 				272D32072BBA7FD5001D7875 /* Images.swift in Sources */,
 				272D32172BBB49C8001D7875 /* Home+Protocols.swift in Sources */,
@@ -642,6 +673,7 @@
 				272D32492BBCBFDD001D7875 /* AchivementViewController.swift in Sources */,
 				272D324B2BBCC049001D7875 /* AchivementView.swift in Sources */,
 				272D32292BBB5092001D7875 /* IntroViewController.swift in Sources */,
+				27D5D55F2BBCF8CF00746611 /* MyPigViewController.swift in Sources */,
 				272D32222BBB4F88001D7875 /* Keys.swift in Sources */,
 				27D5D5282BBCE7B100746611 /* Goal+CoreDataClass.swift in Sources */,
 				27D5D5292BBCE7B100746611 /* Goal+CoreDataProperties.swift in Sources */,

@@ -1,7 +1,7 @@
 import UIKit
 
 
-final internal class HomeViewController: UIViewController {
+final internal class HomeViewController: MyPigViewController {
     
     private lazy var homeView = HomeView(user: session.userName)
     

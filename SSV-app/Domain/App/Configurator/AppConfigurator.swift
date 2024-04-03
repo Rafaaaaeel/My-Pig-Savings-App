@@ -1,15 +1,10 @@
-import UIKit
-
-
 final public class AppConfigurator {
     
-    static func view() -> UIViewController {
+    static func view() -> MyPigViewController {
         guard !SessionManager.shared.isFirstTime else {
-            return IntroViewController(interactor: IntroInteractor(), router: IntroRouter())
+            return IntroConfigurator.view()
         }
-        
-        
-        return HomeViewController(router: HomeRouter())
+        return HomeConfigurator.view()
     }
     
 }
