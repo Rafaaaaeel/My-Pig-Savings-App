@@ -48,6 +48,8 @@
 		27D5D52B2BBCE7B100746611 /* Achieviment+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5D5272BBCE7B100746611 /* Achieviment+CoreDataProperties.swift */; };
 		27D5D5512BBCE98000746611 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27D5D5502BBCE98000746611 /* Assets.xcassets */; };
 		27D5D5532BBCE9A900746611 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5D5522BBCE9A900746611 /* DataManager.swift */; };
+		27D5D5592BBCEED100746611 /* CreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5D5582BBCEED100746611 /* CreationView.swift */; };
+		27D5D55B2BBCEF0B00746611 /* CreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5D55A2BBCEF0B00746611 /* CreationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +96,8 @@
 		27D5D5272BBCE7B100746611 /* Achieviment+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achieviment+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		27D5D5502BBCE98000746611 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27D5D5522BBCE9A900746611 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		27D5D5582BBCEED100746611 /* CreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationView.swift; sourceTree = "<group>"; };
+		27D5D55A2BBCEF0B00746611 /* CreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +239,9 @@
 		272D31E42BBA5324001D7875 /* Creation */ = {
 			isa = PBXGroup;
 			children = (
+				27D5D5572BBCEEB700746611 /* View */,
+				27D5D5552BBCEEAC00746611 /* Interactor */,
+				27D5D5542BBCEEA800746611 /* Controller */,
 			);
 			path = Creation;
 			sourceTree = "<group>";
@@ -525,6 +532,29 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		27D5D5542BBCEEA800746611 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				27D5D55A2BBCEF0B00746611 /* CreationViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		27D5D5552BBCEEAC00746611 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		27D5D5572BBCEEB700746611 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				27D5D5582BBCEED100746611 /* CreationView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -616,9 +646,11 @@
 				27D5D5282BBCE7B100746611 /* Goal+CoreDataClass.swift in Sources */,
 				27D5D5292BBCE7B100746611 /* Goal+CoreDataProperties.swift in Sources */,
 				27D5D52A2BBCE7B100746611 /* Achieviment+CoreDataClass.swift in Sources */,
+				27D5D5592BBCEED100746611 /* CreationView.swift in Sources */,
 				27D5D52B2BBCE7B100746611 /* Achieviment+CoreDataProperties.swift in Sources */,
 				272D32532BBCDE9F001D7875 /* Storage.xcdatamodeld in Sources */,
 				272D31F62BBA5739001D7875 /* MyPigButton.swift in Sources */,
+				27D5D55B2BBCEF0B00746611 /* CreationViewController.swift in Sources */,
 				272D32372BBCA5F1001D7875 /* String.swift in Sources */,
 				272D32202BBB4F5C001D7875 /* Optional+String.swift in Sources */,
 				272D322E2BBB526B001D7875 /* Textfield.swift in Sources */,

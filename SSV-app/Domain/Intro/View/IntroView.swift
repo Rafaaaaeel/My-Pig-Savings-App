@@ -89,7 +89,6 @@ extension IntroView: CodableViews {
     
     internal func setupContraints() {
         let padding: CGFloat = 48
-        let imageSize: CGFloat = 300
         
         topConstraint = contentStackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 150)
         
@@ -97,9 +96,6 @@ extension IntroView: CodableViews {
             topConstraint,
             contentStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: padding),
             contentStackView.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -padding),
-            
-            thoughtsImageView.widthAnchor.constraint(equalToConstant: imageSize),
-            thoughtsImageView.heightAnchor.constraint(equalToConstant: imageSize)
         ]
         
         NSLayoutConstraint.activate(constraints)

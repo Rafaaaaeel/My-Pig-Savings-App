@@ -3,14 +3,13 @@ import UIKit
 
 final internal class IntroViewController: UIViewController {
     
-    private let interactor: IntroInteractorInput
-    private let router: IntroRouterInput
+    internal var router: IntroRouterInput?
     
+    private let interactor: IntroInteractorInput
     private lazy var introView = IntroView()
     
-    internal init<Interactor: IntroInteractorInput, Router: IntroRouterInput>(interactor: Interactor, router: Router) {
+    internal init<Interactor: IntroInteractorInput>(interactor: Interactor) {
         self.interactor = interactor
-        self.router = router
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -28,7 +27,7 @@ extension IntroViewController: IntroViewDelegate {
     
     internal func didText(_ text: String) {
         interactor.didSaveUserName(text) { [weak self] in
-            self?.router.presentHome()
+            self?.router?.presentHome()
         }
     }
     

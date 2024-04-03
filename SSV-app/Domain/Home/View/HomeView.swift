@@ -114,17 +114,12 @@ extension HomeView: CodableViews {
     
     internal func setupContraints() {
         let padding: CGFloat = 48
-        let imageSize: CGFloat = 300
         
         let constraints = [
             contentStackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 50),
             contentStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: padding),
             contentStackView.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -padding),
             contentStackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -58),
-            
-            pigImageView.widthAnchor.constraint(equalToConstant: imageSize),
-            pigImageView.heightAnchor.constraint(equalToConstant: imageSize)
-            
         ]
         
         NSLayoutConstraint.activate(constraints)

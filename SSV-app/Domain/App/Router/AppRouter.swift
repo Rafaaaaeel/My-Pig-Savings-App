@@ -6,6 +6,7 @@ public class AppRouter {
     
     public func moveTo(_ controller: UIViewController) {
         currentViewController?.navigationController?.pushViewController(controller, animated: true)
+        currentViewController = controller
     }
     
     public func rootViewController(_ controller: UIViewController) {

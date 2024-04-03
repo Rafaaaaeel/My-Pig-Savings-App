@@ -1,3 +1,4 @@
+import UIKit
 final internal class HomeRouter: AppRouter, HomeRouterInput {
     
     internal func presentAchivements() {
@@ -5,7 +6,7 @@ final internal class HomeRouter: AppRouter, HomeRouterInput {
     }
     
     internal func presentCreation() {
-        print("b")
+        moveTo(CreationViewController())
     }
     
 }

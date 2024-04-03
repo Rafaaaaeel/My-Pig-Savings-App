@@ -4,7 +4,7 @@ internal protocol IntroInteractorInput: AnyObject {
     
 }
 
-internal protocol IntroRouterInput {
+internal protocol IntroRouterInput: AnyObject {
     
     func presentHome()
     
