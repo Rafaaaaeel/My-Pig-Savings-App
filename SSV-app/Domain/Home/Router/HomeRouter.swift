@@ -6,7 +6,7 @@ final internal class HomeRouter: AppRouter, HomeRouterInput {
     }
     
     internal func presentCreation() {
-        moveTo(CreationViewController())
+        present(CreationViewController(), style: .overFullScreen)
     }
     
 }

@@ -8,9 +8,13 @@ public class AppRouter: AppRouterProtocol {
     
     public var currentViewController: UIViewController?
     
+    public func present(_ controller: UIViewController, style: UIModalPresentationStyle = .overCurrentContext, completion: (() -> Void)? = nil) {
+        controller.modalPresentationStyle = style
+        currentViewController?.present(controller, animated: true, completion: completion)
+    }
+    
     public func moveTo(_ controller: UIViewController) {
         currentViewController?.navigationController?.pushViewController(controller, animated: true)
-        currentViewController = controller
     }
     
     public func rootViewController(_ controller: UIViewController) {

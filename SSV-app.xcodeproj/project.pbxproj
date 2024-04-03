@@ -52,6 +52,9 @@
 		27D5D55B2BBCEF0B00746611 /* CreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5D55A2BBCEF0B00746611 /* CreationViewController.swift */; };
 		27D5D55F2BBCF8CF00746611 /* MyPigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5D55E2BBCF8CF00746611 /* MyPigViewController.swift */; };
 		27D5D5622BBCF91200746611 /* IntroConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5D5612BBCF91200746611 /* IntroConfigurator.swift */; };
+		27D5D5652BBCFF3700746611 /* CreationFirstStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5D5642BBCFF3700746611 /* CreationFirstStepView.swift */; };
+		27D5D5672BBCFF7500746611 /* DarkGreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5D5662BBCFF7500746611 /* DarkGreenView.swift */; };
+		27D5D56A2BBD016200746611 /* Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5D5692BBD016200746611 /* Frame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +105,9 @@
 		27D5D55A2BBCEF0B00746611 /* CreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationViewController.swift; sourceTree = "<group>"; };
 		27D5D55E2BBCF8CF00746611 /* MyPigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPigViewController.swift; sourceTree = "<group>"; };
 		27D5D5612BBCF91200746611 /* IntroConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroConfigurator.swift; sourceTree = "<group>"; };
+		27D5D5642BBCFF3700746611 /* CreationFirstStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationFirstStepView.swift; sourceTree = "<group>"; };
+		27D5D5662BBCFF7500746611 /* DarkGreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkGreenView.swift; sourceTree = "<group>"; };
+		27D5D5692BBD016200746611 /* Frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,11 +149,8 @@
 		272D31DC2BBA4FED001D7875 /* Global */ = {
 			isa = PBXGroup;
 			children = (
-				272D32332BBB6278001D7875 /* Regex */,
-				272D322F2BBB5535001D7875 /* Base */,
 				272D322C2BBB5261001D7875 /* Textfield */,
 				272D320C2BBB3F8C001D7875 /* Fonts */,
-				272D320B2BBA88A7001D7875 /* Labels */,
 				272D32082BBA877F001D7875 /* Texts */,
 				272D32052BBA7FCE001D7875 /* Images */,
 				272D31FC2BBA5F34001D7875 /* Utils */,
@@ -161,7 +164,6 @@
 		272D31DD2BBA5060001D7875 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				27D5D55D2BBCF8B100746611 /* Base */,
 				272D31DF2BBA50E9001D7875 /* App */,
 				272D31E32BBA5316001D7875 /* Intro */,
 				272D31E22BBA51D5001D7875 /* Home */,
@@ -187,6 +189,7 @@
 		272D31DF2BBA50E9001D7875 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				27D5D55D2BBCF8B100746611 /* Base */,
 				27D5D54F2BBCE8D700746611 /* Data */,
 				272D321B2BBB4DAD001D7875 /* Session */,
 				272D320F2BBB41AC001D7875 /* Router */,
@@ -298,6 +301,7 @@
 		272D31FC2BBA5F34001D7875 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				272D32332BBB6278001D7875 /* Regex */,
 				272D31FD2BBA5F42001D7875 /* CodableView.swift */,
 			);
 			path = Utils;
@@ -333,13 +337,6 @@
 				272D32092BBA8787001D7875 /* Texts.swift */,
 			);
 			path = Texts;
-			sourceTree = "<group>";
-		};
-		272D320B2BBA88A7001D7875 /* Labels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Labels;
 			sourceTree = "<group>";
 		};
 		272D320C2BBB3F8C001D7875 /* Fonts */ = {
@@ -456,18 +453,12 @@
 			path = Textfield;
 			sourceTree = "<group>";
 		};
-		272D322F2BBB5535001D7875 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Base;
-			sourceTree = "<group>";
-		};
 		272D32302BBB5540001D7875 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				272D32312BBB5547001D7875 /* GreenView.swift */,
 				272D324C2BBCC0F5001D7875 /* WhiteView.swift */,
+				272D32312BBB5547001D7875 /* GreenView.swift */,
+				27D5D5662BBCFF7500746611 /* DarkGreenView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -556,6 +547,7 @@
 			isa = PBXGroup;
 			children = (
 				27D5D5582BBCEED100746611 /* CreationView.swift */,
+				27D5D5632BBCFF1700746611 /* FirstStep */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -571,6 +563,7 @@
 		27D5D55D2BBCF8B100746611 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				27D5D5682BBD015A00746611 /* Frame */,
 				27D5D55C2BBCF8A400746611 /* Controller */,
 				272D32302BBB5540001D7875 /* View */,
 			);
@@ -583,6 +576,22 @@
 				27D5D5612BBCF91200746611 /* IntroConfigurator.swift */,
 			);
 			path = Configurator;
+			sourceTree = "<group>";
+		};
+		27D5D5632BBCFF1700746611 /* FirstStep */ = {
+			isa = PBXGroup;
+			children = (
+				27D5D5642BBCFF3700746611 /* CreationFirstStepView.swift */,
+			);
+			path = FirstStep;
+			sourceTree = "<group>";
+		};
+		27D5D5682BBD015A00746611 /* Frame */ = {
+			isa = PBXGroup;
+			children = (
+				27D5D5692BBD016200746611 /* Frame.swift */,
+			);
+			path = Frame;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -658,7 +667,9 @@
 				272D324D2BBCC0F5001D7875 /* WhiteView.swift in Sources */,
 				272D320E2BBB3F93001D7875 /* Fonts.swift in Sources */,
 				272D323B2BBCAE60001D7875 /* IntroRouter.swift in Sources */,
+				27D5D5672BBCFF7500746611 /* DarkGreenView.swift in Sources */,
 				272D32012BBA7EE8001D7875 /* UIView.swift in Sources */,
+				27D5D56A2BBD016200746611 /* Frame.swift in Sources */,
 				272D323E2BBCB07D001D7875 /* HomeConfigurator.swift in Sources */,
 				27D5D5622BBCF91200746611 /* IntroConfigurator.swift in Sources */,
 				272D321D2BBB4DB6001D7875 /* SessionManager.swift in Sources */,
@@ -678,6 +689,7 @@
 				27D5D5282BBCE7B100746611 /* Goal+CoreDataClass.swift in Sources */,
 				27D5D5292BBCE7B100746611 /* Goal+CoreDataProperties.swift in Sources */,
 				27D5D52A2BBCE7B100746611 /* Achieviment+CoreDataClass.swift in Sources */,
+				27D5D5652BBCFF3700746611 /* CreationFirstStepView.swift in Sources */,
 				27D5D5592BBCEED100746611 /* CreationView.swift in Sources */,
 				27D5D52B2BBCE7B100746611 /* Achieviment+CoreDataProperties.swift in Sources */,
 				272D32532BBCDE9F001D7875 /* Storage.xcdatamodeld in Sources */,

@@ -1,10 +1,11 @@
 import UIKit
 
-public class GreenView: UIView {
+
+public class DarkGreenView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = ColorTheme.primaryFacelift
+        backgroundColor = ColorTheme.primaryAction
         dismissKeyboard()
     }
     

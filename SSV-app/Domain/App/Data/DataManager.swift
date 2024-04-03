@@ -2,7 +2,9 @@ import Foundation
 import CoreData
 
 protocol DataManagerProtocol {
+    
     func saveContext()
+    
 }
 
 public class DataManager: DataManagerProtocol {

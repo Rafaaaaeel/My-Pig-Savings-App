@@ -90,7 +90,7 @@ extension IntroView: CodableViews {
     internal func setupContraints() {
         let padding: CGFloat = 48
         
-        topConstraint = contentStackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 150)
+        topConstraint = contentStackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 50)
         
         let constraints = [
             topConstraint,
