@@ -1,6 +1,6 @@
 import UIKit
 
-protocol MyPigTextfieldDelegate: AnyObject {
+public protocol MyPigTextfieldDelegate: AnyObject {
     func didBeginEditing()
     func didReturn()
     func didTextFieldDidEndEditing(_ textfield: UITextField)
@@ -11,16 +11,24 @@ public class MyPigTextfield: UITextField {
     private lazy var lineView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .white
+        view.backgroundColor = ColorTheme.primaryTitle
         return view
     }()
     
     private lazy var placeholderText: UILabel = {
         let label = UILabel()
-        label.text = "Name"
-        label.textColor = .white
+        label.textColor = ColorTheme.primaryTitle
         return label
     }()
+    
+    public override var placeholder: String? {
+        get {
+            return placeholderText.text
+        }
+        set {
+            placeholderText.text = newValue
+        }
+    }
     
     weak var textfieldDelegate: MyPigTextfieldDelegate?
     

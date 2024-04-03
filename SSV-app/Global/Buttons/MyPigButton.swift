@@ -30,7 +30,7 @@ public class MyPigButton: UIButton {
     private func configTitle() {
         guard let title else { return }
         let attributes: [NSAttributedString.Key: Any] = [
-            .foregroundColor: UIColor.white,
+            .foregroundColor: ColorTheme.primaryTitle,
             .font: UIFont.systemFont(ofSize: 12, weight: .medium),
         ]
         let attributedText = NSAttributedString(string: title, attributes: attributes)
@@ -46,7 +46,7 @@ public class MyPigButton: UIButton {
             backgroundColor = .clear
             layer.borderWidth = 1
             layer.cornerRadius = 6
-            layer.borderColor = UIColor.white.cgColor
+            layer.borderColor = ColorTheme.primaryTitle.cgColor
         case .main:
             height = 30
             layer.cornerRadius = 15

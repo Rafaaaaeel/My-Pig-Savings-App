@@ -51,7 +51,7 @@ final internal class HomeView: GreenView {
         let label = UILabel()
         label.text = userName
         label.numberOfLines = 1
-        label.textColor = .white
+        label.textColor = ColorTheme.primaryTitle
         label.font = Fonts.title
         return label
     }()

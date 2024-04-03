@@ -4,7 +4,7 @@ private typealias Text = Texts.Creation
 private typealias Image = Images.Creation
 
 final internal class CreationFirstStepView: GreenView {
-    
+
     private lazy var contentStackView: UIStackView = {
         let stack = UIStackView()
         stack.axis = .vertical
@@ -31,21 +31,23 @@ final internal class CreationFirstStepView: GreenView {
     
     private lazy var nameTextfield: MyPigTextfield = {
         let textfield = MyPigTextfield()
-//        textfield.textfieldDelegate = self
+        textfield.textfieldDelegate = self
+        textfield.placeholder = Text.NAME
         return textfield
     }()
     
     
     private lazy var goalTextfield: MyPigTextfield = {
         let textfield = MyPigTextfield()
-//        textfield.textfieldDelegate = self
+        textfield.textfieldDelegate = self
+        textfield.placeholder = Text.VALUE
         return textfield
     }()
     
     private lazy var continueButton: MyPigButton = {
         let button = MyPigButton(type: .main)
-        button.title = "Save"
-//        button.addTarget(self, action: #selector(didTouchContinue), for: .touchUpInside)
+        button.title = Text.SAVE
+        button.addTarget(self, action: #selector(didTouchSave), for: .touchUpInside)
         return button
     }()
     
@@ -71,6 +73,7 @@ extension CreationFirstStepView: CodableViews {
     
     internal func setupContraints() {
         let padding: CGFloat = 48
+        let width: CGFloat = 135
         
         let constraints = [
             barImageView.topAnchor.constraint(equalTo: topAnchor, constant: 16),
@@ -81,11 +84,35 @@ extension CreationFirstStepView: CodableViews {
             contentStackView.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -padding),
             
             continueButton.topAnchor.constraint(equalToSystemSpacingBelow: contentStackView.bottomAnchor, multiplier: 3),
-            continueButton.widthAnchor.constraint(equalToConstant: 135),
+            continueButton.widthAnchor.constraint(equalToConstant: width),
             continueButton.centerXAnchor.constraint(equalTo: centerXAnchor)
         ]
         
         NSLayoutConstraint.activate(constraints)
+    }
+    
+}
+
+extension CreationFirstStepView {
+    
+    @objc internal func didTouchSave() {
+        
+    }
+    
+}
+
+extension CreationFirstStepView: MyPigTextfieldDelegate {
+    
+    func didBeginEditing() {
+        
+    }
+    
+    func didReturn() {
+        
+    }
+    
+    func didTextFieldDidEndEditing(_ textfield: UITextField) {
+        
     }
     
 }
