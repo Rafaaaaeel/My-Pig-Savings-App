@@ -3,6 +3,9 @@ public struct Texts {
     public struct Card {
         static let TOTAL = "Goal"
         static let SAVED = "Saved"
+        static let ZERO_MONEY = "R$ 0,00"
+        static let ZERO_PERCENTAGE = "0%"
+        static let NAME = "Name"
     }
     
     public struct Intro {

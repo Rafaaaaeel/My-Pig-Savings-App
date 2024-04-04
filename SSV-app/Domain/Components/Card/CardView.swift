@@ -8,6 +8,18 @@ private typealias Text = Texts.Card
 // MARK: - View
 final internal class CardView: GreenView {
     
+    internal var totalText: String = .empty {
+        didSet {
+            totalValueLabel.text = totalText.isEmpty ? Text.ZERO_MONEY : totalText
+        }
+    }
+    
+    internal var nameText: String = .empty {
+        didSet {
+            nameLabel.text = nameText.isEmpty ? Text.NAME : nameText
+        }
+    }
+    
     private lazy var mainContentStackView: UIStackView = {
         let stack = UIStackView()
         stack.axis = .vertical
@@ -43,7 +55,7 @@ final internal class CardView: GreenView {
     private lazy var percentageLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 1
-        label.text = "15%"
+        label.text = Text.ZERO_PERCENTAGE
         label.textColor = ColorTheme.primaryTitle
         label.font = Fonts.sfBoldBigger
         return label
@@ -52,16 +64,16 @@ final internal class CardView: GreenView {
     private lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 1
-        label.text = "Car"
         label.textColor = ColorTheme.primaryAction
         label.font = Fonts.sfBold
+        label.text = Text.NAME
         return label
     }()
     
     private lazy var totalLabel: UILabel = {
         let label = UILabel()
-        label.text = Text.TOTAL
         label.numberOfLines = 1
+        label.text = Text.TOTAL
         label.textColor = ColorTheme.primaryAction
         label.font = Fonts.sfRegular
         return label
@@ -70,7 +82,7 @@ final internal class CardView: GreenView {
     private lazy var totalValueLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 1
-        label.text = "R$ 1,00"
+        label.text = Text.ZERO_MONEY
         label.textColor = ColorTheme.primaryTitle
         label.font = Fonts.sfRegular
         return label
@@ -88,7 +100,7 @@ final internal class CardView: GreenView {
     private lazy var savedValueLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 1
-        label.text = "R$ 2,00"
+        label.text = Text.ZERO_MONEY
         label.textColor = ColorTheme.primaryTitle
         label.font = Fonts.sfRegular
         return label
@@ -115,7 +127,7 @@ extension CardView: CodableViews {
     
     internal func configView() {
         layer.cornerRadius = 25
-        progressView.percentage = 0.4
+        progressView.percentage = 0.0
     }
     
     internal func setupHiearchy() {

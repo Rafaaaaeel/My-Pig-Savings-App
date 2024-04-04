@@ -19,6 +19,10 @@ final internal class CreationView: WhiteView {
 
 extension CreationView: CodableViews {
     
+    internal func configView() {
+        infoView.delegate = self
+    }
+    
     internal func setupHiearchy() {
         addSubviews(cardView, infoView)
     }
@@ -67,6 +71,22 @@ extension CreationView {
                 self.infoView.frame = CGRect(x: 0, y: 150, width: 0, height: 0)
             }
         }
+    }
+    
+}
+
+extension CreationView: InfoViewDelegate {
+    
+    func didTouchSave(_ model: Creator) {
+        
+    }
+    
+    func didChangeName(_ text: String) {
+        cardView.nameText = text
+    }
+    
+    func didChangeValue(_ text: String) {
+        cardView.totalText = text
     }
     
 }
