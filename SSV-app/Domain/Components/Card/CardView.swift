@@ -41,6 +41,15 @@ final internal class CardView: GreenView {
     
     private lazy var progressView = ProgressView(radius: 50, lineThickness: 7, lineColor: ColorTheme.primaryTitle)
     
+    private lazy var percentageLabel: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 1
+        label.text = "15%"
+        label.textColor = ColorTheme.primaryTitle
+        label.font = Fonts.sfBoldBigger
+        return label
+    }()
+    
     private lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 1
@@ -71,7 +80,6 @@ final internal class CardView: GreenView {
     private lazy var savedLabel: UILabel = {
         let label = UILabel()
         label.text = Text.SAVED
-//        label.isHidden = true
         label.numberOfLines = 1
         label.textColor = ColorTheme.primaryAction
         label.font = Fonts.sfRegular
@@ -115,6 +123,7 @@ extension CardView: CodableViews {
         savedStackView.addArrangedSubviews(savedLabel, savedValueLabel)
         centerContentStackView.addArrangedSubviews(totalStackView, savedStackView)
         mainContentStackView.addArrangedSubviews(nameLabel, centerContentStackView)
+        progressView.addSubviews(percentageLabel)
         addSubviews(progressView, mainContentStackView, plantsImageView)
     }
     
@@ -123,8 +132,11 @@ extension CardView: CodableViews {
             progressView.centerYAnchor.constraint(equalTo: centerYAnchor),
             progressView.leadingAnchor.constraint(lessThanOrEqualToSystemSpacingAfter: leadingAnchor, multiplier: 10),
             
+            percentageLabel.centerXAnchor.constraint(equalTo: progressView.centerXAnchor),
+            percentageLabel.centerYAnchor.constraint(equalTo: progressView.centerYAnchor),
+            
             mainContentStackView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            mainContentStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 140),
+            mainContentStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 160),
             mainContentStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -80),
             
             plantsImageView.bottomAnchor.constraint(equalTo: bottomAnchor),
