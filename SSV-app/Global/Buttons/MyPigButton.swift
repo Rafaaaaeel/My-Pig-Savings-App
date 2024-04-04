@@ -26,7 +26,6 @@ public class MyPigButton: UIButton {
     
     required init?(coder: NSCoder) { nil }
     
-    
     private func configTitle() {
         guard let title else { return }
         let attributes: [NSAttributedString.Key: Any] = [

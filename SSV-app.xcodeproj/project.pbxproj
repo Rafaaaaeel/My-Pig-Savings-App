@@ -55,6 +55,9 @@
 		27D5D5652BBCFF3700746611 /* CreationFirstStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5D5642BBCFF3700746611 /* CreationFirstStepView.swift */; };
 		27D5D5672BBCFF7500746611 /* DarkGreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5D5662BBCFF7500746611 /* DarkGreenView.swift */; };
 		27D5D56A2BBD016200746611 /* Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5D5692BBD016200746611 /* Frame.swift */; };
+		27D5D56C2BBE1DBB00746611 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5D56B2BBE1DBB00746611 /* ProgressView.swift */; };
+		27D5D5712BBE380300746611 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5D5702BBE380300746611 /* CardView.swift */; };
+		27D5D5742BBE38B800746611 /* Decimal+Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5D5732BBE38B800746611 /* Decimal+Currency.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +111,9 @@
 		27D5D5642BBCFF3700746611 /* CreationFirstStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationFirstStepView.swift; sourceTree = "<group>"; };
 		27D5D5662BBCFF7500746611 /* DarkGreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkGreenView.swift; sourceTree = "<group>"; };
 		27D5D5692BBD016200746611 /* Frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frame.swift; sourceTree = "<group>"; };
+		27D5D56B2BBE1DBB00746611 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		27D5D5702BBE380300746611 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		27D5D5732BBE38B800746611 /* Decimal+Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Currency.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +170,7 @@
 		272D31DD2BBA5060001D7875 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				27D5D56D2BBE367F00746611 /* Components */,
 				272D31DF2BBA50E9001D7875 /* App */,
 				272D31E32BBA5316001D7875 /* Intro */,
 				272D31E22BBA51D5001D7875 /* Home */,
@@ -274,6 +281,7 @@
 		272D31EE2BBA54BC001D7875 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				27D5D5722BBE38A900746611 /* Decimal */,
 				272D321E2BBB4F49001D7875 /* String */,
 				272D32022BBA7F31001D7875 /* UIStackView */,
 				272D31FF2BBA7EDA001D7875 /* UIView */,
@@ -594,6 +602,39 @@
 			path = Frame;
 			sourceTree = "<group>";
 		};
+		27D5D56D2BBE367F00746611 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				27D5D56F2BBE37F200746611 /* Card */,
+				27D5D56E2BBE368600746611 /* Progress */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		27D5D56E2BBE368600746611 /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				27D5D56B2BBE1DBB00746611 /* ProgressView.swift */,
+			);
+			path = Progress;
+			sourceTree = "<group>";
+		};
+		27D5D56F2BBE37F200746611 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				27D5D5702BBE380300746611 /* CardView.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		27D5D5722BBE38A900746611 /* Decimal */ = {
+			isa = PBXGroup;
+			children = (
+				27D5D5732BBE38B800746611 /* Decimal+Currency.swift */,
+			);
+			path = Decimal;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -681,10 +722,13 @@
 				272D32142BBB4899001D7875 /* HomeRouter.swift in Sources */,
 				272D32042BBA7F3A001D7875 /* UIStackView.swift in Sources */,
 				272D322B2BBB5149001D7875 /* IntroView.swift in Sources */,
+				27D5D5742BBE38B800746611 /* Decimal+Currency.swift in Sources */,
 				272D32492BBCBFDD001D7875 /* AchivementViewController.swift in Sources */,
 				272D324B2BBCC049001D7875 /* AchivementView.swift in Sources */,
+				27D5D56C2BBE1DBB00746611 /* ProgressView.swift in Sources */,
 				272D32292BBB5092001D7875 /* IntroViewController.swift in Sources */,
 				27D5D55F2BBCF8CF00746611 /* MyPigViewController.swift in Sources */,
+				27D5D5712BBE380300746611 /* CardView.swift in Sources */,
 				272D32222BBB4F88001D7875 /* Keys.swift in Sources */,
 				27D5D5282BBCE7B100746611 /* Goal+CoreDataClass.swift in Sources */,
 				27D5D5292BBCE7B100746611 /* Goal+CoreDataProperties.swift in Sources */,

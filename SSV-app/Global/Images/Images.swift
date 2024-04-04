@@ -14,4 +14,8 @@ public struct Images {
         static var bar = UIImage(named: "bar")
     }
     
+    struct Card {
+        static var plants = UIImage(named: "plants")
+    }
+    
 }
