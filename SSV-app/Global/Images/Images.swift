@@ -2,6 +2,12 @@ import UIKit
 
 public struct Images {
     
+    struct App {
+        static var close = UIImage(systemName: "xmark")?
+                                    .withTintColor(ColorTheme.secondaryTile,
+                                                   renderingMode: .alwaysOriginal)
+    }
+    
     struct Intro {
         static var thoughts = UIImage(named: "thoughts")
     }

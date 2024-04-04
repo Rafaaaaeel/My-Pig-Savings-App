@@ -23,4 +23,8 @@ public class AppRouter: AppRouterProtocol {
         currentViewController = controller
     }
     
+    public func dismiss() {
+        currentViewController?.dismiss(animated: true)
+    }
+    
 }

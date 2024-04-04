@@ -1,4 +1,3 @@
-import UIKit
 final internal class HomeRouter: AppRouter, HomeRouterInput {
     
     internal func presentAchivements() {
@@ -6,7 +5,7 @@ final internal class HomeRouter: AppRouter, HomeRouterInput {
     }
     
     internal func presentCreation() {
-        present(CreationViewController(), style: .overFullScreen)
+        present(CreationConfigurator.view(), style: .overFullScreen)
     }
     
 }

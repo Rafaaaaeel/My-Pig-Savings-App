@@ -3,7 +3,7 @@ import UIKit
 private typealias Text = Texts.Creation
 private typealias Image = Images.Creation
 
-final internal class CreationFirstStepView: GreenView {
+final internal class InfoView: GreenView {
 
     private lazy var contentStackView: UIStackView = {
         let stack = UIStackView()
@@ -60,7 +60,7 @@ final internal class CreationFirstStepView: GreenView {
     
 }
 
-extension CreationFirstStepView: CodableViews {
+extension InfoView: CodableViews {
     
     internal func configView() {
         roundConer()
@@ -93,7 +93,7 @@ extension CreationFirstStepView: CodableViews {
     
 }
 
-extension CreationFirstStepView {
+extension InfoView {
     
     @objc internal func didTouchSave() {
         
@@ -101,7 +101,7 @@ extension CreationFirstStepView {
     
 }
 
-extension CreationFirstStepView: MyPigTextfieldDelegate {
+extension InfoView: MyPigTextfieldDelegate {
     
     func didBeginEditing() {
         

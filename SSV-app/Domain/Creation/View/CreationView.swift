@@ -3,7 +3,7 @@ import UIKit
 final internal class CreationView: WhiteView {
     
     private lazy var cardView = CardView()
-    private lazy var firstStepView = CreationFirstStepView()
+    private lazy var firstStepView = InfoView()
     
     internal override init(frame: CGRect) {
         super.init(frame: frame)
@@ -22,7 +22,7 @@ extension CreationView: CodableViews {
     
     internal func setupContraints() {
         let constraints = [
-            cardView.topAnchor.constraint(equalToSystemSpacingBelow: safeAreaLayoutGuide.topAnchor, multiplier: 10),
+            cardView.topAnchor.constraint(equalToSystemSpacingBelow: safeAreaLayoutGuide.topAnchor, multiplier: 5),
             cardView.leadingAnchor.constraint(equalToSystemSpacingAfter: leadingAnchor, multiplier: 2),
             trailingAnchor.constraint(equalToSystemSpacingAfter: cardView.trailingAnchor, multiplier: 2),
             cardView.bottomAnchor.constraint(equalTo: firstStepView.topAnchor, constant: -20),
