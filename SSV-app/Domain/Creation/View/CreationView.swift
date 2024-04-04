@@ -22,10 +22,10 @@ extension CreationView: CodableViews {
     
     internal func setupContraints() {
         let constraints = [
-            cardView.topAnchor.constraint(equalToSystemSpacingBelow: safeAreaLayoutGuide.topAnchor, multiplier: 2),
+            cardView.topAnchor.constraint(equalToSystemSpacingBelow: safeAreaLayoutGuide.topAnchor, multiplier: 10),
             cardView.leadingAnchor.constraint(equalToSystemSpacingAfter: leadingAnchor, multiplier: 2),
             trailingAnchor.constraint(equalToSystemSpacingAfter: cardView.trailingAnchor, multiplier: 2),
-            cardView.bottomAnchor.constraint(equalTo: firstStepView.topAnchor, constant: -80),
+            cardView.bottomAnchor.constraint(equalTo: firstStepView.topAnchor, constant: -20),
             
             firstStepView.topAnchor.constraint(equalTo: topAnchor, constant: Frame.height / 3),
             firstStepView.leadingAnchor.constraint(equalTo: leadingAnchor),

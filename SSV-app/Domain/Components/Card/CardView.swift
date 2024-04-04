@@ -1,8 +1,11 @@
+// MARK: - Imports
 import UIKit
 
+// MARK: - Alias
 private typealias Image = Images.Card
 private typealias Text = Texts.Card
 
+// MARK: - View
 final internal class CardView: GreenView {
     
     private lazy var mainContentStackView: UIStackView = {
@@ -10,7 +13,6 @@ final internal class CardView: GreenView {
         stack.axis = .vertical
         stack.distribution = .fillEqually
         stack.spacing = 16
-//        stack.backgroundColor = .red
         return stack
     }()
     
@@ -19,14 +21,12 @@ final internal class CardView: GreenView {
         stack.axis = .vertical
         stack.distribution = .fillEqually
         stack.spacing = 4
-//        stack.backgroundColor = .red
         return stack
     }()
     
     private lazy var totalStackView: UIStackView = {
         let stack = UIStackView()
         stack.axis = .horizontal
-//        stack.backgroundColor = .red
         stack.distribution = .equalSpacing
         return stack
     }()
@@ -35,7 +35,6 @@ final internal class CardView: GreenView {
         let stack = UIStackView()
         stack.axis = .horizontal
         stack.distribution = .equalSpacing
-//        stack.backgroundColor = .red
         return stack
     }()
     
@@ -111,6 +110,7 @@ final internal class CardView: GreenView {
     
 }
 
+// MARK: - CodableViews
 extension CardView: CodableViews {
     
     internal func configView() {
