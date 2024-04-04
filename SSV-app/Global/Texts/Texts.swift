@@ -1,7 +1,7 @@
 public struct Texts {
 
     public struct Card {
-        static let TOTAL = "Total"
+        static let TOTAL = "Goal"
         static let SAVED = "Saved"
     }
     

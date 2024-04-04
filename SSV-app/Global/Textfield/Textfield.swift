@@ -1,9 +1,23 @@
 import UIKit
 
 public protocol MyPigTextfieldDelegate: AnyObject {
+    
     func didBeginEditing()
     func didReturn()
     func didTextFieldDidEndEditing(_ textfield: UITextField)
+    func didChangedText(_ textfield: UITextField)
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool
+    
+}
+
+extension MyPigTextfieldDelegate {
+    
+    func didBeginEditing() { }
+    func didReturn() { }
+    func didTextFieldDidEndEditing(_ textfield: UITextField) { }
+    func didChangedText(_ textfield: UITextField) { }
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool { true }
+    
 }
 
 public class MyPigTextfield: UITextField {
@@ -36,7 +50,7 @@ public class MyPigTextfield: UITextField {
         super.init(frame: frame)
         delegate = self
         textColor = ColorTheme.primaryAction
-        
+        addTarget(self, action: #selector(didChangedText), for: .editingChanged)
         addSubviews(lineView, placeholderText)
         
         NSLayoutConstraint.activate([
@@ -74,6 +88,13 @@ extension MyPigTextfield: UITextFieldDelegate {
         textfieldDelegate?.didTextFieldDidEndEditing(textField)
     }
     
+    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        return textfieldDelegate?.textField(textField, shouldChangeCharactersIn: range, replacementString: string) ?? false
+    }
+    
+    @objc internal func didChangedText(_ textfield: UITextField) {
+        textfieldDelegate?.didChangedText(textfield)
+    }
     
     private func placeholder(_ hasText: Bool) {
         placeholderText.isHidden = hasText

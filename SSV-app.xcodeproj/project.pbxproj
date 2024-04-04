@@ -47,6 +47,7 @@
 		27A937302BBE5D4B0014C445 /* CreationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A9372F2BBE5D4B0014C445 /* CreationRouter.swift */; };
 		27A937332BBE5F740014C445 /* Creator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A937322BBE5F740014C445 /* Creator.swift */; };
 		27A937352BBE60380014C445 /* String+Decimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A937342BBE60380014C445 /* String+Decimal.swift */; };
+		27A937372BBEE0450014C445 /* String+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A937362BBEE0450014C445 /* String+Formatting.swift */; };
 		27D5D5282BBCE7B100746611 /* Goal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5D5242BBCE7B100746611 /* Goal+CoreDataClass.swift */; };
 		27D5D5292BBCE7B100746611 /* Goal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5D5252BBCE7B100746611 /* Goal+CoreDataProperties.swift */; };
 		27D5D52A2BBCE7B100746611 /* Achieviment+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5D5262BBCE7B100746611 /* Achieviment+CoreDataClass.swift */; };
@@ -108,6 +109,7 @@
 		27A9372F2BBE5D4B0014C445 /* CreationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationRouter.swift; sourceTree = "<group>"; };
 		27A937322BBE5F740014C445 /* Creator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creator.swift; sourceTree = "<group>"; };
 		27A937342BBE60380014C445 /* String+Decimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Decimal.swift"; sourceTree = "<group>"; };
+		27A937362BBEE0450014C445 /* String+Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Formatting.swift"; sourceTree = "<group>"; };
 		27D5D5242BBCE7B100746611 /* Goal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goal+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		27D5D5252BBCE7B100746611 /* Goal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goal+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		27D5D5262BBCE7B100746611 /* Achieviment+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achieviment+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
@@ -424,6 +426,7 @@
 				272D321F2BBB4F5C001D7875 /* Optional+String.swift */,
 				272D32362BBCA5F1001D7875 /* String.swift */,
 				27A937342BBE60380014C445 /* String+Decimal.swift */,
+				27A937362BBEE0450014C445 /* String+Formatting.swift */,
 			);
 			path = String;
 			sourceTree = "<group>";
@@ -801,6 +804,7 @@
 				272D32352BBB6280001D7875 /* Regex.swift in Sources */,
 				272D32392BBCACAF001D7875 /* IntroInteractor.swift in Sources */,
 				272D32402BBCB490001D7875 /* Intro+Protocol.swift in Sources */,
+				27A937372BBEE0450014C445 /* String+Formatting.swift in Sources */,
 				272D31FA2BBA582B001D7875 /* HomeView.swift in Sources */,
 				272D31F82BBA5802001D7875 /* HomeViewController.swift in Sources */,
 				27A9372A2BBE51ED0014C445 /* CreationConfigurator.swift in Sources */,

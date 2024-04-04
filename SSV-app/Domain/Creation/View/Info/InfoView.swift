@@ -106,10 +106,16 @@ extension InfoView {
 
 extension InfoView: MyPigTextfieldDelegate {
     
-    func didBeginEditing() { }
+    func didChangedText(_ textfield: UITextField) {
+        guard let text = textfield.text,  textfield.keyboardType == .numberPad else { return }
+        
+        textfield.text = text.currencyInputFormatting()
+    }
     
-    func didReturn() { }
-    
-    func didTextFieldDidEndEditing(_ textfield: UITextField) { }
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard let text = textField.text, textField.keyboardType == .numberPad else { return true }
+        
+        return string.isEmpty ? true : Regex.validate(input: text + string, .onlyToSixTeenNumbers)
+    }
     
 }
