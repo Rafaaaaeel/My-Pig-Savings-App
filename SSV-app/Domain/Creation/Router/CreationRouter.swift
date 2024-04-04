@@ -4,7 +4,7 @@ internal protocol CreationRouterInput: AppRouterProtocol {
 
 final internal class CreationRouter: AppRouter, CreationRouterInput {
     
-    func close() {
+    internal func close() {
         dismiss()
     }
     

@@ -3,7 +3,7 @@ import UIKit
 final internal class CreationView: WhiteView {
     
     private lazy var cardView = CardView()
-    private lazy var firstStepView = InfoView()
+    private lazy var infoView = InfoView()
     
     internal override init(frame: CGRect) {
         super.init(frame: frame)
@@ -17,7 +17,7 @@ final internal class CreationView: WhiteView {
 extension CreationView: CodableViews {
     
     internal func setupHiearchy() {
-        addSubviews(cardView, firstStepView)
+        addSubviews(cardView, infoView)
     }
     
     internal func setupContraints() {
@@ -25,12 +25,12 @@ extension CreationView: CodableViews {
             cardView.topAnchor.constraint(equalToSystemSpacingBelow: safeAreaLayoutGuide.topAnchor, multiplier: 5),
             cardView.leadingAnchor.constraint(equalToSystemSpacingAfter: leadingAnchor, multiplier: 2),
             trailingAnchor.constraint(equalToSystemSpacingAfter: cardView.trailingAnchor, multiplier: 2),
-            cardView.bottomAnchor.constraint(equalTo: firstStepView.topAnchor, constant: -20),
+            cardView.bottomAnchor.constraint(equalTo: infoView.topAnchor, constant: -20),
             
-            firstStepView.topAnchor.constraint(equalTo: topAnchor, constant: Frame.height / 3),
-            firstStepView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            firstStepView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            firstStepView.bottomAnchor.constraint(equalTo: bottomAnchor)
+            infoView.topAnchor.constraint(equalTo: topAnchor, constant: Frame.height / 3),
+            infoView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            infoView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            infoView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ]
         
         NSLayoutConstraint.activate(constraints)

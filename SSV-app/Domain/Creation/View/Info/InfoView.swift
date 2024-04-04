@@ -5,6 +5,8 @@ private typealias Image = Images.Creation
 
 final internal class InfoView: GreenView {
 
+    internal var model = Creator()
+    
     private lazy var contentStackView: UIStackView = {
         let stack = UIStackView()
         stack.axis = .vertical
@@ -36,11 +38,11 @@ final internal class InfoView: GreenView {
         return textfield
     }()
     
-    
     private lazy var goalTextfield: MyPigTextfield = {
         let textfield = MyPigTextfield()
         textfield.textfieldDelegate = self
         textfield.placeholder = Text.VALUE
+        textfield.keyboardType = .numberPad
         return textfield
     }()
     
@@ -96,23 +98,18 @@ extension InfoView: CodableViews {
 extension InfoView {
     
     @objc internal func didTouchSave() {
-        
+        model.name = nameTextfield.text.orEmpty
+        model.total = goalTextfield.text.orEmpty.toDecimal
     }
     
 }
 
 extension InfoView: MyPigTextfieldDelegate {
     
-    func didBeginEditing() {
-        
-    }
+    func didBeginEditing() { }
     
-    func didReturn() {
-        
-    }
+    func didReturn() { }
     
-    func didTextFieldDidEndEditing(_ textfield: UITextField) {
-        
-    }
+    func didTextFieldDidEndEditing(_ textfield: UITextField) { }
     
 }
