@@ -1,5 +1,10 @@
 public struct Texts {
 
+    public struct Card {
+        static let TOTAL = "Total"
+        static let SAVED = "Saved"
+    }
+    
     public struct Intro {
         static let NAME = "Name"
         static let GET_STARTED = "Get Started"
