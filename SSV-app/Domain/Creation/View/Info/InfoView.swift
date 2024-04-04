@@ -3,7 +3,7 @@ import UIKit
 private typealias Text = Texts.Creation
 private typealias Image = Images.Creation
 
-protocol InfoViewDelegate: AnyObject {
+internal protocol InfoViewDelegate: AnyObject {
     
     func didChangeName(_ text: String)
     func didChangeValue(_ text: String)
