@@ -49,7 +49,7 @@ public class MyPigTextfield: UITextField {
     override init(frame: CGRect) {
         super.init(frame: frame)
         delegate = self
-        textColor = ColorTheme.primaryAction
+        textColor = ColorTheme.primaryTitle
         addTarget(self, action: #selector(didChangedText), for: .editingChanged)
         addSubviews(lineView, placeholderText)
         

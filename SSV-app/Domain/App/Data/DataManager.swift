@@ -1,42 +1,34 @@
 import Foundation
-import CoreData
-
-protocol DataManagerProtocol {
+public protocol DataManagerProtocol {
     
-    func saveContext()
+    var errorHandler: (() -> Void)? { get set }
     
+//    func createGoal(name: String, total: Decimal)
 }
 
 public class DataManager: DataManagerProtocol {
     
-    static let shared = DataManager()
+    public var errorHandler: (() -> Void)? = nil
     
-    private init() { }
+    public static let shared = DataManager()
     
-    lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "MyPigSavings")
-        container.loadPersistentStores { (storeDescription, error) in
-            if let error = error as NSError? {
-                fatalError("Unresolved error \(error), \(error.userInfo)")
-            }
-        }
-        return container
-    }()
+    private let container: TransactionContainerProtocol
     
-    var viewContext: NSManagedObjectContext {
-        return persistentContainer.viewContext
+    private init<Container: TransactionContainerProtocol>(container: Container = TransactionContainer.shared) {
+        self.container = container
     }
     
-    public func saveContext() {
-        let context = persistentContainer.viewContext
-        if context.hasChanges {
-            do {
-                try context.save()
-            } catch {
-                let nserror = error as NSError
-                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-            }
-        }
-    }
+//    public func createGoal(name: String, total: Decimal) {
+//        let goal = Goal(context: container.viewContext)
+//        goal.goal = (total) as NSDecimalNumber
+//        goal.name = name
+//        
+//        do {
+//            try container.saveContext()
+//        } catch {
+//            errorHandler?()
+//        }
+//    }
+//    
     
 }

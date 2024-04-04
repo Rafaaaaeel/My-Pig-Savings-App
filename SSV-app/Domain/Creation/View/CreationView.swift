@@ -1,5 +1,11 @@
 import UIKit
 
+internal protocol CreationViewDelegate: AnyObject {
+    
+    func didTouchSave(_ model: Creator)
+    
+}
+
 final internal class CreationView: WhiteView {
     
     private lazy var cardView = CardView()
@@ -7,6 +13,8 @@ final internal class CreationView: WhiteView {
     
     private var initialTouchPoint: CGPoint = CGPoint(x: 0,y: 0)
     private var isDragging = false
+    
+    internal weak var delegate: CreationViewDelegate?
     
     internal override init(frame: CGRect) {
         super.init(frame: frame)
@@ -79,7 +87,7 @@ extension CreationView {
 extension CreationView: InfoViewDelegate {
     
     func didTouchSave(_ model: Creator) {
-        
+        delegate?.didTouchSave(model)
     }
     
     func didChangeName(_ text: String) {
