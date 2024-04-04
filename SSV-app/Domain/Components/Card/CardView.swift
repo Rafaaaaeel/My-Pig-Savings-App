@@ -8,18 +8,6 @@ private typealias Text = Texts.Card
 // MARK: - View
 final internal class CardView: GreenView {
     
-    internal var totalText: String = .empty {
-        didSet {
-            totalValueLabel.text = totalText.isEmpty ? Text.ZERO_MONEY : totalText
-        }
-    }
-    
-    internal var nameText: String = .empty {
-        didSet {
-            nameLabel.text = nameText.isEmpty ? Text.NAME : nameText
-        }
-    }
-    
     private lazy var mainContentStackView: UIStackView = {
         let stack = UIStackView()
         stack.axis = .vertical
@@ -112,6 +100,18 @@ final internal class CardView: GreenView {
         imageView.image = Image.plants
         return imageView
     }()
+    
+    internal var totalText: String = .empty {
+        didSet {
+            totalValueLabel.text = totalText.isEmpty ? Text.ZERO_MONEY : totalText
+        }
+    }
+    
+    internal var nameText: String = .empty {
+        didSet {
+            nameLabel.text = nameText.isEmpty ? Text.NAME : nameText
+        }
+    }
     
     internal override init(frame: CGRect) {
         super.init(frame: frame)
