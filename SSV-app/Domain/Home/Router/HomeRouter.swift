@@ -1,7 +1,7 @@
 final internal class HomeRouter: AppRouter, HomeRouterInput {
     
     internal func presentAchivements() {
-        print("a")
+        moveTo(AchivementViewController())
     }
     
     internal func presentCreation() {
