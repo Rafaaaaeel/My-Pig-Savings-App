@@ -7,8 +7,35 @@ final internal class CardView: GreenView {
     
     private lazy var mainContentStackView: UIStackView = {
         let stack = UIStackView()
+        stack.axis = .vertical
+        stack.distribution = .fillEqually
+        stack.spacing = 16
+//        stack.backgroundColor = .red
+        return stack
+    }()
+    
+    private lazy var centerContentStackView: UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .vertical
+        stack.distribution = .fillEqually
+        stack.spacing = 4
+//        stack.backgroundColor = .red
+        return stack
+    }()
+    
+    private lazy var totalStackView: UIStackView = {
+        let stack = UIStackView()
         stack.axis = .horizontal
-        
+//        stack.backgroundColor = .red
+        stack.distribution = .equalSpacing
+        return stack
+    }()
+    
+    private lazy var savedStackView: UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .horizontal
+        stack.distribution = .equalSpacing
+//        stack.backgroundColor = .red
         return stack
     }()
     
@@ -17,8 +44,9 @@ final internal class CardView: GreenView {
     private lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 1
+        label.text = "Car"
         label.textColor = ColorTheme.primaryAction
-        label.font = Fonts.subTitle
+        label.font = Fonts.sfBold
         return label
     }()
     
@@ -27,33 +55,35 @@ final internal class CardView: GreenView {
         label.text = Text.TOTAL
         label.numberOfLines = 1
         label.textColor = ColorTheme.primaryAction
-        label.font = Fonts.subTitle
+        label.font = Fonts.sfRegular
         return label
     }()
     
     private lazy var totalValueLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 1
+        label.text = "R$ 1,00"
         label.textColor = ColorTheme.primaryTitle
-        label.font = Fonts.subTitle
+        label.font = Fonts.sfRegular
         return label
     }()
     
     private lazy var savedLabel: UILabel = {
         let label = UILabel()
         label.text = Text.SAVED
-        label.isHidden = true
+//        label.isHidden = true
         label.numberOfLines = 1
         label.textColor = ColorTheme.primaryAction
-        label.font = Fonts.subTitle
+        label.font = Fonts.sfRegular
         return label
     }()
     
     private lazy var savedValueLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 1
+        label.text = "R$ 2,00"
         label.textColor = ColorTheme.primaryTitle
-        label.font = Fonts.subTitle
+        label.font = Fonts.sfRegular
         return label
     }()
     
@@ -81,7 +111,10 @@ extension CardView: CodableViews {
     }
     
     internal func setupHiearchy() {
-        mainContentStackView.addArrangedSubviews(totalLabel, totalValueLabel)
+        totalStackView.addArrangedSubviews(totalLabel, totalValueLabel)
+        savedStackView.addArrangedSubviews(savedLabel, savedValueLabel)
+        centerContentStackView.addArrangedSubviews(totalStackView, savedStackView)
+        mainContentStackView.addArrangedSubviews(nameLabel, centerContentStackView)
         addSubviews(progressView, mainContentStackView, plantsImageView)
     }
     
@@ -89,10 +122,11 @@ extension CardView: CodableViews {
         let constraints = [
             progressView.centerYAnchor.constraint(equalTo: centerYAnchor),
             progressView.leadingAnchor.constraint(lessThanOrEqualToSystemSpacingAfter: leadingAnchor, multiplier: 10),
-            mainContentStackView.topAnchor.constraint(equalTo: progressView.topAnchor),
-            mainContentStackView.leadingAnchor.constraint(equalTo: progressView.trailingAnchor),
-            mainContentStackView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            mainContentStackView.trailingAnchor.constraint(equalTo: plantsImageView.leadingAnchor),
+            
+            mainContentStackView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            mainContentStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 140),
+            mainContentStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -80),
+            
             plantsImageView.bottomAnchor.constraint(equalTo: bottomAnchor),
             plantsImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
         ]
