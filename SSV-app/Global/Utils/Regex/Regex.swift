@@ -1,7 +1,7 @@
 import Foundation
 
 public enum RegexPatterns: String {
-    case onlyCharactersToTen = "^[a-zA-Z]+(\\s[a-zA-Z]+)*$"
+    case onlyCharactersToTen = "^[a-zA-Z\\s]{0,9}[a-zA-Z]$"
     case onlyToSixTeenNumbers = "^.{0,16}$"
 }
 
