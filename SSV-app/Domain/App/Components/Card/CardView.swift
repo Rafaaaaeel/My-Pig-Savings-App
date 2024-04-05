@@ -127,7 +127,7 @@ extension CardView: CodableViews {
     
     internal func configView() {
         layer.cornerRadius = 25
-        progressView.percentage = 0.0
+        progressView.percentage = 0.5
     }
     
     internal func setupHiearchy() {

@@ -90,7 +90,7 @@ extension IntroView: CodableViews {
     internal func setupContraints() {
         let padding: CGFloat = 48
         
-        topConstraint = contentStackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 50)
+        topConstraint = contentStackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 1)
         
         let constraints = [
             topConstraint,
@@ -132,7 +132,7 @@ extension IntroView {
     private func animate() {
         DispatchQueue.main.async { [weak self] in
             UIView.animate(withDuration: 0.2) {
-                self?.topConstraint.constant = self?.topConstraint.constant ?? 0 > 0 ? -40 : 150
+                self?.topConstraint.constant = self?.topConstraint.constant ?? 0 > 0 ? -80 : 1
             }
         }
     }

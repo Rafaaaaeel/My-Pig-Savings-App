@@ -16,7 +16,7 @@ public class TransactionContainer: TransactionContainerProtocol {
     private init() { }
     
     lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "MyPigSavings")
+        let container = NSPersistentContainer(name: "Storage")
         container.loadPersistentStores { (storeDescription, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")

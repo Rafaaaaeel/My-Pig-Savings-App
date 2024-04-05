@@ -110,6 +110,7 @@ extension InfoView {
     @objc internal func didTouchSave() {
         model.name = nameTextfield.text.orEmpty
         model.total = goalTextfield.text.orEmpty.toDecimal
+        guard isTextFieldsValid() else { return }
         delegate?.didTouchSave(model)
     }
     
@@ -133,21 +134,25 @@ extension InfoView: MyPigTextfieldDelegate {
         
         let newText = text + string
         guard textField.keyboardType == .numberPad else {
-            return string.isEmpty ? true : validateUsername(newText)
+            return string.isEmpty ? true : isUserNameValid(newText)
         }
         
-        return string.isEmpty ? true : validateCurrency(newText)
+        return string.isEmpty ? true : isCurrencyValid(newText)
     }
     
 }
 
 extension InfoView {
     
-    private func validateUsername(_ input: String) -> Bool {
+    private func isTextFieldsValid() -> Bool {
+        return goalTextfield.text.orEmpty.isNotEmpty && nameTextfield.text.orEmpty.isNotEmpty
+    }
+    
+    private func isUserNameValid(_ input: String) -> Bool {
         return Regex.validate(input: input, .onlyCharactersToTen)
     }
     
-    private func validateCurrency(_ input: String) -> Bool {
+    private func isCurrencyValid(_ input: String) -> Bool {
         return Regex.validate(input: input, .onlyToSixTeenNumbers)
     }
     

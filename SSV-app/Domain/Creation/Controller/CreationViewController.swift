@@ -17,13 +17,14 @@ final internal class CreationViewController: MyPigViewController {
     
     required init?(coder: NSCoder) { nil }
         
-    override func viewDidLoad() {
+    internal override func viewDidLoad() {
         super.viewDidLoad()
         configNav()
     }
     
-    override func loadView() {
+    internal override func loadView() {
         super.loadView()
+        creationView.delegate = self
         self.view = creationView
     }
     
@@ -38,15 +39,15 @@ final internal class CreationViewController: MyPigViewController {
 
 extension CreationViewController: CreationViewDelegate {
     
-    func didTouchSave(_ model: Creator) {
-        
+    internal func didTouchSave(_ model: Creator) {
+        interactor.didSave(model)
     }
     
 }
 
 extension CreationViewController: CloseButtonDelegate {
     
-    func didTouchButton() {
+    internal func didTouchButton() {
         router.close()
     }
     

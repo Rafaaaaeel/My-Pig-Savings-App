@@ -1,20 +1,25 @@
-internal protocol CreationInteractorInput {
+final internal class CreationInteractor: CreationInteractorInput {
     
-    func didSave(_ model: Creator)
+    private var goalWorker: GoalWorkerInput
+    
+    internal init<GoalWorker: GoalWorkerInput>(goalWorker: GoalWorker) {
+        self.goalWorker = goalWorker
+        self.goalWorker.output = self
+    }
+        
+    internal func didSave(_ model: Creator) {
+        
+    }
     
 }
 
-final internal class CreationInteractor: CreationInteractorInput {
+extension CreationInteractor: GoalWorkerOutput {
     
-    
-    private let dataManager: DataManagerProtocol
-    
-    internal init<Manager: DataManagerProtocol>(dataManager: Manager = DataManager.shared) {
-        self.dataManager = dataManager
+    internal func saveGoalSuccessed() {
+        
     }
     
-    
-    func didSave(_ model: Creator) {
+    internal func saveGoalFailed() {
         
     }
     
