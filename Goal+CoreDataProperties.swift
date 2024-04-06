@@ -2,7 +2,7 @@
 //  Goal+CoreDataProperties.swift
 //  SSV-app
 //
-//  Created by Rafael Oliveira on 02/04/24.
+//  Created by Rafael Oliveira on 05/04/24.
 //
 //
 
@@ -20,7 +20,7 @@ extension Goal {
     @NSManaged public var isOnGoing: Bool
     @NSManaged public var name: String?
     @NSManaged public var value: NSDecimalNumber?
-    @NSManaged public var achieviment: Achieviment?
+    @NSManaged public var createDate: Date?
 
 }
 

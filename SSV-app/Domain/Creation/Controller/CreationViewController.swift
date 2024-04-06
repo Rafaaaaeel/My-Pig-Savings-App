@@ -37,6 +37,18 @@ final internal class CreationViewController: MyPigViewController {
     
 }
 
+extension CreationViewController: CreationViewControllerInput {
+    
+    func didSucceeded() {
+        router.close()
+    }
+    
+    func didFailed() {
+        print("ERROR =======> ERROR")
+    }
+    
+}
+
 extension CreationViewController: CreationViewDelegate {
     
     internal func didTouchSave(_ model: Creator) {

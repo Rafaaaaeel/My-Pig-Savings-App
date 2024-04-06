@@ -1,26 +1,31 @@
+import Foundation
+
+
 final internal class CreationInteractor: CreationInteractorInput {
     
-    private var goalWorker: GoalWorkerInput
+    private var worker: CreationWorkerInput
+    private let presenter: CreationPresenterInput
     
-    internal init<GoalWorker: GoalWorkerInput>(goalWorker: GoalWorker) {
-        self.goalWorker = goalWorker
-        self.goalWorker.output = self
+    internal init<Worker: CreationWorkerInput, Presenter: CreationPresenterInput>(worker: Worker, presenter: Presenter) {
+        self.worker = worker
+        self.presenter = presenter
+        self.worker.output = self
     }
         
     internal func didSave(_ model: Creator) {
-        
+        worker.createGoal(name: model.name, total: model.total)
     }
     
 }
 
-extension CreationInteractor: GoalWorkerOutput {
+extension CreationInteractor: CreationWorkerOutput {
     
-    internal func saveGoalSuccessed() {
-        
+    internal func createGoalSucceeded() {
+        presenter.didSucceeded()
     }
     
-    internal func saveGoalFailed() {
-        
+    internal func createGoalFailed() {
+        presenter.didFailed()
     }
     
 }
