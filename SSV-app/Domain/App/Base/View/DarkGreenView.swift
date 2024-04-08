@@ -1,7 +1,7 @@
 import UIKit
 
 
-public class DarkGreenView: UIView {
+public class DarkGreenView: StateView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)

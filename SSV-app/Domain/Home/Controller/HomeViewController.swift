@@ -3,20 +3,26 @@ import UIKit
 
 final internal class HomeViewController: MyPigViewController {
     
-    private lazy var homeView = HomeView(user: session.userName)
-    
+    private let name: String
     private let router: HomeRouterInput
-    private let session: SessionManagerProtocol
+    private let interactor: HomeInteractorInput
     
-    internal init<Router: HomeRouterInput, Session: SessionManagerProtocol>(router: Router, session: Session = SessionManager.shared) {
+    private lazy var homeView = HomeView(user: name)
+
+    internal init<Router: HomeRouterInput, Interactor: HomeInteractorInput>(name: String, router: Router, interactor: Interactor) {
+        self.name = name
         self.router = router
-        self.session = session
+        self.interactor = interactor
         super.init(nibName: nil, bundle: nil)
         self.router.currentViewController = self
-        self.session.logged()
     }
     
     required init?(coder: NSCoder) { nil }
+    
+    internal override func viewDidLoad() {
+        super.viewDidLoad()
+        interactor.didLoad()
+    }
     
     internal override func loadView() {
         super.loadView()
@@ -28,12 +34,24 @@ final internal class HomeViewController: MyPigViewController {
 
 extension HomeViewController: HomeViewDelegate {
     
+    internal func didTouchShowGoals() {
+        router.presentGoals()
+    }
+    
     internal func didTouchCreate() {
         router.presentCreation()
     }
     
     internal func didTouchSummary() {
         router.presentAchivements()
+    }
+    
+}
+
+extension HomeViewController: HomeViewControllerInput {
+    
+    internal func load(_ state: StateView.State) {
+        homeView.state = state
     }
     
 }

@@ -10,11 +10,12 @@ private typealias Text = Texts.Home
 internal protocol HomeViewDelegate: AnyObject {
     func didTouchCreate()
     func didTouchSummary()
+    func didTouchShowGoals()
 }
 
 // MARK: - View
 final internal class HomeView: GreenView {
-    
+
     private let userName: String
     
     private lazy var contentStackView: UIStackView = {
@@ -66,7 +67,16 @@ final internal class HomeView: GreenView {
     private lazy var createGoalButton: MyPigButton = {
         let button = MyPigButton(type: .primary)
         button.title = Text.NEW_GOAL
+        button.isHidden = true
         button.addTarget(self, action: #selector(didTouchCreate), for: .touchUpInside)
+        return button
+    }()
+    
+    private lazy var showGoalsButton: MyPigButton = {
+        let button = MyPigButton(type: .primary)
+        button.title = Text.GOALS
+        button.isHidden = true
+        button.addTarget(self, action: #selector(didTouchShowGoals), for: .touchUpInside)
         return button
     }()
     
@@ -86,6 +96,14 @@ final internal class HomeView: GreenView {
     }
     
     required init?(coder: NSCoder) { nil }
+    
+    override func loadEmpty() {
+        createGoalButton.isHidden = false
+    }
+    
+    override func loadNonEmpty() {
+        showGoalsButton.isHidden = false
+    }
 
 }
 
@@ -100,6 +118,10 @@ extension HomeView {
         delegate?.didTouchSummary()
     }
     
+    @objc internal func didTouchShowGoals() {
+        delegate?.didTouchShowGoals()
+    }
+    
 }
 
 // MARK: - CodableView
@@ -108,7 +130,7 @@ extension HomeView: CodableViews {
     internal func setupHiearchy() {
         textStackView.addArrangedSubviews(helloLabel, nameLabel)
         topLeadingStackView.addArrangedSubviews(textStackView)
-        contentStackView.addArrangedSubviews(topLeadingStackView, pigImageView, createGoalButton, achivementsButton)
+        contentStackView.addArrangedSubviews(topLeadingStackView, pigImageView, showGoalsButton, createGoalButton, achivementsButton)
         addSubviews(contentStackView)
     }
     

@@ -6,6 +6,9 @@ public struct Images {
         static var close = UIImage(systemName: "xmark")?
                                     .withTintColor(ColorTheme.secondaryTile,
                                                    renderingMode: .alwaysOriginal)
+        static var arrow_left = UIImage(systemName: "arrow.left")?
+                                    .withTintColor(ColorTheme.secondaryTile,
+                                                   renderingMode: .alwaysOriginal)
     }
     
     struct Intro {

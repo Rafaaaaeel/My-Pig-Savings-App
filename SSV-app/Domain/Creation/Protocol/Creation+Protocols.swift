@@ -32,7 +32,6 @@ internal protocol CreationWorkerOutput: GoalCreateFetcherOutput { }
 internal protocol CreationWorkerInput: GoalCreateFetcherInput {
     
     var container: TransactionContainerProtocol { get }
-    var output: GoalCreateFetcherOutput? { get set }
 
 }
 

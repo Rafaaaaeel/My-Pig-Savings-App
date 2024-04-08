@@ -19,6 +19,7 @@ public struct Texts {
         static let NEW_GOAL = "NEW GOAL"
         static let ACHIEVEMENT = "ACHIEVEMENT"
         static let HELLO = "Hello,"
+        static let GOALS = "MY GOALS"
     }
     
     public struct Creation {

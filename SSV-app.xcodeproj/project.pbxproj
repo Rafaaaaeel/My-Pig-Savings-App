@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2701438F2BC46BD4007E4ED2 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2701438E2BC46BD4007E4ED2 /* HomeInteractor.swift */; };
+		270143912BC46C0A007E4ED2 /* HomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270143902BC46C0A007E4ED2 /* HomeWorker.swift */; };
+		270143952BC477F9007E4ED2 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270143942BC477F9007E4ED2 /* HomePresenter.swift */; };
+		270143972BC47FEB007E4ED2 /* StateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270143962BC47FEB007E4ED2 /* StateView.swift */; };
+		270143992BC4829C007E4ED2 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270143982BC4829C007E4ED2 /* BackButton.swift */; };
 		272D31C92BBA4F7D001D7875 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D31C82BBA4F7D001D7875 /* AppDelegate.swift */; };
 		272D31CB2BBA4F7D001D7875 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D31CA2BBA4F7D001D7875 /* SceneDelegate.swift */; };
 		272D31D52BBA4F7E001D7875 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 272D31D42BBA4F7E001D7875 /* Base */; };
@@ -75,6 +80,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2701438E2BC46BD4007E4ED2 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		270143902BC46C0A007E4ED2 /* HomeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWorker.swift; sourceTree = "<group>"; };
+		270143942BC477F9007E4ED2 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		270143962BC47FEB007E4ED2 /* StateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateView.swift; sourceTree = "<group>"; };
+		270143982BC4829C007E4ED2 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		272D31C52BBA4F7D001D7875 /* SSV-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SSV-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		272D31C82BBA4F7D001D7875 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		272D31CA2BBA4F7D001D7875 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -155,6 +165,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2701438D2BC46BC9007E4ED2 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				2701438E2BC46BD4007E4ED2 /* HomeInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		270143922BC46C3B007E4ED2 /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				270143902BC46C0A007E4ED2 /* HomeWorker.swift */,
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
+		270143932BC475FA007E4ED2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				270143942BC477F9007E4ED2 /* HomePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2701439A2BC48370007E4ED2 /* Goals */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Goals;
+			sourceTree = "<group>";
+		};
 		272D31BC2BBA4F7D001D7875 = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +242,7 @@
 				272D31DF2BBA50E9001D7875 /* App */,
 				272D31E32BBA5316001D7875 /* Intro */,
 				272D31E22BBA51D5001D7875 /* Home */,
+				2701439A2BC48370007E4ED2 /* Goals */,
 				272D31E12BBA5117001D7875 /* Achievement */,
 				272D31E42BBA5324001D7875 /* Creation */,
 				272D31DE2BBA506F001D7875 /* Resources */,
@@ -256,6 +298,9 @@
 		272D31E22BBA51D5001D7875 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				270143932BC475FA007E4ED2 /* Presenter */,
+				270143922BC46C3B007E4ED2 /* Worker */,
+				2701438D2BC46BC9007E4ED2 /* Interactor */,
 				272D32152BBB49B2001D7875 /* Protocols */,
 				272D323C2BBCB070001D7875 /* Configurator */,
 				272D321A2BBB4C10001D7875 /* Controller */,
@@ -503,6 +548,7 @@
 				272D324C2BBCC0F5001D7875 /* WhiteView.swift */,
 				272D32312BBB5547001D7875 /* GreenView.swift */,
 				27D5D5662BBCFF7500746611 /* DarkGreenView.swift */,
+				270143962BC47FEB007E4ED2 /* StateView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -574,6 +620,7 @@
 			isa = PBXGroup;
 			children = (
 				27A9372C2BBE5B8B0014C445 /* CloseButton.swift */,
+				270143982BC4829C007E4ED2 /* BackButton.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -894,7 +941,9 @@
 				272D31ED2BBA543D001D7875 /* MyPigColors.swift in Sources */,
 				272D32322BBB5547001D7875 /* GreenView.swift in Sources */,
 				27A937352BBE60380014C445 /* String+Decimal.swift in Sources */,
+				2701438F2BC46BD4007E4ED2 /* HomeInteractor.swift in Sources */,
 				272D31C92BBA4F7D001D7875 /* AppDelegate.swift in Sources */,
+				270143952BC477F9007E4ED2 /* HomePresenter.swift in Sources */,
 				272D32142BBB4899001D7875 /* HomeRouter.swift in Sources */,
 				272D32042BBA7F3A001D7875 /* UIStackView.swift in Sources */,
 				272D322B2BBB5149001D7875 /* IntroView.swift in Sources */,
@@ -911,7 +960,9 @@
 				272D32222BBB4F88001D7875 /* Keys.swift in Sources */,
 				27D5D5652BBCFF3700746611 /* InfoView.swift in Sources */,
 				27D5D5592BBCEED100746611 /* CreationView.swift in Sources */,
+				270143972BC47FEB007E4ED2 /* StateView.swift in Sources */,
 				272D32532BBCDE9F001D7875 /* Storage.xcdatamodeld in Sources */,
+				270143992BC4829C007E4ED2 /* BackButton.swift in Sources */,
 				272D31F62BBA5739001D7875 /* MyPigButton.swift in Sources */,
 				27D5D55B2BBCEF0B00746611 /* CreationViewController.swift in Sources */,
 				272D32372BBCA5F1001D7875 /* String.swift in Sources */,
@@ -922,6 +973,7 @@
 				272D31FE2BBA5F43001D7875 /* CodableView.swift in Sources */,
 				272D320A2BBA8787001D7875 /* Texts.swift in Sources */,
 				272D31E72BBA5351001D7875 /* AppConfigurator.swift in Sources */,
+				270143912BC46C0A007E4ED2 /* HomeWorker.swift in Sources */,
 				272D32352BBB6280001D7875 /* Regex.swift in Sources */,
 				27A9373F2BBF56A10014C445 /* Creation+Protocols.swift in Sources */,
 				272D32392BBCACAF001D7875 /* IntroInteractor.swift in Sources */,

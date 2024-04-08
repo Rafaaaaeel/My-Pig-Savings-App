@@ -55,38 +55,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D6CCA98C-A932-4568-A6C0-4E5C1DF96B3E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SSV-app/Domain/Creation/Interactor/CreationInteractor.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "createGoalSucceeded()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3EE599DD-FC35-4558-AD1E-55AE855C9D3B"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SSV-app/Domain/Creation/Interactor/CreationInteractor.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "createGoalFailed()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "0DF30F5D-CC32-4E3F-A7D1-4CC0858F9E66"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -114,82 +82,6 @@
             endingLineNumber = "54"
             landmarkName = "didTouchSave(_:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3C4933E5-0A8C-41B9-9E8C-C3420F5B424C"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SSV-app/Domain/App/CoreData/Fetchers/Goal/Create/GoalCreateFetcher.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "save(successHanlder:errorHandler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5BA46CB5-6A53-4BB3-938B-BD791659384A"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SSV-app/Domain/App/CoreData/Fetchers/Goal/Create/GoalCreateFetcher.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "createGoal(name:total:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "5BA46CB5-6A53-4BB3-938B-BD791659384A - 50266118e9371754"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SSV_app.GoalCreateFetcherInput.createGoal(name: Swift.String, total: __C.NSDecimal) -&gt; ()"
-                  moduleName = "SSV-app"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rafaeloliveira/Developer/Mobile/iOS/Projects/SSV-app/SSV-app/Domain/App/CoreData/Fetchers/Goal/Create/GoalCreateFetcher.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28">
-               </Location>
-               <Location
-                  uuid = "5BA46CB5-6A53-4BB3-938B-BD791659384A - 9587b77b815bdf94"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in SSV_app.GoalCreateFetcherInput.createGoal(name: Swift.String, total: __C.NSDecimal) -&gt; ()"
-                  moduleName = "SSV-app"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rafaeloliveira/Developer/Mobile/iOS/Projects/SSV-app/SSV-app/Domain/App/CoreData/Fetchers/Goal/Create/GoalCreateFetcher.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28">
-               </Location>
-               <Location
-                  uuid = "5BA46CB5-6A53-4BB3-938B-BD791659384A - c48ff69ee9127193"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 () -&gt; () in SSV_app.GoalCreateFetcherInput.createGoal(name: Swift.String, total: __C.NSDecimal) -&gt; ()"
-                  moduleName = "SSV-app"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rafaeloliveira/Developer/Mobile/iOS/Projects/SSV-app/SSV-app/Domain/App/CoreData/Fetchers/Goal/Create/GoalCreateFetcher.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

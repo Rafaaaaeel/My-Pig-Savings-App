@@ -1,7 +1,7 @@
 import UIKit
 
 
-public class WhiteView: UIView {
+public class WhiteView: StateView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)

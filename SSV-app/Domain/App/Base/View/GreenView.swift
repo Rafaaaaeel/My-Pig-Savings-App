@@ -1,7 +1,7 @@
 import UIKit
 
 
-public class GreenView: UIView {
+public class GreenView: StateView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -21,4 +21,5 @@ public class GreenView: UIView {
         layer.cornerRadius = 30
         layer.maskedCorners = [.layerMinXMinYCorner]
     }
+    
 }
