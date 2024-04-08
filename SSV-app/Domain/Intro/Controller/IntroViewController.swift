@@ -11,7 +11,7 @@ final internal class IntroViewController: MyPigViewController {
     internal init<Interactor: IntroInteractorInput, Router: IntroRouterInput>(interactor: Interactor, router: Router) {
         self.interactor = interactor
         self.router = router
-        super.init(nibName: nil, bundle: nil)
+        super.init()
         self.router.currentViewController = self
     }
     

@@ -13,7 +13,7 @@ final internal class HomeViewController: MyPigViewController {
         self.name = name
         self.router = router
         self.interactor = interactor
-        super.init(nibName: nil, bundle: nil)
+        super.init()
         self.router.currentViewController = self
     }
     

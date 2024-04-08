@@ -1,7 +1,7 @@
 final internal class HomeRouter: AppRouter, HomeRouterInput {
     
     internal func presentGoals() {
-        moveTo(AchivementViewController())
+        moveTo(GoalsConfigurator.view())
     }
     
     internal func presentAchivements() {
