@@ -24,7 +24,7 @@ extension GoalCreateFetcherInput {
         goal.name = name
         goal.isOnGoing = true
         goal.createDate = Date()
-        goal.value = total as NSDecimalNumber
+        goal.goal = total as NSDecimalNumber
         save(successHanlder: { self.output?.createGoalSucceeded() }, errorHandler: { self.output?.createGoalFailed() })
     }
     

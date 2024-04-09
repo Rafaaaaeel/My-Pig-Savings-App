@@ -13,6 +13,10 @@ final internal class GoalsView: WhiteView {
     
     required init?(coder: NSCoder) { nil }
     
+    public func update(_ goals: [Goal]) {
+        tableView.update(goals)
+    }
+    
 }
 
 extension GoalsView: CodableViews {
@@ -24,8 +28,8 @@ extension GoalsView: CodableViews {
     internal func setupContraints() {
         let constraints = [
             tableView.topAnchor.constraint(greaterThanOrEqualToSystemSpacingBelow: safeAreaLayoutGuide.topAnchor, multiplier: 0),
-            tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            tableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
+            tableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32),
             tableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
         ]
         

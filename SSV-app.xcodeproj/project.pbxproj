@@ -23,6 +23,8 @@
 		270143B52BC4A057007E4ED2 /* GoalsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270143B42BC4A057007E4ED2 /* GoalsTableView.swift */; };
 		270143B82BC4A0D3007E4ED2 /* GoalsTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270143B72BC4A0D3007E4ED2 /* GoalsTableDataSource.swift */; };
 		270143BD2BC5C3C8007E4ED2 /* GoalsTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270143BC2BC5C3C8007E4ED2 /* GoalsTableHeaderView.swift */; };
+		270143BF2BC5E43D007E4ED2 /* GoalsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270143BE2BC5E43D007E4ED2 /* GoalsTableViewCell.swift */; };
+		270143C22BC5E49D007E4ED2 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270143C12BC5E49D007E4ED2 /* Reusable.swift */; };
 		272D31C92BBA4F7D001D7875 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D31C82BBA4F7D001D7875 /* AppDelegate.swift */; };
 		272D31CB2BBA4F7D001D7875 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D31CA2BBA4F7D001D7875 /* SceneDelegate.swift */; };
 		272D31D52BBA4F7E001D7875 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 272D31D42BBA4F7E001D7875 /* Base */; };
@@ -107,6 +109,8 @@
 		270143B42BC4A057007E4ED2 /* GoalsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsTableView.swift; sourceTree = "<group>"; };
 		270143B72BC4A0D3007E4ED2 /* GoalsTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsTableDataSource.swift; sourceTree = "<group>"; };
 		270143BC2BC5C3C8007E4ED2 /* GoalsTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsTableHeaderView.swift; sourceTree = "<group>"; };
+		270143BE2BC5E43D007E4ED2 /* GoalsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsTableViewCell.swift; sourceTree = "<group>"; };
+		270143C12BC5E49D007E4ED2 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		272D31C52BBA4F7D001D7875 /* SSV-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SSV-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		272D31C82BBA4F7D001D7875 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		272D31CA2BBA4F7D001D7875 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -321,6 +325,7 @@
 		270143BA2BC4A335007E4ED2 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				270143BE2BC5E43D007E4ED2 /* GoalsTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -331,6 +336,14 @@
 				270143BC2BC5C3C8007E4ED2 /* GoalsTableHeaderView.swift */,
 			);
 			path = Header;
+			sourceTree = "<group>";
+		};
+		270143C02BC5E497007E4ED2 /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				270143C12BC5E49D007E4ED2 /* Reusable.swift */,
+			);
+			path = Reusable;
 			sourceTree = "<group>";
 		};
 		272D31BC2BBA4F7D001D7875 = {
@@ -361,6 +374,7 @@
 		272D31DC2BBA4FED001D7875 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				270143C02BC5E497007E4ED2 /* Reusable */,
 				272D322C2BBB5261001D7875 /* Textfield */,
 				272D320C2BBB3F8C001D7875 /* Fonts */,
 				272D32082BBA877F001D7875 /* Texts */,
@@ -1071,6 +1085,7 @@
 				27A9372D2BBE5B8B0014C445 /* CloseButton.swift in Sources */,
 				27A937612BC109CC0014C445 /* CreationPresenter.swift in Sources */,
 				27D5D5622BBCF91200746611 /* IntroConfigurator.swift in Sources */,
+				270143C22BC5E49D007E4ED2 /* Reusable.swift in Sources */,
 				27A937582BC104120014C445 /* GoalGetFetcher.swift in Sources */,
 				272D321D2BBB4DB6001D7875 /* SessionManager.swift in Sources */,
 				270143AA2BC4847F007E4ED2 /* Goals+Protocols.swift in Sources */,
@@ -1103,6 +1118,7 @@
 				27D5D5652BBCFF3700746611 /* InfoView.swift in Sources */,
 				270143BD2BC5C3C8007E4ED2 /* GoalsTableHeaderView.swift in Sources */,
 				27D5D5592BBCEED100746611 /* CreationView.swift in Sources */,
+				270143BF2BC5E43D007E4ED2 /* GoalsTableViewCell.swift in Sources */,
 				270143972BC47FEB007E4ED2 /* StateView.swift in Sources */,
 				2701439E2BC483BC007E4ED2 /* GoalsInteractor.swift in Sources */,
 				272D32532BBCDE9F001D7875 /* Storage.xcdatamodeld in Sources */,

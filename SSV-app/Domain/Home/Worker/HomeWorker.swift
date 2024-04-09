@@ -1,12 +1,5 @@
 import Foundation
 
-internal protocol HomeWorkerOutput: GoalGetFetcherOutput { }
-
-internal protocol HomeWorkerInput: GoalGetFetcherInput {
-    
-    var container: TransactionContainerProtocol { get }
-
-}
 
 final internal class HomeWorker: HomeWorkerInput {
     

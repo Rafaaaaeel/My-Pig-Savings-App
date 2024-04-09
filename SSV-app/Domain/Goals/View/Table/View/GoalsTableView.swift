@@ -23,9 +23,12 @@ extension GoalsTableView {
     
     private func configure() {
         dataSource = source
-        backgroundColor = .clear
+//        backgroundColor = .clear
         translatesAutoresizingMaskIntoConstraints = false
-        tableHeaderView = GoalsTableHeaderView(frame: CGRect(x: 0, y: 0, width: Frame.width, height: 50))
+        tableHeaderView = GoalsTableHeaderView(frame: CGRect(x: 0, y: 0, width: Frame.width, height: 100))
+        register(CardsTableViewCell.self, forCellReuseIdentifier: CardsTableViewCell.identifier)
+        rowHeight = 120
+        separatorStyle = .none
         source.delegate = self
     }
     

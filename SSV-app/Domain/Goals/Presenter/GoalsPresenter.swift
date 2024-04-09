@@ -1,8 +1,13 @@
-//
-//  GoalsPresenter.swift
-//  SSV-app
-//
-//  Created by Rafael Oliveira on 08/04/24.
-//
-
-import Foundation
+final internal class GoalsPresenter: GoalsPresenterInput {
+    
+    internal var view: GoalsViewControllerInput?
+    
+    internal func didSucceeded(_ goals: [Goal]) {
+        view?.didSucceeded(goals)
+    }
+    
+    internal func didFailed() {
+        view?.didFailed()
+    }
+    
+}

@@ -2,14 +2,21 @@ import Foundation
 
 final internal class GoalsViewController: MyPigViewController {
     
+    private let interactor: GoalsInteractorInput
     private let router: GoalsRouterInput
     
     private lazy var goalsView = GoalsView()
     
-    internal init<Router: GoalsRouterInput>(router: Router) {
+    internal init<Interactor: GoalsInteractorInput, Router: GoalsRouterInput>(interactor: Interactor, router: Router) {
+        self.interactor = interactor
         self.router = router
         super.init()
         self.router.currentViewController = self
+    }
+    
+    internal override func viewDidLoad() {
+        super.viewDidLoad()
+        interactor.fetchGoals()
     }
     
     required init?(coder: NSCoder) { nil }
@@ -19,7 +26,15 @@ final internal class GoalsViewController: MyPigViewController {
         self.view = goalsView
     }
     
-    private func configNav() {
+}
+
+extension GoalsViewController: GoalsViewControllerInput {
+    
+    internal func didSucceeded(_ goals: [Goal]) {
+        goalsView.update(goals)
+    }
+    
+    internal func didFailed() {
         
     }
     

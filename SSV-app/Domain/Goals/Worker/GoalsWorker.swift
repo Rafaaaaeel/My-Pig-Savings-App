@@ -1,8 +1,14 @@
-//
-//  GoalsWorker.swift
-//  SSV-app
-//
-//  Created by Rafael Oliveira on 08/04/24.
-//
-
 import Foundation
+
+
+final internal class GoalsWorker: GoalsWorkerInput {
+    
+    internal var container: TransactionContainerProtocol
+    internal var output: GoalGetFetcherOutput?
+
+    internal init<Container: TransactionContainerProtocol>(container: Container = TransactionContainer.shared) {
+        self.container = container
+    }
+    
+}
+

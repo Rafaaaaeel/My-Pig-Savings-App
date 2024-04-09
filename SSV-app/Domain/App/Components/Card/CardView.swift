@@ -120,6 +120,17 @@ final internal class CardView: GreenView {
     
     required init?(coder: NSCoder) { nil }
     
+    internal func render(_ goal: Goal) {
+        let total = goal.goal?.doubleValue ?? 0
+        let saved = goal.value?.doubleValue ?? 0
+        let percentual = (saved / total) * 100
+        progressView.percentage = (saved / total)
+        percentageLabel.text = "\(percentual)%"
+        nameText = goal.name.orEmpty
+        savedValueLabel.text = goal.value?.decimalValue.asCurrencyValue ?? .empty
+        totalText = goal.goal?.decimalValue.asCurrencyValue ?? .empty
+    }
+    
 }
 
 // MARK: - CodableViews
@@ -127,7 +138,7 @@ extension CardView: CodableViews {
     
     internal func configView() {
         layer.cornerRadius = 25
-        progressView.percentage = 0.5
+        progressView.percentage = 0.0
     }
     
     internal func setupHiearchy() {
@@ -142,13 +153,13 @@ extension CardView: CodableViews {
     internal func setupContraints() {
         let constraints = [
             progressView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            progressView.leadingAnchor.constraint(lessThanOrEqualToSystemSpacingAfter: leadingAnchor, multiplier: 10),
+            progressView.leadingAnchor.constraint(lessThanOrEqualToSystemSpacingAfter: leadingAnchor, multiplier: 8),
             
             percentageLabel.centerXAnchor.constraint(equalTo: progressView.centerXAnchor),
             percentageLabel.centerYAnchor.constraint(equalTo: progressView.centerYAnchor),
             
             mainContentStackView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            mainContentStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 160),
+            mainContentStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 130),
             mainContentStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -80),
             
             plantsImageView.bottomAnchor.constraint(equalTo: bottomAnchor),

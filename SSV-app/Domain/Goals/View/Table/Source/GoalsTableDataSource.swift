@@ -25,7 +25,11 @@ final internal class GoalsTableDataSource: DataSource {
     }
     
     internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CardsTableViewCell.identifier, for: indexPath) as? CardsTableViewCell else {
+            return UITableViewCell()
+        }
+        cell.render(sections[indexPath.row])
+        return cell
     }
     
 }

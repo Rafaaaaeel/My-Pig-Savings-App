@@ -22,3 +22,12 @@ internal protocol HomePresenterInput {
 internal protocol HomeViewControllerInput {
     func load(_ state: StateView.State)
 }
+
+
+internal protocol HomeWorkerOutput: GoalGetFetcherOutput { }
+
+internal protocol HomeWorkerInput: GoalGetFetcherInput {
+    
+    var container: TransactionContainerProtocol { get }
+
+}
