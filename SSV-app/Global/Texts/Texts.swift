@@ -29,4 +29,8 @@ public struct Texts {
         static let VALUE = "R$ 0,00"
     }
     
+    public struct Goals {
+        static let TITLE = "Your goals"
+    }
+    
 }

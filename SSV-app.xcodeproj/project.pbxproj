@@ -20,6 +20,9 @@
 		270143A62BC4844F007E4ED2 /* GoalsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270143A52BC4844F007E4ED2 /* GoalsRouter.swift */; };
 		270143A82BC48472007E4ED2 /* GoalsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270143A72BC48472007E4ED2 /* GoalsConfigurator.swift */; };
 		270143AA2BC4847F007E4ED2 /* Goals+Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270143A92BC4847F007E4ED2 /* Goals+Protocols.swift */; };
+		270143B52BC4A057007E4ED2 /* GoalsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270143B42BC4A057007E4ED2 /* GoalsTableView.swift */; };
+		270143B82BC4A0D3007E4ED2 /* GoalsTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270143B72BC4A0D3007E4ED2 /* GoalsTableDataSource.swift */; };
+		270143BD2BC5C3C8007E4ED2 /* GoalsTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270143BC2BC5C3C8007E4ED2 /* GoalsTableHeaderView.swift */; };
 		272D31C92BBA4F7D001D7875 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D31C82BBA4F7D001D7875 /* AppDelegate.swift */; };
 		272D31CB2BBA4F7D001D7875 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D31CA2BBA4F7D001D7875 /* SceneDelegate.swift */; };
 		272D31D52BBA4F7E001D7875 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 272D31D42BBA4F7E001D7875 /* Base */; };
@@ -101,6 +104,9 @@
 		270143A52BC4844F007E4ED2 /* GoalsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsRouter.swift; sourceTree = "<group>"; };
 		270143A72BC48472007E4ED2 /* GoalsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsConfigurator.swift; sourceTree = "<group>"; };
 		270143A92BC4847F007E4ED2 /* Goals+Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goals+Protocols.swift"; sourceTree = "<group>"; };
+		270143B42BC4A057007E4ED2 /* GoalsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsTableView.swift; sourceTree = "<group>"; };
+		270143B72BC4A0D3007E4ED2 /* GoalsTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsTableDataSource.swift; sourceTree = "<group>"; };
+		270143BC2BC5C3C8007E4ED2 /* GoalsTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsTableHeaderView.swift; sourceTree = "<group>"; };
 		272D31C52BBA4F7D001D7875 /* SSV-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SSV-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		272D31C82BBA4F7D001D7875 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		272D31CA2BBA4F7D001D7875 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -255,6 +261,7 @@
 		270143AF2BC487D8007E4ED2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				270143B32BC4A04C007E4ED2 /* Table */,
 				270143A32BC48424007E4ED2 /* GoalsView.swift */,
 			);
 			path = View;
@@ -282,6 +289,48 @@
 				270143A72BC48472007E4ED2 /* GoalsConfigurator.swift */,
 			);
 			path = Configurator;
+			sourceTree = "<group>";
+		};
+		270143B32BC4A04C007E4ED2 /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				270143BB2BC4A33A007E4ED2 /* Header */,
+				270143BA2BC4A335007E4ED2 /* Cell */,
+				270143B92BC4A32F007E4ED2 /* View */,
+				270143B62BC4A099007E4ED2 /* Source */,
+			);
+			path = Table;
+			sourceTree = "<group>";
+		};
+		270143B62BC4A099007E4ED2 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				270143B72BC4A0D3007E4ED2 /* GoalsTableDataSource.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		270143B92BC4A32F007E4ED2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				270143B42BC4A057007E4ED2 /* GoalsTableView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		270143BA2BC4A335007E4ED2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		270143BB2BC4A33A007E4ED2 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				270143BC2BC5C3C8007E4ED2 /* GoalsTableHeaderView.swift */,
+			);
+			path = Header;
 			sourceTree = "<group>";
 		};
 		272D31BC2BBA4F7D001D7875 = {
@@ -1052,6 +1101,7 @@
 				270143A22BC483CB007E4ED2 /* GoalsWorker.swift in Sources */,
 				272D32222BBB4F88001D7875 /* Keys.swift in Sources */,
 				27D5D5652BBCFF3700746611 /* InfoView.swift in Sources */,
+				270143BD2BC5C3C8007E4ED2 /* GoalsTableHeaderView.swift in Sources */,
 				27D5D5592BBCEED100746611 /* CreationView.swift in Sources */,
 				270143972BC47FEB007E4ED2 /* StateView.swift in Sources */,
 				2701439E2BC483BC007E4ED2 /* GoalsInteractor.swift in Sources */,
@@ -1068,6 +1118,7 @@
 				272D320A2BBA8787001D7875 /* Texts.swift in Sources */,
 				272D31E72BBA5351001D7875 /* AppConfigurator.swift in Sources */,
 				270143912BC46C0A007E4ED2 /* HomeWorker.swift in Sources */,
+				270143B82BC4A0D3007E4ED2 /* GoalsTableDataSource.swift in Sources */,
 				272D32352BBB6280001D7875 /* Regex.swift in Sources */,
 				27A9373F2BBF56A10014C445 /* Creation+Protocols.swift in Sources */,
 				272D32392BBCACAF001D7875 /* IntroInteractor.swift in Sources */,
@@ -1075,6 +1126,7 @@
 				27A9375E2BC1051B0014C445 /* GoalDeleteFetcher.swift in Sources */,
 				27A937642BC1103F0014C445 /* CreationWorker.swift in Sources */,
 				270143A82BC48472007E4ED2 /* GoalsConfigurator.swift in Sources */,
+				270143B52BC4A057007E4ED2 /* GoalsTableView.swift in Sources */,
 				272D32402BBCB490001D7875 /* Intro+Protocol.swift in Sources */,
 				27A937372BBEE0450014C445 /* String+Formatting.swift in Sources */,
 				272D31FA2BBA582B001D7875 /* HomeView.swift in Sources */,
@@ -1232,11 +1284,13 @@
 				DEVELOPMENT_TEAM = 56293NUR34;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SSV-app/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "My Pig";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1260,11 +1314,13 @@
 				DEVELOPMENT_TEAM = 56293NUR34;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SSV-app/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "My Pig";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
