@@ -31,7 +31,7 @@ extension GoalsTableHeaderView: CodableViews {
     internal func setupContraints() {
         let constraints = [
             helloLabel.topAnchor.constraint(equalTo: topAnchor, constant: 16),
-            helloLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+            helloLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
             helloLabel.bottomAnchor.constraint(equalTo: bottomAnchor)
         ]
         

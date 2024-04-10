@@ -22,7 +22,7 @@ final internal class CardsTableViewCell: UITableViewCell, Reusable {
 extension CardsTableViewCell: CodableViews {
     
     internal func setupHiearchy() {
-//        selectionStyle = .none
+        selectionStyle = .none
         backgroundColor = .clear
         addSubview(cardView)
     }
@@ -30,10 +30,10 @@ extension CardsTableViewCell: CodableViews {
     internal func setupContraints() {
         
         let cardViewConstraints = [
-            cardView.topAnchor.constraint(equalTo: topAnchor, constant: 20),
+            cardView.topAnchor.constraint(equalTo: topAnchor, constant: 10),
             cardView.leadingAnchor.constraint(equalTo: leadingAnchor),
             cardView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            cardView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20)
+            cardView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
         ]
         
         NSLayoutConstraint.activate(cardViewConstraints)

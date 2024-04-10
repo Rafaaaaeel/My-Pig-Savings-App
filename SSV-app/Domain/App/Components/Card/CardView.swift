@@ -177,7 +177,7 @@ extension Double {
     var percentageFormatted: String {
         let formatter = NumberFormatter()
         formatter.numberStyle = .percent
-        formatter.minimumFractionDigits = 2 // Defina o número mínimo de casas decimais
+        formatter.minimumFractionDigits = 0
         
         return formatter.string(from: NSNumber(value: self)) ?? "0.0%"
     }
