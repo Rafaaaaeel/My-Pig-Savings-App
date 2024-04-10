@@ -1,9 +1,17 @@
 import UIKit
 
 
+internal protocol GoalsTableViewDelegate: AnyObject {
+    
+    func didSelectGoal(_ goal: Goal)
+    
+}
+
 final internal class GoalsTableView: UITableView {
     
     private let source: GoalsTableDataSource
+    
+    internal weak var tableDelegate: GoalsTableViewDelegate?
     
     internal init(source: GoalsTableDataSource = GoalsTableDataSource()) {
         self.source = source
@@ -15,6 +23,7 @@ final internal class GoalsTableView: UITableView {
     
     internal func update(_ data: [Goal]) {
         source.sections = data
+        reloadData()
     }
     
 }
@@ -22,22 +31,24 @@ final internal class GoalsTableView: UITableView {
 extension GoalsTableView {
     
     private func configure() {
+        delegate = self
+        rowHeight = 160
         dataSource = source
-//        backgroundColor = .clear
-        translatesAutoresizingMaskIntoConstraints = false
-        tableHeaderView = GoalsTableHeaderView(frame: CGRect(x: 0, y: 0, width: Frame.width, height: 100))
-        register(CardsTableViewCell.self, forCellReuseIdentifier: CardsTableViewCell.identifier)
-        rowHeight = 120
         separatorStyle = .none
-        source.delegate = self
+        isUserInteractionEnabled = true
+        showsVerticalScrollIndicator = false
+        translatesAutoresizingMaskIntoConstraints = false
+        register(CardsTableViewCell.self, forCellReuseIdentifier: CardsTableViewCell.identifier)
+        tableHeaderView = GoalsTableHeaderView(frame: CGRect(x: 0, y: 0, width: Frame.width, height: 100))
     }
     
 }
 
-extension GoalsTableView: GoalsTableDataSourceDelegate {
+extension GoalsTableView: UITableViewDelegate {
     
-    internal func reload() {
-        reloadData()
+    internal func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        print("dwda")
     }
     
 }

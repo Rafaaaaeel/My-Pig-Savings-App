@@ -9,6 +9,9 @@ public struct Images {
         static var arrow_left = UIImage(systemName: "arrow.left")?
                                     .withTintColor(ColorTheme.secondaryTile,
                                                    renderingMode: .alwaysOriginal)
+        static var plus = UIImage(systemName: "plus")?
+                                    .withTintColor(ColorTheme.secondaryTile,
+                                                   renderingMode: .alwaysOriginal)
     }
     
     struct Intro {

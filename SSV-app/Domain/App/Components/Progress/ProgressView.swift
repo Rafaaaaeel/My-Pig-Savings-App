@@ -32,7 +32,7 @@ final public class ProgressView: UIView {
         layer.addSublayer(trackLayer)
         trackLayer.strokeColor = lineColor.cgColor
         trackLayer.fillColor = UIColor.clear.cgColor
-        trackLayer.lineWidth = 2
+        trackLayer.lineWidth = 1
         shapeLayer.path = circularPath.cgPath
         layer.addSublayer(shapeLayer)
         shapeLayer.strokeColor = ColorTheme.secondaryFacelift.cgColor

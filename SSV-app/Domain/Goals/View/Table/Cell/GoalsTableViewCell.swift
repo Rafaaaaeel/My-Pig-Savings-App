@@ -1,6 +1,6 @@
 import UIKit
 
-final class CardsTableViewCell: UITableViewCell, Reusable {
+final internal class CardsTableViewCell: UITableViewCell, Reusable {
     
     private let cardView = CardView()
     
@@ -20,17 +20,18 @@ final class CardsTableViewCell: UITableViewCell, Reusable {
 extension CardsTableViewCell: CodableViews {
     
     func setupHiearchy() {
-        selectionStyle = .none
-        addSubviews(cardView)
+//        selectionStyle = .none
+        backgroundColor = .clear
+        addSubview(cardView)
     }
     
     func setupContraints() {
         
         let cardViewConstraints = [
-            cardView.topAnchor.constraint(equalTo: topAnchor),
+            cardView.topAnchor.constraint(equalTo: topAnchor, constant: 20),
             cardView.leadingAnchor.constraint(equalTo: leadingAnchor),
             cardView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            cardView.bottomAnchor.constraint(equalTo: bottomAnchor)
+            cardView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20)
         ]
         
         NSLayoutConstraint.activate(cardViewConstraints)

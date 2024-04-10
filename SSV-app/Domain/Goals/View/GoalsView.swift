@@ -1,10 +1,17 @@
 import UIKit
 
 
+internal protocol GoalsViewDelegate: AnyObject {
+    
+    func didSelectGoal(_ goal: Goal)
+    
+}
 
 final internal class GoalsView: WhiteView {
     
     private lazy var tableView = GoalsTableView()
+    
+    internal weak var delegate: GoalsViewDelegate?
     
     internal override init(frame: CGRect) {
         super.init(frame: frame)
@@ -21,6 +28,10 @@ final internal class GoalsView: WhiteView {
 
 extension GoalsView: CodableViews {
     
+    internal func configView() {
+        tableView.tableDelegate = self
+    }
+    
     internal func setupHiearchy() {
         addSubview(tableView)
     }
@@ -34,6 +45,14 @@ extension GoalsView: CodableViews {
         ]
         
         NSLayoutConstraint.activate(constraints)
+    }
+    
+}
+
+extension GoalsView: GoalsTableViewDelegate {
+    
+    internal func didSelectGoal(_ goal: Goal) {
+        delegate?.didSelectGoal(goal)
     }
     
 }

@@ -125,7 +125,7 @@ final internal class CardView: GreenView {
         let saved = goal.value?.doubleValue ?? 0
         let percentual = (saved / total) * 100
         progressView.percentage = (saved / total)
-        percentageLabel.text = "\(percentual)%"
+        percentageLabel.text = (saved / total).percentageFormatted
         nameText = goal.name.orEmpty
         savedValueLabel.text = goal.value?.decimalValue.asCurrencyValue ?? .empty
         totalText = goal.goal?.decimalValue.asCurrencyValue ?? .empty
@@ -137,6 +137,7 @@ final internal class CardView: GreenView {
 extension CardView: CodableViews {
     
     internal func configView() {
+        translatesAutoresizingMaskIntoConstraints = false
         layer.cornerRadius = 25
         progressView.percentage = 0.0
     }
@@ -169,4 +170,15 @@ extension CardView: CodableViews {
         NSLayoutConstraint.activate(constraints)
     }
     
+}
+
+extension Double {
+
+    var percentageFormatted: String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .percent
+        formatter.minimumFractionDigits = 2 // Defina o número mínimo de casas decimais
+        
+        return formatter.string(from: NSNumber(value: self)) ?? "0.0%"
+    }
 }

@@ -25,6 +25,7 @@
 		270143BD2BC5C3C8007E4ED2 /* GoalsTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270143BC2BC5C3C8007E4ED2 /* GoalsTableHeaderView.swift */; };
 		270143BF2BC5E43D007E4ED2 /* GoalsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270143BE2BC5E43D007E4ED2 /* GoalsTableViewCell.swift */; };
 		270143C22BC5E49D007E4ED2 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270143C12BC5E49D007E4ED2 /* Reusable.swift */; };
+		270143C62BC5F022007E4ED2 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270143C52BC5F022007E4ED2 /* AddButton.swift */; };
 		272D31C92BBA4F7D001D7875 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D31C82BBA4F7D001D7875 /* AppDelegate.swift */; };
 		272D31CB2BBA4F7D001D7875 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D31CA2BBA4F7D001D7875 /* SceneDelegate.swift */; };
 		272D31D52BBA4F7E001D7875 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 272D31D42BBA4F7E001D7875 /* Base */; };
@@ -111,6 +112,7 @@
 		270143BC2BC5C3C8007E4ED2 /* GoalsTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsTableHeaderView.swift; sourceTree = "<group>"; };
 		270143BE2BC5E43D007E4ED2 /* GoalsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsTableViewCell.swift; sourceTree = "<group>"; };
 		270143C12BC5E49D007E4ED2 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		270143C52BC5F022007E4ED2 /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
 		272D31C52BBA4F7D001D7875 /* SSV-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SSV-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		272D31C82BBA4F7D001D7875 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		272D31CA2BBA4F7D001D7875 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -265,8 +267,8 @@
 		270143AF2BC487D8007E4ED2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				270143B32BC4A04C007E4ED2 /* Table */,
 				270143A32BC48424007E4ED2 /* GoalsView.swift */,
+				270143B32BC4A04C007E4ED2 /* Table */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -772,6 +774,7 @@
 			children = (
 				27A9372C2BBE5B8B0014C445 /* CloseButton.swift */,
 				270143982BC4829C007E4ED2 /* BackButton.swift */,
+				270143C52BC5F022007E4ED2 /* AddButton.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -1116,6 +1119,7 @@
 				270143A22BC483CB007E4ED2 /* GoalsWorker.swift in Sources */,
 				272D32222BBB4F88001D7875 /* Keys.swift in Sources */,
 				27D5D5652BBCFF3700746611 /* InfoView.swift in Sources */,
+				270143C62BC5F022007E4ED2 /* AddButton.swift in Sources */,
 				270143BD2BC5C3C8007E4ED2 /* GoalsTableHeaderView.swift in Sources */,
 				27D5D5592BBCEED100746611 /* CreationView.swift in Sources */,
 				270143BF2BC5E43D007E4ED2 /* GoalsTableViewCell.swift in Sources */,
@@ -1304,8 +1308,8 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1314,6 +1318,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.projects.SSV-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1334,8 +1342,8 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1344,6 +1352,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.projects.SSV-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

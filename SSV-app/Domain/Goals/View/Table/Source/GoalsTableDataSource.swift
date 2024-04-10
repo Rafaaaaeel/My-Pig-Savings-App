@@ -4,21 +4,10 @@ import UIKit
 
 typealias DataSource = NSObject & UITableViewDataSource
 
-internal protocol GoalsTableDataSourceDelegate: AnyObject {
-    
-    func reload()
-    
-}
 
 final internal class GoalsTableDataSource: DataSource {
     
-    internal var sections: [Goal] = [] {
-        didSet {
-            delegate?.reload()
-        }
-    }
-    
-    weak var delegate: GoalsTableDataSourceDelegate?
+    internal var sections: [Goal] = []
     
     internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sections.count
@@ -30,6 +19,10 @@ final internal class GoalsTableDataSource: DataSource {
         }
         cell.render(sections[indexPath.row])
         return cell
+    }
+    
+    internal func select(row: Int) -> Goal {
+        return sections[row]
     }
     
 }

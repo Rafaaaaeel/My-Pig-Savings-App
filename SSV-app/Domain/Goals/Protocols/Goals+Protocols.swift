@@ -7,10 +7,18 @@ internal protocol GoalsInteractorInput {
     
 }
 
-internal protocol GoalsRouterInput: AppRouterProtocol{
+internal protocol GoalsRouterInput: AppRouterProtocol {
+    
+    var view: GoalsRouterOutput? { get set }
     
     func close()
+    func presentCreation()
+    func presentGoal(_ goal: Goal)
     
+}
+
+internal protocol GoalsRouterOutput {
+    func didClose()
 }
 
 internal protocol GoalsPresenterInput {

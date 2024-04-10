@@ -19,10 +19,6 @@ extension GoalGetFetcherInput {
         do {
             let goals = try container.viewContext.fetch(Goal.fetchRequest())
             output?.getGoalsSucceeded(goals)
-//            goals.forEach { goal in
-//                container.viewContext.delete(goal)
-//            }
-//            try container.saveContext()
         } catch {
             output?.getGoalsFailed()
         }
