@@ -16,7 +16,7 @@ final internal class GoalsTableView: UITableView {
     internal init(source: GoalsTableDataSource = GoalsTableDataSource()) {
         self.source = source
         super.init(frame: .zero, style: .plain)
-        delegate = self
+        
         configure()
     }
     
@@ -32,10 +32,11 @@ final internal class GoalsTableView: UITableView {
 extension GoalsTableView {
     
     private func configure() {
-        backgroundColor = .clear
+        backgroundColor = .blue
         rowHeight = 140
         dataSource = source
-        separatorStyle = .none
+        delegate = self
+//        separatorStyle = .none
         isUserInteractionEnabled = true
         showsVerticalScrollIndicator = false
         translatesAutoresizingMaskIntoConstraints = false
@@ -48,7 +49,7 @@ extension GoalsTableView {
 extension GoalsTableView: UITableViewDelegate {
     
     internal func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        tableView.deselectRow(at: indexPath, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
         print("dwda")
     }
     
