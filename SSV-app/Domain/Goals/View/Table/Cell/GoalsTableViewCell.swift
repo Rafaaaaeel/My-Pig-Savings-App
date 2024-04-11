@@ -21,14 +21,16 @@ final internal class CardsTableViewCell: UITableViewCell, Reusable {
 
 extension CardsTableViewCell: CodableViews {
     
-    internal func setupHiearchy() {
-        selectionStyle = .none
+    func configView() {
+//        selectionStyle = .none
         backgroundColor = .clear
+    }
+    
+    internal func setupHiearchy() {
         addSubview(cardView)
     }
     
     internal func setupContraints() {
-        
         let cardViewConstraints = [
             cardView.topAnchor.constraint(equalTo: topAnchor, constant: 10),
             cardView.leadingAnchor.constraint(equalTo: leadingAnchor),

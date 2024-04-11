@@ -16,7 +16,6 @@ final internal class GoalsTableView: UITableView {
     internal init(source: GoalsTableDataSource = GoalsTableDataSource()) {
         self.source = source
         super.init(frame: .zero, style: .plain)
-        
         configure()
     }
     
@@ -32,12 +31,10 @@ final internal class GoalsTableView: UITableView {
 extension GoalsTableView {
     
     private func configure() {
-        backgroundColor = .blue
         rowHeight = 140
         dataSource = source
         delegate = self
-//        separatorStyle = .none
-        isUserInteractionEnabled = true
+        separatorStyle = .none
         showsVerticalScrollIndicator = false
         translatesAutoresizingMaskIntoConstraints = false
         register(CardsTableViewCell.self, forCellReuseIdentifier: CardsTableViewCell.identifier)
