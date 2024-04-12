@@ -40,5 +40,6 @@ internal protocol GoalsWorkerOutput: GoalGetFetcherOutput { }
 internal protocol GoalsWorkerInput: GoalGetFetcherInput {
     
     var container: TransactionContainerProtocol { get }
+    var output: GoalsWorkerOutput? { get set }
 
 }

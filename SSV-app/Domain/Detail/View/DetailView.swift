@@ -6,12 +6,15 @@ internal enum OperationType: Int {
 
 internal protocol DetailViewDelegate: AnyObject {
     
-    func didChangeValue(_ value: Decimal, operation type: OperationType)
+    func didChangeValue(_ newValue: Decimal, _ value: Decimal, operation type: OperationType)
     
 }
 
 
 final internal class DetailView: WhiteView {
+    
+    private var lastPercentage: CGFloat = 0
+    private var isFirstLoading = true
     
     private lazy var contentStackView: UIStackView = {
         let stack = UIStackView()
@@ -41,7 +44,6 @@ final internal class DetailView: WhiteView {
     
     private lazy var savedTextField: MyPigTextfield2 = {
         let label = MyPigTextfield2()
-        label.placeholder = goal.value?.decimalValue.asCurrencyValue
         label.textfieldDelegate = self
         label.keyboardType = .numberPad
         return label
@@ -49,7 +51,7 @@ final internal class DetailView: WhiteView {
     
     private lazy var goalLabel: UILabel = {
         let label = UILabel()
-        label.text = "of your \(goal.goal?.decimalValue.asCurrencyValue ?? "") saving goal"
+        
         label.font = UIFont.systemFont(ofSize: 14)
         label.textColor = .lightGray
         label.textAlignment = .center
@@ -57,28 +59,22 @@ final internal class DetailView: WhiteView {
     }()
     
     private lazy var percentageLabel: UILabel = {
-        let total = goal.goal?.doubleValue ?? 0
-        let saved = goal.value?.doubleValue ?? 0
-        let percentual = (saved / total) * 100
         let label = UILabel()
-        label.text = (saved / total).percentageFormatted
         label.font = UIFont.systemFont(ofSize: 50, weight: .bold)
         label.textColor = ColorTheme.secondaryFacelift
         label.textAlignment = .center
         return label
     }()
     
-    private lazy var progressView: ProgressView = {
-        let view = ProgressView(radius: 140, lineThickness: 10, lineColor: .lightGray, trackLineThickness: 3)
-        let total = goal.goal?.doubleValue ?? 0
-        let saved = goal.value?.doubleValue ?? 0
-        view.percentage = (saved / total)
-        return view
-    }()
+    private lazy var progressView = ProgressView(radius: 140, lineThickness: 10, lineColor: .lightGray, trackLineThickness: 3)
     
     //tableView
     
-    private let goal: Goal
+    internal var goal: Goal {
+        didSet {
+            render()
+        }
+    }
     
     private var savedValue: Decimal {
         return goal.value?.decimalValue ?? 0
@@ -89,10 +85,25 @@ final internal class DetailView: WhiteView {
     internal init(_ goal: Goal) {
         self.goal = goal
         super.init(frame: .zero)
+        let total = goal.goal?.doubleValue ?? 0
+        let saved = goal.value?.doubleValue ?? 0
+        lastPercentage = (saved / total)
         setup()
+        render()
+        isFirstLoading = false
     }
     
     required init?(coder: NSCoder) { nil }
+    
+    private func render() {
+        let total = goal.goal?.doubleValue ?? 0
+        let saved = goal.value?.doubleValue ?? 0
+        percentageLabel.text = (saved / total).percentageFormatted
+        goalLabel.text = "of your \(goal.goal?.decimalValue.asCurrencyValue ?? "") saving goal"
+        savedTextField.placeholder = goal.value?.decimalValue.asCurrencyValue
+        progressView.percentage = [isFirstLoading ? 0 : lastPercentage, (saved / total)]
+        lastPercentage = (saved / total)
+    }
     
 }
 
@@ -139,7 +150,8 @@ extension DetailView {
     private func saveEditing(_ newValue: Decimal) {
         let difference = newValue - savedValue
         let operationType: OperationType = difference > 0 ? .increase : .decrease
-        delegate?.didChangeValue(0, operation: operationType)
+        guard difference != 0 else { return }
+        delegate?.didChangeValue(newValue, difference, operation: operationType)
     }
     
 }

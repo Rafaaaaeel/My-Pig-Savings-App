@@ -29,5 +29,5 @@ internal protocol HomeWorkerOutput: GoalGetFetcherOutput { }
 internal protocol HomeWorkerInput: GoalGetFetcherInput {
     
     var container: TransactionContainerProtocol { get }
-
+    var output: HomeWorkerOutput? { get set }
 }

@@ -1,7 +1,7 @@
 internal protocol GoalGetFetcherInput {
     
     var container: TransactionContainerProtocol { get }
-    var output: GoalGetFetcherOutput? { get set }
+    var outputGet: GoalGetFetcherOutput? { get  }
     
     func getGoals()
 }
@@ -18,20 +18,10 @@ extension GoalGetFetcherInput {
     internal func getGoals() {
         do {
             let goals = try container.viewContext.fetch(Goal.fetchRequest())
-            output?.getGoalsSucceeded(goals)
+            outputGet?.getGoalsSucceeded(goals)
         } catch {
-            output?.getGoalsFailed()
+            outputGet?.getGoalsFailed()
         }
     }
 
-}
-
-internal class GoalGetFetcher: GoalGetFetcherInput {
-    
-    internal let container: TransactionContainerProtocol
-    
-    internal var output: GoalGetFetcherOutput?
-    
-    init<Container: TransactionContainerProtocol>(container: Container = TransactionContainer.shared) { self.container = container }
-    
 }

@@ -124,7 +124,7 @@ final internal class CardView: GreenView {
         let total = goal.goal?.doubleValue ?? 0
         let saved = goal.value?.doubleValue ?? 0
         let percentual = (saved / total) * 100
-        progressView.percentage = (saved / total)
+        progressView.percentage = [0,(saved / total)]
         percentageLabel.text = (saved / total).percentageFormatted
         nameText = goal.name.orEmpty
         savedValueLabel.text = goal.value?.decimalValue.asCurrencyValue ?? .empty
@@ -139,7 +139,7 @@ extension CardView: CodableViews {
     internal func configView() {
         translatesAutoresizingMaskIntoConstraints = false
         layer.cornerRadius = 25
-        progressView.percentage = 0.0
+        progressView.percentage = [0,0]
     }
     
     internal func setupHiearchy() {

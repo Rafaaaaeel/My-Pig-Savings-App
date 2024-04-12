@@ -3,25 +3,25 @@ import Foundation
 internal protocol GoalUpdateFetcherInput {
     
     var container: TransactionContainerProtocol { get }
-    var output: GoalUpdateFetcherOuput? { get set }
+    var outputUpdate: GoalUpdateFetcherOuput? { get }
     
     func updateGoal(_ goal: Goal, name: String?, total value: Decimal?, saved: Decimal?, isOnGoing: Bool?)
 }
 
 internal protocol GoalUpdateFetcherOuput {
-    func updateGoalSucceeded()
+    func updateGoalSucceeded(_ goal: Goal)
     func updateGoalFailed()
 }
 
 extension GoalUpdateFetcherInput {
     
-    internal func updateGoal(_ goal: Goal, name: String?, total value: Decimal?, saved: Decimal?, isOnGoing: Bool?) {
+    internal func updateGoal(_ goal: Goal, name: String? = nil, total value: Decimal? = nil, saved: Decimal? = nil, isOnGoing: Bool? = nil) {
         goal.name = name == nil ? goal.name : name
-        goal.goal = value == nil ? goal.value : value.orEmpty as NSDecimalNumber
+        goal.goal = value == nil ? goal.goal : value.orEmpty as NSDecimalNumber
         goal.value = saved == nil ? goal.value : saved.orEmpty as NSDecimalNumber
         goal.isOnGoing = isOnGoing == nil ? goal.isOnGoing : isOnGoing.orTrue
         
-        save(successHanlder: { output?.updateGoalSucceeded() }, errorHandler: { output?.updateGoalFailed() })
+        save(successHanlder: { outputUpdate?.updateGoalSucceeded(goal) }, errorHandler: { outputUpdate?.updateGoalFailed() })
     }
     
     private func save(successHanlder: () -> Void, errorHandler: () -> Void) {
@@ -32,14 +32,4 @@ extension GoalUpdateFetcherInput {
             errorHandler()
         }
     }
-}
-
-internal class GoalUpdateFetcher: GoalUpdateFetcherInput {
-    
-    internal let container: TransactionContainerProtocol
-    
-    internal var output: GoalUpdateFetcherOuput?
-    
-    init<Container: TransactionContainerProtocol>(container: Container = TransactionContainer.shared) { self.container = container }
-    
 }

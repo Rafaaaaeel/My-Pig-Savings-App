@@ -23,6 +23,12 @@ extension Goal {
     @NSManaged public var value: NSDecimalNumber?
     @NSManaged public var transactions: NSSet?
 
+    public var lastTransaction: [Transactions] {
+        let transactionsSet = transactions as? Set<Transactions> ?? []
+        
+        return transactionsSet.sorted(by: { $0.editionDate ?? Date() < $1.editionDate ?? Date() })
+    }
+    
 }
 
 // MARK: Generated accessors for transactions

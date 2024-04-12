@@ -69,6 +69,12 @@
 		272E0DEF2BC8DB6F008957A4 /* Transactions+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272E0DEB2BC8DB6F008957A4 /* Transactions+CoreDataProperties.swift */; };
 		272E0DF02BC8DB6F008957A4 /* Goal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272E0DEC2BC8DB6F008957A4 /* Goal+CoreDataClass.swift */; };
 		272E0DF12BC8DB6F008957A4 /* Goal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272E0DED2BC8DB6F008957A4 /* Goal+CoreDataProperties.swift */; };
+		272E0DF32BC8DEE7008957A4 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272E0DF22BC8DEE7008957A4 /* DetailInteractor.swift */; };
+		272E0DF52BC8DF65008957A4 /* Details+Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272E0DF42BC8DF65008957A4 /* Details+Protocols.swift */; };
+		272E0DF82BC8E05C008957A4 /* TransactionCreateFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272E0DF72BC8E05C008957A4 /* TransactionCreateFetcher.swift */; };
+		272E0DFA2BC8E19B008957A4 /* TransactionGetFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272E0DF92BC8E19B008957A4 /* TransactionGetFetcher.swift */; };
+		272E0DFC2BC8E3C5008957A4 /* DetailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272E0DFB2BC8E3C5008957A4 /* DetailWorker.swift */; };
+		272E0DFE2BC8ECD8008957A4 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272E0DFD2BC8ECD8008957A4 /* DetailPresenter.swift */; };
 		27A9372A2BBE51ED0014C445 /* CreationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A937292BBE51ED0014C445 /* CreationConfigurator.swift */; };
 		27A9372D2BBE5B8B0014C445 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A9372C2BBE5B8B0014C445 /* CloseButton.swift */; };
 		27A937302BBE5D4B0014C445 /* CreationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A9372F2BBE5D4B0014C445 /* CreationRouter.swift */; };
@@ -164,6 +170,12 @@
 		272E0DEB2BC8DB6F008957A4 /* Transactions+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transactions+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		272E0DEC2BC8DB6F008957A4 /* Goal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goal+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		272E0DED2BC8DB6F008957A4 /* Goal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goal+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		272E0DF22BC8DEE7008957A4 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		272E0DF42BC8DF65008957A4 /* Details+Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Details+Protocols.swift"; sourceTree = "<group>"; };
+		272E0DF72BC8E05C008957A4 /* TransactionCreateFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCreateFetcher.swift; sourceTree = "<group>"; };
+		272E0DF92BC8E19B008957A4 /* TransactionGetFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionGetFetcher.swift; sourceTree = "<group>"; };
+		272E0DFB2BC8E3C5008957A4 /* DetailWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWorker.swift; sourceTree = "<group>"; };
+		272E0DFD2BC8ECD8008957A4 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		27A937292BBE51ED0014C445 /* CreationConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationConfigurator.swift; sourceTree = "<group>"; };
 		27A9372C2BBE5B8B0014C445 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		27A9372F2BBE5D4B0014C445 /* CreationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationRouter.swift; sourceTree = "<group>"; };
@@ -802,6 +814,7 @@
 		272E0DB82BC8A2C0008957A4 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				272E0DFD2BC8ECD8008957A4 /* DetailPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -809,6 +822,7 @@
 		272E0DB92BC8A2C6008957A4 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				272E0DF22BC8DEE7008957A4 /* DetailInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -816,6 +830,7 @@
 		272E0DBA2BC8A2CA008957A4 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				272E0DF42BC8DF65008957A4 /* Details+Protocols.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -839,8 +854,18 @@
 		272E0DBD2BC8A2E6008957A4 /* Worker */ = {
 			isa = PBXGroup;
 			children = (
+				272E0DFB2BC8E3C5008957A4 /* DetailWorker.swift */,
 			);
 			path = Worker;
+			sourceTree = "<group>";
+		};
+		272E0DF62BC8E04B008957A4 /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				272E0DF72BC8E05C008957A4 /* TransactionCreateFetcher.swift */,
+				272E0DF92BC8E19B008957A4 /* TransactionGetFetcher.swift */,
+			);
+			path = Transaction;
 			sourceTree = "<group>";
 		};
 		27A937282BBE51E10014C445 /* Configurator */ = {
@@ -896,6 +921,7 @@
 		27A937432BBFBD480014C445 /* Fetchers */ = {
 			isa = PBXGroup;
 			children = (
+				272E0DF62BC8E04B008957A4 /* Transaction */,
 				27A937522BC103680014C445 /* Goal */,
 			);
 			path = Fetchers;
@@ -1171,18 +1197,22 @@
 				27A937612BC109CC0014C445 /* CreationPresenter.swift in Sources */,
 				272E0DBF2BC8A30A008957A4 /* DetailViewController.swift in Sources */,
 				27D5D5622BBCF91200746611 /* IntroConfigurator.swift in Sources */,
+				272E0DFE2BC8ECD8008957A4 /* DetailPresenter.swift in Sources */,
 				270143C22BC5E49D007E4ED2 /* Reusable.swift in Sources */,
 				27A937582BC104120014C445 /* GoalGetFetcher.swift in Sources */,
 				272D321D2BBB4DB6001D7875 /* SessionManager.swift in Sources */,
 				270143AA2BC4847F007E4ED2 /* Goals+Protocols.swift in Sources */,
 				272D32072BBA7FD5001D7875 /* Images.swift in Sources */,
 				27A9373C2BBF26760014C445 /* TransactionContainer.swift in Sources */,
+				272E0DF32BC8DEE7008957A4 /* DetailInteractor.swift in Sources */,
 				272D32172BBB49C8001D7875 /* Home+Protocols.swift in Sources */,
 				272D31ED2BBA543D001D7875 /* MyPigColors.swift in Sources */,
 				272D32322BBB5547001D7875 /* GreenView.swift in Sources */,
 				27A937352BBE60380014C445 /* String+Decimal.swift in Sources */,
+				272E0DFA2BC8E19B008957A4 /* TransactionGetFetcher.swift in Sources */,
 				2701438F2BC46BD4007E4ED2 /* HomeInteractor.swift in Sources */,
 				272D31C92BBA4F7D001D7875 /* AppDelegate.swift in Sources */,
+				272E0DF82BC8E05C008957A4 /* TransactionCreateFetcher.swift in Sources */,
 				270143952BC477F9007E4ED2 /* HomePresenter.swift in Sources */,
 				272D32142BBB4899001D7875 /* HomeRouter.swift in Sources */,
 				272D32042BBA7F3A001D7875 /* UIStackView.swift in Sources */,
@@ -1197,6 +1227,7 @@
 				27A9374D2BC100BA0014C445 /* Optional+Decimal.swift in Sources */,
 				270143A02BC483C3007E4ED2 /* GoalsPresenter.swift in Sources */,
 				27D5D55F2BBCF8CF00746611 /* MyPigViewController.swift in Sources */,
+				272E0DF52BC8DF65008957A4 /* Details+Protocols.swift in Sources */,
 				27D5D5712BBE380300746611 /* CardView.swift in Sources */,
 				272E0DC52BC8B64A008957A4 /* MyPigTextfield.swift in Sources */,
 				27A937302BBE5D4B0014C445 /* CreationRouter.swift in Sources */,
@@ -1224,6 +1255,7 @@
 				272D31CB2BBA4F7D001D7875 /* SceneDelegate.swift in Sources */,
 				272D32112BBB41B7001D7875 /* AppRouter.swift in Sources */,
 				272D31FE2BBA5F43001D7875 /* CodableView.swift in Sources */,
+				272E0DFC2BC8E3C5008957A4 /* DetailWorker.swift in Sources */,
 				272D320A2BBA8787001D7875 /* Texts.swift in Sources */,
 				272D31E72BBA5351001D7875 /* AppConfigurator.swift in Sources */,
 				270143912BC46C0A007E4ED2 /* HomeWorker.swift in Sources */,
