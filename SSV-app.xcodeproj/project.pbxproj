@@ -64,6 +64,7 @@
 		272E0DBF2BC8A30A008957A4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272E0DBE2BC8A30A008957A4 /* DetailViewController.swift */; };
 		272E0DC12BC8A353008957A4 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272E0DC02BC8A353008957A4 /* DetailView.swift */; };
 		272E0DC32BC8A4EC008957A4 /* DetailConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272E0DC22BC8A4EC008957A4 /* DetailConfigurator.swift */; };
+		272E0DC52BC8B64A008957A4 /* MyPigTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272E0DC42BC8B64A008957A4 /* MyPigTextfield.swift */; };
 		27A9372A2BBE51ED0014C445 /* CreationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A937292BBE51ED0014C445 /* CreationConfigurator.swift */; };
 		27A9372D2BBE5B8B0014C445 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A9372C2BBE5B8B0014C445 /* CloseButton.swift */; };
 		27A937302BBE5D4B0014C445 /* CreationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A9372F2BBE5D4B0014C445 /* CreationRouter.swift */; };
@@ -156,6 +157,7 @@
 		272E0DBE2BC8A30A008957A4 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		272E0DC02BC8A353008957A4 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		272E0DC22BC8A4EC008957A4 /* DetailConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailConfigurator.swift; sourceTree = "<group>"; };
+		272E0DC42BC8B64A008957A4 /* MyPigTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPigTextfield.swift; sourceTree = "<group>"; };
 		27A937292BBE51ED0014C445 /* CreationConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationConfigurator.swift; sourceTree = "<group>"; };
 		27A9372C2BBE5B8B0014C445 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		27A9372F2BBE5D4B0014C445 /* CreationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationRouter.swift; sourceTree = "<group>"; };
@@ -698,6 +700,7 @@
 			isa = PBXGroup;
 			children = (
 				272D322D2BBB526B001D7875 /* Textfield.swift */,
+				272E0DC42BC8B64A008957A4 /* MyPigTextfield.swift */,
 			);
 			path = Textfield;
 			sourceTree = "<group>";
@@ -1189,6 +1192,7 @@
 				270143A02BC483C3007E4ED2 /* GoalsPresenter.swift in Sources */,
 				27D5D55F2BBCF8CF00746611 /* MyPigViewController.swift in Sources */,
 				27D5D5712BBE380300746611 /* CardView.swift in Sources */,
+				272E0DC52BC8B64A008957A4 /* MyPigTextfield.swift in Sources */,
 				27A937302BBE5D4B0014C445 /* CreationRouter.swift in Sources */,
 				270143A22BC483CB007E4ED2 /* GoalsWorker.swift in Sources */,
 				272D32222BBB4F88001D7875 /* Keys.swift in Sources */,

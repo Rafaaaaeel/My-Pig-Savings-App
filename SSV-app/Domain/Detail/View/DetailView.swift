@@ -31,14 +31,14 @@ final class DetailView: WhiteView {
         label.textAlignment = .center
         return label
     }()
+    
     //Textfield
-    private lazy var savedTextField: UILabel = {
-        let label = UILabel()
-        label.text = "R$XX.XXXX,XX"
-        label.font = Fonts.subTitle
-        label.textColor = ColorTheme.primaryAction
+    private lazy var savedTextField: MyPigTextfield2 = {
+        let label = MyPigTextfield2()
+        label.placeholder = goal.value?.decimalValue.asCurrencyValue
         return label
     }()
+    
     //label
     private lazy var goalLabel: UILabel = {
         let label = UILabel()
@@ -70,6 +70,7 @@ final class DetailView: WhiteView {
         view.percentage = (saved / total)
         return view
     }()
+    
     //tableView
     
     private let goal: Goal
