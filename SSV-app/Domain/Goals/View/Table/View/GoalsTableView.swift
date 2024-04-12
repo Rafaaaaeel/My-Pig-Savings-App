@@ -32,8 +32,8 @@ extension GoalsTableView {
     
     private func configure() {
         rowHeight = 140
-        dataSource = source
         delegate = self
+        dataSource = source
         separatorStyle = .none
         showsVerticalScrollIndicator = false
         translatesAutoresizingMaskIntoConstraints = false
@@ -47,7 +47,7 @@ extension GoalsTableView: UITableViewDelegate {
     
     internal func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        print("dwda")
+        tableDelegate?.didSelectGoal(source.select(row: indexPath.row))
     }
     
 }

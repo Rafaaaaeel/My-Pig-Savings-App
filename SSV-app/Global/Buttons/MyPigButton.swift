@@ -2,7 +2,7 @@ import UIKit
 
 public class MyPigButton: UIButton {
     
-    private var height: CGFloat = 60
+    private var height: CGFloat = 58
     
     public enum ButtonType {
         case primary

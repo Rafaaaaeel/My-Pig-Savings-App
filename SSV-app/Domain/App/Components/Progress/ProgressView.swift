@@ -13,13 +13,15 @@ final public class ProgressView: UIView {
     public let radius: CGFloat
     public let lineThickness: CGFloat
     public let lineColor: UIColor
+    public let trackLineThickness: CGFloat
     
     private let shapeLayer = CAShapeLayer()
     
-    internal init(radius: CGFloat, lineThickness: CGFloat, lineColor: UIColor) {
+    internal init(radius: CGFloat, lineThickness: CGFloat, lineColor: UIColor, trackLineThickness: CGFloat = 1) {
         self.radius = radius
         self.lineThickness = lineThickness
         self.lineColor = lineColor
+        self.trackLineThickness = trackLineThickness
         super.init(frame: .zero)
     }
     
@@ -32,7 +34,7 @@ final public class ProgressView: UIView {
         layer.addSublayer(trackLayer)
         trackLayer.strokeColor = lineColor.cgColor
         trackLayer.fillColor = UIColor.clear.cgColor
-        trackLayer.lineWidth = 1
+        trackLayer.lineWidth = trackLineThickness
         shapeLayer.path = circularPath.cgPath
         layer.addSublayer(shapeLayer)
         shapeLayer.strokeColor = ColorTheme.secondaryFacelift.cgColor

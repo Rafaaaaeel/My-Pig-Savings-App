@@ -2,7 +2,7 @@ import UIKit
 
 
 
-typealias DataSource = NSObject & UITableViewDataSource
+public typealias DataSource = NSObject & UITableViewDataSource
 
 
 final internal class GoalsTableDataSource: DataSource {

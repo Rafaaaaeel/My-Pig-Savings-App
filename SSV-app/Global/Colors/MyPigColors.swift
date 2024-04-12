@@ -1,8 +1,8 @@
 import UIKit
 
-public typealias ColorTheme = MyPigColors.App
+public typealias ColorTheme = Colors.App
 
-public struct MyPigColors {
+public struct Colors {
     
     public struct App {
         static var primaryFacelift = UIColor(hex: "50BC74")

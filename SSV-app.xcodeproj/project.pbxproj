@@ -61,6 +61,9 @@
 		272D324B2BBCC049001D7875 /* AchivementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D324A2BBCC049001D7875 /* AchivementView.swift */; };
 		272D324D2BBCC0F5001D7875 /* WhiteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D324C2BBCC0F5001D7875 /* WhiteView.swift */; };
 		272D32532BBCDE9F001D7875 /* Storage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 272D32512BBCDE9E001D7875 /* Storage.xcdatamodeld */; };
+		272E0DBF2BC8A30A008957A4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272E0DBE2BC8A30A008957A4 /* DetailViewController.swift */; };
+		272E0DC12BC8A353008957A4 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272E0DC02BC8A353008957A4 /* DetailView.swift */; };
+		272E0DC32BC8A4EC008957A4 /* DetailConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272E0DC22BC8A4EC008957A4 /* DetailConfigurator.swift */; };
 		27A9372A2BBE51ED0014C445 /* CreationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A937292BBE51ED0014C445 /* CreationConfigurator.swift */; };
 		27A9372D2BBE5B8B0014C445 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A9372C2BBE5B8B0014C445 /* CloseButton.swift */; };
 		27A937302BBE5D4B0014C445 /* CreationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A9372F2BBE5D4B0014C445 /* CreationRouter.swift */; };
@@ -150,6 +153,9 @@
 		272D324A2BBCC049001D7875 /* AchivementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchivementView.swift; sourceTree = "<group>"; };
 		272D324C2BBCC0F5001D7875 /* WhiteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteView.swift; sourceTree = "<group>"; };
 		272D32522BBCDE9F001D7875 /* Storage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Storage.xcdatamodel; sourceTree = "<group>"; };
+		272E0DBE2BC8A30A008957A4 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		272E0DC02BC8A353008957A4 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		272E0DC22BC8A4EC008957A4 /* DetailConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailConfigurator.swift; sourceTree = "<group>"; };
 		27A937292BBE51ED0014C445 /* CreationConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationConfigurator.swift; sourceTree = "<group>"; };
 		27A9372C2BBE5B8B0014C445 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		27A9372F2BBE5D4B0014C445 /* CreationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationRouter.swift; sourceTree = "<group>"; };
@@ -396,6 +402,7 @@
 				272D31E32BBA5316001D7875 /* Intro */,
 				272D31E22BBA51D5001D7875 /* Home */,
 				2701439A2BC48370007E4ED2 /* Goals */,
+				272E0DB62BC8A285008957A4 /* Detail */,
 				272D31E12BBA5117001D7875 /* Achievement */,
 				272D31E42BBA5324001D7875 /* Creation */,
 				272D31DE2BBA506F001D7875 /* Resources */,
@@ -761,6 +768,72 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		272E0DB62BC8A285008957A4 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				272E0DBA2BC8A2CA008957A4 /* Protocols */,
+				272E0DBC2BC8A2DA008957A4 /* Configurator */,
+				272E0DBD2BC8A2E6008957A4 /* Worker */,
+				272E0DBB2BC8A2D4008957A4 /* View */,
+				272E0DB92BC8A2C6008957A4 /* Interactor */,
+				272E0DB82BC8A2C0008957A4 /* Presenter */,
+				272E0DB72BC8A2BB008957A4 /* Controller */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		272E0DB72BC8A2BB008957A4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				272E0DBE2BC8A30A008957A4 /* DetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		272E0DB82BC8A2C0008957A4 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		272E0DB92BC8A2C6008957A4 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		272E0DBA2BC8A2CA008957A4 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		272E0DBB2BC8A2D4008957A4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				272E0DC02BC8A353008957A4 /* DetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		272E0DBC2BC8A2DA008957A4 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				272E0DC22BC8A4EC008957A4 /* DetailConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		272E0DBD2BC8A2E6008957A4 /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
 		27A937282BBE51E10014C445 /* Configurator */ = {
 			isa = PBXGroup;
 			children = (
@@ -1087,6 +1160,7 @@
 				272D323E2BBCB07D001D7875 /* HomeConfigurator.swift in Sources */,
 				27A9372D2BBE5B8B0014C445 /* CloseButton.swift in Sources */,
 				27A937612BC109CC0014C445 /* CreationPresenter.swift in Sources */,
+				272E0DBF2BC8A30A008957A4 /* DetailViewController.swift in Sources */,
 				27D5D5622BBCF91200746611 /* IntroConfigurator.swift in Sources */,
 				270143C22BC5E49D007E4ED2 /* Reusable.swift in Sources */,
 				27A937582BC104120014C445 /* GoalGetFetcher.swift in Sources */,
@@ -1123,6 +1197,7 @@
 				270143BD2BC5C3C8007E4ED2 /* GoalsTableHeaderView.swift in Sources */,
 				27D5D5592BBCEED100746611 /* CreationView.swift in Sources */,
 				270143BF2BC5E43D007E4ED2 /* GoalsTableViewCell.swift in Sources */,
+				272E0DC32BC8A4EC008957A4 /* DetailConfigurator.swift in Sources */,
 				270143972BC47FEB007E4ED2 /* StateView.swift in Sources */,
 				2701439E2BC483BC007E4ED2 /* GoalsInteractor.swift in Sources */,
 				272D32532BBCDE9F001D7875 /* Storage.xcdatamodeld in Sources */,
@@ -1148,6 +1223,7 @@
 				270143A82BC48472007E4ED2 /* GoalsConfigurator.swift in Sources */,
 				270143B52BC4A057007E4ED2 /* GoalsTableView.swift in Sources */,
 				272D32402BBCB490001D7875 /* Intro+Protocol.swift in Sources */,
+				272E0DC12BC8A353008957A4 /* DetailView.swift in Sources */,
 				27A937372BBEE0450014C445 /* String+Formatting.swift in Sources */,
 				272D31FA2BBA582B001D7875 /* HomeView.swift in Sources */,
 				27A9374A2BC030460014C445 /* Goal+CoreDataClass.swift in Sources */,

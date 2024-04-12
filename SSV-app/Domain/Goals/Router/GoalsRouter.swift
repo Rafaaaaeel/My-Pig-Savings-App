@@ -7,7 +7,7 @@ final internal class GoalsRouter: AppRouter, GoalsRouterInput {
     }
     
     internal func presentGoal(_ goal: Goal) {
-        
+        moveTo(DetailConfigurator.view(goal))
     }
     
     internal func close() {
