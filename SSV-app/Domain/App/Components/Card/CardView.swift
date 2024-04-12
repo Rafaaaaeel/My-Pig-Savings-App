@@ -123,7 +123,6 @@ final internal class CardView: GreenView {
     internal func render(_ goal: Goal) {
         let total = goal.goal?.doubleValue ?? 0
         let saved = goal.value?.doubleValue ?? 0
-        let percentual = (saved / total) * 100
         progressView.percentage = [0,(saved / total)]
         percentageLabel.text = (saved / total).percentageFormatted
         nameText = goal.name.orEmpty

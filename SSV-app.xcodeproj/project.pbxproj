@@ -75,6 +75,11 @@
 		272E0DFA2BC8E19B008957A4 /* TransactionGetFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272E0DF92BC8E19B008957A4 /* TransactionGetFetcher.swift */; };
 		272E0DFC2BC8E3C5008957A4 /* DetailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272E0DFB2BC8E3C5008957A4 /* DetailWorker.swift */; };
 		272E0DFE2BC8ECD8008957A4 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272E0DFD2BC8ECD8008957A4 /* DetailPresenter.swift */; };
+		272E0E012BC9DC32008957A4 /* TransactionTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272E0E002BC9DC32008957A4 /* TransactionTableView.swift */; };
+		272E0E042BC9DC88008957A4 /* TransactionTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272E0E032BC9DC88008957A4 /* TransactionTableDataSource.swift */; };
+		272E0E072BC9DD18008957A4 /* LastTransactionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272E0E062BC9DD18008957A4 /* LastTransactionsTableViewCell.swift */; };
+		272E0E0B2BC9DD48008957A4 /* LastTransactionTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272E0E0A2BC9DD48008957A4 /* LastTransactionTableHeaderView.swift */; };
+		272E0E0D2BC9DEB2008957A4 /* LastTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272E0E0C2BC9DEB2008957A4 /* LastTransactionView.swift */; };
 		27A9372A2BBE51ED0014C445 /* CreationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A937292BBE51ED0014C445 /* CreationConfigurator.swift */; };
 		27A9372D2BBE5B8B0014C445 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A9372C2BBE5B8B0014C445 /* CloseButton.swift */; };
 		27A937302BBE5D4B0014C445 /* CreationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A9372F2BBE5D4B0014C445 /* CreationRouter.swift */; };
@@ -176,6 +181,11 @@
 		272E0DF92BC8E19B008957A4 /* TransactionGetFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionGetFetcher.swift; sourceTree = "<group>"; };
 		272E0DFB2BC8E3C5008957A4 /* DetailWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWorker.swift; sourceTree = "<group>"; };
 		272E0DFD2BC8ECD8008957A4 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		272E0E002BC9DC32008957A4 /* TransactionTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableView.swift; sourceTree = "<group>"; };
+		272E0E032BC9DC88008957A4 /* TransactionTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableDataSource.swift; sourceTree = "<group>"; };
+		272E0E062BC9DD18008957A4 /* LastTransactionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastTransactionsTableViewCell.swift; sourceTree = "<group>"; };
+		272E0E0A2BC9DD48008957A4 /* LastTransactionTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastTransactionTableHeaderView.swift; sourceTree = "<group>"; };
+		272E0E0C2BC9DEB2008957A4 /* LastTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastTransactionView.swift; sourceTree = "<group>"; };
 		27A937292BBE51ED0014C445 /* CreationConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationConfigurator.swift; sourceTree = "<group>"; };
 		27A9372C2BBE5B8B0014C445 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		27A9372F2BBE5D4B0014C445 /* CreationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationRouter.swift; sourceTree = "<group>"; };
@@ -838,6 +848,7 @@
 		272E0DBB2BC8A2D4008957A4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				272E0DFF2BC9DC25008957A4 /* Table */,
 				272E0DC02BC8A353008957A4 /* DetailView.swift */,
 			);
 			path = View;
@@ -866,6 +877,50 @@
 				272E0DF92BC8E19B008957A4 /* TransactionGetFetcher.swift */,
 			);
 			path = Transaction;
+			sourceTree = "<group>";
+		};
+		272E0DFF2BC9DC25008957A4 /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				272E0E092BC9DD31008957A4 /* Header */,
+				272E0E082BC9DD2C008957A4 /* View */,
+				272E0E052BC9DCF3008957A4 /* Cell */,
+				272E0E022BC9DC7C008957A4 /* Source */,
+				272E0E002BC9DC32008957A4 /* TransactionTableView.swift */,
+			);
+			path = Table;
+			sourceTree = "<group>";
+		};
+		272E0E022BC9DC7C008957A4 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				272E0E032BC9DC88008957A4 /* TransactionTableDataSource.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		272E0E052BC9DCF3008957A4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				272E0E062BC9DD18008957A4 /* LastTransactionsTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		272E0E082BC9DD2C008957A4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				272E0E0C2BC9DEB2008957A4 /* LastTransactionView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		272E0E092BC9DD31008957A4 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				272E0E0A2BC9DD48008957A4 /* LastTransactionTableHeaderView.swift */,
+			);
+			path = Header;
 			sourceTree = "<group>";
 		};
 		27A937282BBE51E10014C445 /* Configurator */ = {
@@ -1209,6 +1264,7 @@
 				272D31ED2BBA543D001D7875 /* MyPigColors.swift in Sources */,
 				272D32322BBB5547001D7875 /* GreenView.swift in Sources */,
 				27A937352BBE60380014C445 /* String+Decimal.swift in Sources */,
+				272E0E0B2BC9DD48008957A4 /* LastTransactionTableHeaderView.swift in Sources */,
 				272E0DFA2BC8E19B008957A4 /* TransactionGetFetcher.swift in Sources */,
 				2701438F2BC46BD4007E4ED2 /* HomeInteractor.swift in Sources */,
 				272D31C92BBA4F7D001D7875 /* AppDelegate.swift in Sources */,
@@ -1224,6 +1280,9 @@
 				272D324B2BBCC049001D7875 /* AchivementView.swift in Sources */,
 				27D5D56C2BBE1DBB00746611 /* ProgressView.swift in Sources */,
 				272D32292BBB5092001D7875 /* IntroViewController.swift in Sources */,
+				272E0E0D2BC9DEB2008957A4 /* LastTransactionView.swift in Sources */,
+				272E0E072BC9DD18008957A4 /* LastTransactionsTableViewCell.swift in Sources */,
+				272E0E042BC9DC88008957A4 /* TransactionTableDataSource.swift in Sources */,
 				27A9374D2BC100BA0014C445 /* Optional+Decimal.swift in Sources */,
 				270143A02BC483C3007E4ED2 /* GoalsPresenter.swift in Sources */,
 				27D5D55F2BBCF8CF00746611 /* MyPigViewController.swift in Sources */,
@@ -1234,6 +1293,7 @@
 				270143A22BC483CB007E4ED2 /* GoalsWorker.swift in Sources */,
 				272D32222BBB4F88001D7875 /* Keys.swift in Sources */,
 				27D5D5652BBCFF3700746611 /* InfoView.swift in Sources */,
+				272E0E012BC9DC32008957A4 /* TransactionTableView.swift in Sources */,
 				270143C62BC5F022007E4ED2 /* AddButton.swift in Sources */,
 				270143BD2BC5C3C8007E4ED2 /* GoalsTableHeaderView.swift in Sources */,
 				27D5D5592BBCEED100746611 /* CreationView.swift in Sources */,

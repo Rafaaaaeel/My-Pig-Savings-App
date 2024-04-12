@@ -68,7 +68,7 @@ final internal class DetailView: WhiteView {
     
     private lazy var progressView = ProgressView(radius: 140, lineThickness: 10, lineColor: .lightGray, trackLineThickness: 3)
     
-    //tableView
+    private lazy var lastTransactionTableView = TransactionTableView()
     
     internal var goal: Goal {
         didSet {
@@ -103,6 +103,7 @@ final internal class DetailView: WhiteView {
         savedTextField.placeholder = goal.value?.decimalValue.asCurrencyValue
         progressView.percentage = [isFirstLoading ? 0 : lastPercentage, (saved / total)]
         lastPercentage = (saved / total)
+        lastTransactionTableView.update(goal.lastTransaction)
     }
     
 }
@@ -114,7 +115,7 @@ extension DetailView: CodableViews {
         textStackView.addArrangedSubviews(titleLabel, savedTextField, goalLabel)
         contentStackView.addArrangedSubviews(textStackView, progressView)
         contentStackView.setCustomSpacing(200, after: textStackView)
-        addSubviews(contentStackView)
+        addSubviews(contentStackView, lastTransactionTableView)
     }
     
     internal func setupContraints() {
@@ -125,7 +126,11 @@ extension DetailView: CodableViews {
             contentStackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 50),
             contentStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24),
             contentStackView.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -24),
-
+            
+            lastTransactionTableView.topAnchor.constraint(equalToSystemSpacingBelow: safeAreaLayoutGuide.topAnchor, multiplier: 60),
+            lastTransactionTableView.leadingAnchor.constraint(equalToSystemSpacingAfter: leadingAnchor, multiplier: 1),
+            lastTransactionTableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
+            lastTransactionTableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: 2)
         ]
         
         NSLayoutConstraint.activate(constraints)

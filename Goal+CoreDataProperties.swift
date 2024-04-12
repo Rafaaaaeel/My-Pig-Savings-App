@@ -26,7 +26,7 @@ extension Goal {
     public var lastTransaction: [Transactions] {
         let transactionsSet = transactions as? Set<Transactions> ?? []
         
-        return transactionsSet.sorted(by: { $0.editionDate ?? Date() < $1.editionDate ?? Date() })
+        return transactionsSet.sorted(by: { $0.editionDate ?? Date() > $1.editionDate ?? Date() })
     }
     
 }

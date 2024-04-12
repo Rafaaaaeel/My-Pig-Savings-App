@@ -33,6 +33,7 @@ extension GoalsTableView {
     private func configure() {
         rowHeight = 140
         delegate = self
+        backgroundColor = .clear
         dataSource = source
         separatorStyle = .none
         showsVerticalScrollIndicator = false

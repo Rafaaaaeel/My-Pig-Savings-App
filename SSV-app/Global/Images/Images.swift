@@ -12,6 +12,9 @@ public struct Images {
         static var plus = UIImage(systemName: "plus")?
                                     .withTintColor(ColorTheme.secondaryTile,
                                                    renderingMode: .alwaysOriginal)
+        static var minus = UIImage(systemName: "minus")?
+                                                    .withTintColor(.systemRed,
+                                                   renderingMode: .alwaysOriginal)
     }
     
     struct Intro {
