@@ -1,9 +1,11 @@
 import UIKit
 
+//TODO: - NEEDS REFACTORING
+
 public protocol MyPigTextfield2Delegate: AnyObject {
     
-    func didBeginEditing()
-    func didReturn()
+    func didBeginEditing(_ textField: UITextField)
+    func didReturn(_ textField: UITextField)
     func didTextFieldDidEndEditing(_ textfield: UITextField)
     func didChangedText(_ textfield: UITextField)
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool
@@ -12,8 +14,8 @@ public protocol MyPigTextfield2Delegate: AnyObject {
 
 extension MyPigTextfield2Delegate {
     
-    func didBeginEditing() { }
-    func didReturn() { }
+    func didBeginEditing(_ textField: UITextField) { }
+    func didReturn(_ textField: UITextField) { }
     func didTextFieldDidEndEditing(_ textfield: UITextField) { }
     func didChangedText(_ textfield: UITextField) { }
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool { true }
@@ -53,11 +55,12 @@ public class MyPigTextfield2: UITextField {
 extension MyPigTextfield2: UITextFieldDelegate {
     
     public func textFieldDidBeginEditing(_ textField: UITextField) {
-        textfieldDelegate?.didBeginEditing()
+        textfieldDelegate?.didBeginEditing(textField)
     }
     
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textfieldDelegate?.didReturn()
+        endEditing(true)
+        textfieldDelegate?.didReturn(textField)
         return false
     }
     

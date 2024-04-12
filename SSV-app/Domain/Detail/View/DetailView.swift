@@ -1,9 +1,18 @@
 import UIKit
 
+internal enum OperationType: Int {
+    case increase, decrease
+}
 
-final class DetailView: WhiteView {
+internal protocol DetailViewDelegate: AnyObject {
     
-    //contentStackView
+    func didChangeValue(_ value: Decimal, operation type: OperationType)
+    
+}
+
+
+final internal class DetailView: WhiteView {
+    
     private lazy var contentStackView: UIStackView = {
         let stack = UIStackView()
         stack.axis = .vertical
@@ -12,7 +21,6 @@ final class DetailView: WhiteView {
         return stack
     }()
     
-    //textStackView
     private lazy var textStackView: UIStackView = {
         let stack = UIStackView()
         stack.axis = .vertical
@@ -22,7 +30,6 @@ final class DetailView: WhiteView {
         return stack
     }()
     
-    //label
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.text = "You have reached"
@@ -32,14 +39,14 @@ final class DetailView: WhiteView {
         return label
     }()
     
-    //Textfield
     private lazy var savedTextField: MyPigTextfield2 = {
         let label = MyPigTextfield2()
         label.placeholder = goal.value?.decimalValue.asCurrencyValue
+        label.textfieldDelegate = self
+        label.keyboardType = .numberPad
         return label
     }()
     
-    //label
     private lazy var goalLabel: UILabel = {
         let label = UILabel()
         label.text = "of your \(goal.goal?.decimalValue.asCurrencyValue ?? "") saving goal"
@@ -49,7 +56,6 @@ final class DetailView: WhiteView {
         return label
     }()
     
-    //Label
     private lazy var percentageLabel: UILabel = {
         let total = goal.goal?.doubleValue ?? 0
         let saved = goal.value?.doubleValue ?? 0
@@ -62,7 +68,6 @@ final class DetailView: WhiteView {
         return label
     }()
     
-    //Progress
     private lazy var progressView: ProgressView = {
         let view = ProgressView(radius: 140, lineThickness: 10, lineColor: .lightGray, trackLineThickness: 3)
         let total = goal.goal?.doubleValue ?? 0
@@ -74,6 +79,12 @@ final class DetailView: WhiteView {
     //tableView
     
     private let goal: Goal
+    
+    private var savedValue: Decimal {
+        return goal.value?.decimalValue ?? 0
+    }
+    
+    internal weak var delegate: DetailViewDelegate?
     
     internal init(_ goal: Goal) {
         self.goal = goal
@@ -111,3 +122,24 @@ extension DetailView: CodableViews {
     
 }
 
+extension DetailView: MyPigTextfield2Delegate {
+    
+    internal func didTextFieldDidEndEditing(_ textfield: UITextField) {
+        if let text = textfield.text {
+            let finalText = text.currencyInputFormatting()
+            textfield.text = finalText
+            saveEditing(finalText.toDecimal)
+        }
+    }
+    
+}
+
+extension DetailView {
+    
+    private func saveEditing(_ newValue: Decimal) {
+        let difference = newValue - savedValue
+        let operationType: OperationType = difference > 0 ? .increase : .decrease
+        delegate?.didChangeValue(0, operation: operationType)
+    }
+    
+}

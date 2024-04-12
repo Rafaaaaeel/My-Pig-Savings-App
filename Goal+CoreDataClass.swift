@@ -2,7 +2,7 @@
 //  Goal+CoreDataClass.swift
 //  SSV-app
 //
-//  Created by Rafael Oliveira on 05/04/24.
+//  Created by Rafael Oliveira on 12/04/24.
 //
 //
 

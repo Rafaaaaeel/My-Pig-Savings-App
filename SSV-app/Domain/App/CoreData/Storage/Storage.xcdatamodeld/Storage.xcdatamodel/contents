@@ -6,5 +6,12 @@
         <attribute name="isOnGoing" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="value" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Transactions" inverseName="goal" inverseEntity="Transactions"/>
+    </entity>
+    <entity name="Transactions" representedClassName="Transactions" syncable="YES">
+        <attribute name="editionDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="operationType" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" customClassName="OperationType"/>
+        <attribute name="value" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <relationship name="goal" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Goal" inverseName="transactions" inverseEntity="Goal"/>
     </entity>
 </model>

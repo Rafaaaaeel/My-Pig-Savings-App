@@ -2,7 +2,7 @@
 //  Goal+CoreDataProperties.swift
 //  SSV-app
 //
-//  Created by Rafael Oliveira on 05/04/24.
+//  Created by Rafael Oliveira on 12/04/24.
 //
 //
 
@@ -16,11 +16,29 @@ extension Goal {
         return NSFetchRequest<Goal>(entityName: "Goal")
     }
 
+    @NSManaged public var createDate: Date?
     @NSManaged public var goal: NSDecimalNumber?
     @NSManaged public var isOnGoing: Bool
     @NSManaged public var name: String?
     @NSManaged public var value: NSDecimalNumber?
-    @NSManaged public var createDate: Date?
+    @NSManaged public var transactions: NSSet?
+
+}
+
+// MARK: Generated accessors for transactions
+extension Goal {
+
+    @objc(addTransactionsObject:)
+    @NSManaged public func addToTransactions(_ value: Transactions)
+
+    @objc(removeTransactionsObject:)
+    @NSManaged public func removeFromTransactions(_ value: Transactions)
+
+    @objc(addTransactions:)
+    @NSManaged public func addToTransactions(_ values: NSSet)
+
+    @objc(removeTransactions:)
+    @NSManaged public func removeFromTransactions(_ values: NSSet)
 
 }
 
