@@ -1,5 +1,9 @@
 final internal class HomeRouter: AppRouter, HomeRouterInput {
     
+    internal func presentEditUser() {
+        moveTo(IntroConfigurator.view())
+    }
+    
     internal func presentGoals() {
         moveTo(GoalsConfigurator.view())
     }

@@ -23,6 +23,8 @@ public struct Images {
     
     struct Home {
         static var pig_savig = UIImage(named: "savings")
+        static var person_fill = UIImage(systemName: "person.fill", withConfiguration: UIImage.SymbolConfiguration(scale: .large) )?.withTintColor(ColorTheme.primaryTitle,
+                                                                    renderingMode: .alwaysOriginal)
     }
     
     struct Creation {

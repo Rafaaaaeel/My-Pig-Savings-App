@@ -34,6 +34,10 @@ final internal class HomeViewController: MyPigViewController {
 
 extension HomeViewController: HomeViewDelegate {
     
+    internal func didTouchEditUser() {
+        router.presentEditUser()
+    }
+    
     internal func didTouchShowGoals() {
         router.presentGoals()
     }

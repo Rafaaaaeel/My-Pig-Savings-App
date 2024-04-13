@@ -80,6 +80,7 @@
 		272E0E072BC9DD18008957A4 /* LastTransactionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272E0E062BC9DD18008957A4 /* LastTransactionsTableViewCell.swift */; };
 		272E0E0B2BC9DD48008957A4 /* LastTransactionTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272E0E0A2BC9DD48008957A4 /* LastTransactionTableHeaderView.swift */; };
 		272E0E0D2BC9DEB2008957A4 /* LastTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272E0E0C2BC9DEB2008957A4 /* LastTransactionView.swift */; };
+		275F91072BCA46D400F76624 /* AccountMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275F91062BCA46D400F76624 /* AccountMenuView.swift */; };
 		27A9372A2BBE51ED0014C445 /* CreationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A937292BBE51ED0014C445 /* CreationConfigurator.swift */; };
 		27A9372D2BBE5B8B0014C445 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A9372C2BBE5B8B0014C445 /* CloseButton.swift */; };
 		27A937302BBE5D4B0014C445 /* CreationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A9372F2BBE5D4B0014C445 /* CreationRouter.swift */; };
@@ -186,6 +187,7 @@
 		272E0E062BC9DD18008957A4 /* LastTransactionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastTransactionsTableViewCell.swift; sourceTree = "<group>"; };
 		272E0E0A2BC9DD48008957A4 /* LastTransactionTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastTransactionTableHeaderView.swift; sourceTree = "<group>"; };
 		272E0E0C2BC9DEB2008957A4 /* LastTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastTransactionView.swift; sourceTree = "<group>"; };
+		275F91062BCA46D400F76624 /* AccountMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountMenuView.swift; sourceTree = "<group>"; };
 		27A937292BBE51ED0014C445 /* CreationConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationConfigurator.swift; sourceTree = "<group>"; };
 		27A9372C2BBE5B8B0014C445 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		27A9372F2BBE5D4B0014C445 /* CreationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationRouter.swift; sourceTree = "<group>"; };
@@ -650,6 +652,7 @@
 			isa = PBXGroup;
 			children = (
 				272D31F92BBA582B001D7875 /* HomeView.swift */,
+				275F91062BCA46D400F76624 /* AccountMenuView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1256,6 +1259,7 @@
 				270143C22BC5E49D007E4ED2 /* Reusable.swift in Sources */,
 				27A937582BC104120014C445 /* GoalGetFetcher.swift in Sources */,
 				272D321D2BBB4DB6001D7875 /* SessionManager.swift in Sources */,
+				275F91072BCA46D400F76624 /* AccountMenuView.swift in Sources */,
 				270143AA2BC4847F007E4ED2 /* Goals+Protocols.swift in Sources */,
 				272D32072BBA7FD5001D7875 /* Images.swift in Sources */,
 				27A9373C2BBF26760014C445 /* TransactionContainer.swift in Sources */,

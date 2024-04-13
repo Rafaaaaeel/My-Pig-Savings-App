@@ -6,6 +6,7 @@ public class DarkGreenView: StateView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = ColorTheme.primaryAction
+        translatesAutoresizingMaskIntoConstraints = false
         dismissKeyboard()
     }
     

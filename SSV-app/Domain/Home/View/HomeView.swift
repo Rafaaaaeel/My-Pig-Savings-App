@@ -11,6 +11,7 @@ internal protocol HomeViewDelegate: AnyObject {
     func didTouchCreate()
     func didTouchSummary()
     func didTouchShowGoals()
+    func didTouchEditUser()
 }
 
 // MARK: - View
@@ -55,6 +56,12 @@ final internal class HomeView: GreenView {
         label.textColor = ColorTheme.primaryTitle
         label.font = Fonts.title
         return label
+    }()
+    
+    private lazy var accountMenuView: AccountMenuView = {
+        let view = AccountMenuView()
+        view.delegate = self
+        return view
     }()
     
     private lazy var pigImageView: UIImageView = {
@@ -131,7 +138,7 @@ extension HomeView: CodableViews {
         textStackView.addArrangedSubviews(helloLabel, nameLabel)
         topLeadingStackView.addArrangedSubviews(textStackView)
         contentStackView.addArrangedSubviews(topLeadingStackView, pigImageView, showGoalsButton, createGoalButton, achivementsButton)
-        addSubviews(contentStackView)
+        addSubviews(contentStackView, accountMenuView)
     }
     
     internal func setupContraints() {
@@ -142,9 +149,20 @@ extension HomeView: CodableViews {
             contentStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: padding),
             contentStackView.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -padding),
             contentStackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -58),
+            
+            accountMenuView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            accountMenuView.centerYAnchor.constraint(equalTo: textStackView.centerYAnchor)
         ]
         
         NSLayoutConstraint.activate(constraints)
+    }
+    
+}
+
+extension HomeView: AccountMenuViewDelegate {
+    
+    internal func didTouchUser() {
+        delegate?.didTouchEditUser()
     }
     
 }

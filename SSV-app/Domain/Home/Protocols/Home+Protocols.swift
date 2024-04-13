@@ -3,6 +3,7 @@ internal protocol HomeRouterInput: AppRouterProtocol {
     func presentAchivements()
     func presentCreation(_ output: CreationRouterOutput)
     func presentGoals()
+    func presentEditUser()
     
 }
 
