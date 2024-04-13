@@ -11,16 +11,12 @@ final internal class TransactionTableDataSource: DataSource {
     }
     
     internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return numberOfSection
     }
     
     internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: LastTransactionsTableViewCell.identifier, for: indexPath) as? LastTransactionsTableViewCell else {
             return UITableViewCell()
-        }
-        
-        sections.forEach { transaction in
-            print(transaction.editionDate?.dateFormatted ?? "")
         }
         
         cell.render(sections[indexPath.row])

@@ -8,8 +8,8 @@ final internal class HomeRouter: AppRouter, HomeRouterInput {
         moveTo(AchivementViewController())
     }
     
-    internal func presentCreation() {
-        present(CreationConfigurator.view(), style: .overFullScreen)
+    internal func presentCreation(_ output: CreationRouterOutput) {
+        present(CreationConfigurator.view(output), style: .overFullScreen)
     }
     
 }

@@ -4,7 +4,7 @@ import Foundation
 internal protocol GoalCreateFetcherInput {
     
     var container: TransactionContainerProtocol { get }
-    var output: GoalCreateFetcherOutput? { get set }
+    var outputCreate: GoalCreateFetcherOutput? { get }
     
     func createGoal(name: String, total: Decimal)
     
@@ -25,7 +25,7 @@ extension GoalCreateFetcherInput {
         goal.isOnGoing = true
         goal.createDate = Date()
         goal.goal = total as NSDecimalNumber
-        save(successHanlder: { self.output?.createGoalSucceeded() }, errorHandler: { self.output?.createGoalFailed() })
+        save(successHanlder: { self.outputCreate?.createGoalSucceeded() }, errorHandler: { self.outputCreate?.createGoalFailed() })
     }
     
     private func save(successHanlder: () -> Void, errorHandler: () -> Void) {
@@ -37,13 +37,4 @@ extension GoalCreateFetcherInput {
         }
     }
     
-}
-
-internal class GoalCreateFetcher: GoalCreateFetcherInput {
-    
-    internal let container: TransactionContainerProtocol
-    
-    internal var output: GoalCreateFetcherOutput?
-    
-    init<Container: TransactionContainerProtocol>(container: Container = TransactionContainer.shared) { self.container = container }
 }

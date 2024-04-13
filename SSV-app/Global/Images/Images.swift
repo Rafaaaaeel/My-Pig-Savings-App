@@ -4,13 +4,13 @@ public struct Images {
     
     struct App {
         static var close = UIImage(systemName: "xmark")?
-                                    .withTintColor(ColorTheme.secondaryTile,
+                                                    .withTintColor(ColorTheme.gray,
                                                    renderingMode: .alwaysOriginal)
         static var arrow_left = UIImage(systemName: "arrow.left")?
-                                    .withTintColor(ColorTheme.secondaryTile,
+                                                    .withTintColor(ColorTheme.gray,
                                                    renderingMode: .alwaysOriginal)
         static var plus = UIImage(systemName: "plus")?
-                                    .withTintColor(ColorTheme.secondaryTile,
+                                                    .withTintColor(ColorTheme.gray,
                                                    renderingMode: .alwaysOriginal)
         static var minus = UIImage(systemName: "minus")?
                                                     .withTintColor(.systemRed,

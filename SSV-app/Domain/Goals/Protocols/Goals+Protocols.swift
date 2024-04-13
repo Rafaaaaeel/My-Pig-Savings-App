@@ -12,7 +12,7 @@ internal protocol GoalsRouterInput: AppRouterProtocol {
     var view: GoalsRouterOutput? { get set }
     
     func close()
-    func presentCreation()
+    func presentCreation(_ output: CreationRouterOutput)
     func presentGoal(_ goal: Goal)
     
 }

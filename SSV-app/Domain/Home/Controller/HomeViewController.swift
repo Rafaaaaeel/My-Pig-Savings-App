@@ -39,11 +39,19 @@ extension HomeViewController: HomeViewDelegate {
     }
     
     internal func didTouchCreate() {
-        router.presentCreation()
+        router.presentCreation(self)
     }
     
     internal func didTouchSummary() {
         router.presentAchivements()
+    }
+    
+}
+
+extension HomeViewController: CreationRouterOutput {
+    
+    internal func didClose() {
+        interactor.didLoad()
     }
     
 }

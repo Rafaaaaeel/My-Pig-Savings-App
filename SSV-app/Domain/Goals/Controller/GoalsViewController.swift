@@ -12,11 +12,15 @@ final internal class GoalsViewController: MyPigViewController {
         self.router = router
         super.init()
         self.router.currentViewController = self
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         configureNavigation()
     }
     
-    internal override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         interactor.fetchGoals()
     }
     
@@ -31,6 +35,7 @@ final internal class GoalsViewController: MyPigViewController {
     private func configureNavigation() {
         let button = AddButton()
         button.delegate = self
+        setNavigationTitle("Goals")
         setNavigationButton(button, direction: .right)
     }
     
@@ -39,7 +44,15 @@ final internal class GoalsViewController: MyPigViewController {
 extension GoalsViewController: AddButtonDelegate {
     
     internal func didTouchButton() {
-        router.presentCreation()
+        router.presentCreation(self)
+    }
+    
+}
+
+extension GoalsViewController: CreationRouterOutput {
+    
+    func didClose() {
+        interactor.fetchGoals()
     }
     
 }

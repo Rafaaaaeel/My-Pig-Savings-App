@@ -16,9 +16,7 @@ public class MyPigViewController: UIViewController {
         customBackbutton()
     }
 
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    required init?(coder: NSCoder) { nil }
     
     public func setNavigationTitle(_ input: String) {
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: ColorTheme.secondaryTile]

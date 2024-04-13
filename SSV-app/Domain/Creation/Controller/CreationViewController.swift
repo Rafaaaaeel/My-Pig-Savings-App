@@ -14,6 +14,14 @@ final internal class CreationViewController: MyPigViewController {
         super.init()
         self.router.currentViewController = self
     }
+    deinit {
+        print("UYEEEEEEEEEEEEEEESSSSSS ")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+    }
     
     required init?(coder: NSCoder) { nil }
         

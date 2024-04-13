@@ -7,7 +7,15 @@ internal protocol CreationInteractorInput {
     
 }
 
+internal protocol CreationRouterOutput {
+    
+    func didClose()
+    
+}
+
 internal protocol CreationRouterInput: AppRouterProtocol {
+    
+    var output: CreationRouterOutput? { get set }
     
     func close()
     
@@ -30,6 +38,8 @@ internal protocol CreationViewControllerInput {
 internal protocol CreationWorkerOutput: GoalCreateFetcherOutput { }
 
 internal protocol CreationWorkerInput: GoalCreateFetcherInput {
+    
+    var output: CreationWorkerOutput? { get set }
     
     var container: TransactionContainerProtocol { get }
 
