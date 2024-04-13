@@ -52,7 +52,7 @@ final class LastTransactionView: WhiteView {
     internal func render(_ transaction: Transactions) {
         let date = transaction.editionDate ?? Date()
         dateLabel.text = date.dateFormatted
-        iconImageView.image = transaction.Operation == .increase ? Images.App.plus : Images.App.minus
+        iconImageView.image = transaction.Operation == .increase ? Images.App.plus_green : Images.App.minus
         valueLabel.text = transaction.value?.decimalValue.asCurrencyValue
     }
     
@@ -87,4 +87,16 @@ extension Date {
         return dateFormatter.string(from: self)
     }
     
+}
+
+extension UIView {
+    func applyGradient(colors: [UIColor], startPoint: CGPoint = CGPoint(x: 0.5, y: 0.0), endPoint: CGPoint = CGPoint(x: 0.5, y: 1.0)) {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = bounds
+        gradientLayer.colors = colors.map { $0.cgColor }
+        gradientLayer.startPoint = startPoint
+        gradientLayer.endPoint = endPoint
+        
+        layer.insertSublayer(gradientLayer, at: 0)
+    }
 }

@@ -19,7 +19,7 @@ public class AddButton: UIBarButtonItem {
     public weak var delegate: AddButtonDelegate?
     
     private func render() {
-        image = Images.App.plus
+        image = Images.App.plus_gray
         style = .plain
         target = self
         action = #selector(didPressButton)

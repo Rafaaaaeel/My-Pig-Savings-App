@@ -11,7 +11,7 @@ final internal class CreationView: WhiteView {
     private lazy var cardView = CardView()
     private lazy var infoView = InfoView()
     
-    private var initialTouchPoint: CGPoint = CGPoint(x: 0,y: 0)
+    private var initialTouchPoint: CGPoint = CGPoint(x: 0, y: 0)
     private var isDragging = false
     
     internal weak var delegate: CreationViewDelegate?

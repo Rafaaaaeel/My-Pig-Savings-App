@@ -18,7 +18,7 @@ final internal class TransactionTableDataSource: DataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: LastTransactionsTableViewCell.identifier, for: indexPath) as? LastTransactionsTableViewCell else {
             return UITableViewCell()
         }
-        
+        cell.separatorInset = UIEdgeInsets.zero
         cell.render(sections[indexPath.row])
         return cell
     }
