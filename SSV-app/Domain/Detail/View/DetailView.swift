@@ -1,8 +1,8 @@
 import UIKit
 
-internal enum OperationType: Int {
-    case increase, decrease
-}
+
+private typealias Text = Texts.Details
+
 
 internal protocol DetailViewDelegate: AnyObject {
     
@@ -13,7 +13,7 @@ internal protocol DetailViewDelegate: AnyObject {
 
 final internal class DetailView: WhiteView {
     
-    private var lastPercentage: CGFloat = 0
+    private var lastPercentage: CGFloat = .zero
     private var isFirstLoading = true
     
     private lazy var contentStackView: UIStackView = {
@@ -35,8 +35,8 @@ final internal class DetailView: WhiteView {
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "You have reached"
-        label.font = UIFont.systemFont(ofSize: 14)
+        label.text = Text.TITLE
+        label.font = Fonts.sf14Regular
         label.textColor = .lightGray
         label.textAlignment = .center
         return label
@@ -51,8 +51,7 @@ final internal class DetailView: WhiteView {
     
     private lazy var goalLabel: UILabel = {
         let label = UILabel()
-        
-        label.font = UIFont.systemFont(ofSize: 14)
+        label.font = Fonts.sf14Regular
         label.textColor = .lightGray
         label.textAlignment = .center
         return label
@@ -60,7 +59,7 @@ final internal class DetailView: WhiteView {
     
     private lazy var percentageLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 50, weight: .bold)
+        label.font = Fonts.sf50Bold
         label.textColor = ColorTheme.secondaryFacelift
         label.textAlignment = .center
         return label
@@ -77,7 +76,7 @@ final internal class DetailView: WhiteView {
     }
     
     private var savedValue: Decimal {
-        return goal.value?.decimalValue ?? 0
+        return goal.value?.decimalValue ?? .zero
     }
     
     internal weak var delegate: DetailViewDelegate?
@@ -85,8 +84,8 @@ final internal class DetailView: WhiteView {
     internal init(_ goal: Goal) {
         self.goal = goal
         super.init(frame: .zero)
-        let total = goal.goal?.doubleValue ?? 0
-        let saved = goal.value?.doubleValue ?? 0
+        let total = goal.goal?.doubleValue ?? .zero
+        let saved = goal.value?.doubleValue ?? .zero
         lastPercentage = (saved / total)
         setup()
         render()
@@ -96,13 +95,15 @@ final internal class DetailView: WhiteView {
     required init?(coder: NSCoder) { nil }
     
     private func render() {
-        let total = goal.goal?.doubleValue ?? 0
-        let saved = goal.value?.doubleValue ?? 0
-        percentageLabel.text = (saved / total).percentageFormatted
-        goalLabel.text = "of your \(goal.goal?.decimalValue.asCurrencyValue ?? "") saving goal"
+        let total = goal.goal?.doubleValue ?? .zero
+        let saved = goal.value?.doubleValue ?? .zero
+        let percentage = (saved / total)
+
+        percentageLabel.text = percentage.percentageFormatted
+        goalLabel.text = Text.SUBTITLE(goal.goal?.decimalValue.asCurrencyValue ?? "")
         savedTextField.placeholder = goal.value?.decimalValue.asCurrencyValue
-        progressView.percentage = [isFirstLoading ? 0 : lastPercentage, (saved / total)]
-        lastPercentage = (saved / total)
+        progressView.percentage = [isFirstLoading ? .zero : lastPercentage, percentage]
+        lastPercentage = percentage
         lastTransactionTableView.update(goal.lastTransaction)
     }
     

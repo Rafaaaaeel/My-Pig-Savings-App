@@ -33,4 +33,13 @@ public struct Texts {
         static let TITLE = "Your goals"
     }
     
+    public struct Details {
+        static let TITLE = "You have reached"
+        static let OF_YOUR = "of your"
+        static let SAVINGS = "saving goal"
+        static let SPACE = " "
+        
+        static func SUBTITLE(_ input: String) -> String { OF_YOUR + SPACE + input + SPACE + SAVINGS }
+    }
+    
 }

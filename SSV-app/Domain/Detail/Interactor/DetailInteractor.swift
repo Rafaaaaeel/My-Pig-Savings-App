@@ -32,9 +32,7 @@ extension DetailInteractor: DetailWorkerOutput {
     
     internal func updateGoalFailed() { }
     
-    internal func createTransactionSucceeded() { 
-        
-    }
+    internal func createTransactionSucceeded() { }
     
     internal func createTransactionFailed() {  }
     

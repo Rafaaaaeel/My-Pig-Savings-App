@@ -3,7 +3,7 @@ import UIKit
 
 final public class ProgressView: UIView {
     
-    public var percentage: [CGFloat] = [0,0] {
+    public var percentage: [CGFloat] = [.zero, .zero] {
         didSet {
             animate()
         }
@@ -32,7 +32,7 @@ final public class ProgressView: UIView {
         shapeLayer.path = circularPath.cgPath
         layer.addSublayer(shapeLayer)
         shapeLayer.strokeColor = ColorTheme.secondaryFacelift.cgColor
-        shapeLayer.strokeEnd = 0
+        shapeLayer.strokeEnd = .zero
         shapeLayer.lineWidth = lineThickness
         shapeLayer.fillColor = UIColor.clear.cgColor
         shapeLayer.lineCap = .round

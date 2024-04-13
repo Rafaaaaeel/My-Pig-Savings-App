@@ -2,9 +2,11 @@ import UIKit
 
 struct Fonts {
     
-    static var title = UIFont.systemFont(ofSize: 34, weight: .semibold)
-    static var subTitle = UIFont.systemFont(ofSize: 30, weight: .semibold)
-    static var sfRegular = UIFont.systemFont(ofSize: 12, weight: .regular)
-    static var sfBold = UIFont.systemFont(ofSize: 14, weight: .bold)
-    static var sfBoldBigger = UIFont.systemFont(ofSize: 20, weight: .bold)
+    static let title = UIFont.systemFont(ofSize: 34, weight: .semibold)
+    static let subTitle = UIFont.systemFont(ofSize: 30, weight: .semibold)
+    static let sfRegular = UIFont.systemFont(ofSize: 12, weight: .regular)
+    static let sfBold = UIFont.systemFont(ofSize: 14, weight: .bold)
+    static let sf14Regular = UIFont.systemFont(ofSize: 14)
+    static let sfBoldBigger = UIFont.systemFont(ofSize: 20, weight: .bold)
+    static let sf50Bold = UIFont.systemFont(ofSize: 50, weight: .bold)
 }

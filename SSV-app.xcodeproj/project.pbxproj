@@ -30,7 +30,7 @@
 		272D31CB2BBA4F7D001D7875 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D31CA2BBA4F7D001D7875 /* SceneDelegate.swift */; };
 		272D31D52BBA4F7E001D7875 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 272D31D42BBA4F7E001D7875 /* Base */; };
 		272D31E72BBA5351001D7875 /* AppConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D31E62BBA5351001D7875 /* AppConfigurator.swift */; };
-		272D31ED2BBA543D001D7875 /* MyPigColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D31EC2BBA543D001D7875 /* MyPigColors.swift */; };
+		272D31ED2BBA543D001D7875 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D31EC2BBA543D001D7875 /* Colors.swift */; };
 		272D31F12BBA54CF001D7875 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D31F02BBA54CF001D7875 /* UIColor+Hex.swift */; };
 		272D31F62BBA5739001D7875 /* MyPigButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D31F52BBA5739001D7875 /* MyPigButton.swift */; };
 		272D31F82BBA5802001D7875 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D31F72BBA5802001D7875 /* HomeViewController.swift */; };
@@ -80,6 +80,8 @@
 		272E0E072BC9DD18008957A4 /* LastTransactionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272E0E062BC9DD18008957A4 /* LastTransactionsTableViewCell.swift */; };
 		272E0E0B2BC9DD48008957A4 /* LastTransactionTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272E0E0A2BC9DD48008957A4 /* LastTransactionTableHeaderView.swift */; };
 		272E0E0D2BC9DEB2008957A4 /* LastTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272E0E0C2BC9DEB2008957A4 /* LastTransactionView.swift */; };
+		27490BBE2BCAC2D700D6A772 /* OperationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27490BBD2BCAC2D700D6A772 /* OperationType.swift */; };
+		27490BC22BCAC49B00D6A772 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27490BC12BCAC49B00D6A772 /* Double.swift */; };
 		275F91072BCA46D400F76624 /* AccountMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275F91062BCA46D400F76624 /* AccountMenuView.swift */; };
 		27A9372A2BBE51ED0014C445 /* CreationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A937292BBE51ED0014C445 /* CreationConfigurator.swift */; };
 		27A9372D2BBE5B8B0014C445 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A9372C2BBE5B8B0014C445 /* CloseButton.swift */; };
@@ -137,7 +139,7 @@
 		272D31D42BBA4F7E001D7875 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		272D31D62BBA4F7E001D7875 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		272D31E62BBA5351001D7875 /* AppConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurator.swift; sourceTree = "<group>"; };
-		272D31EC2BBA543D001D7875 /* MyPigColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPigColors.swift; sourceTree = "<group>"; };
+		272D31EC2BBA543D001D7875 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		272D31F02BBA54CF001D7875 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		272D31F52BBA5739001D7875 /* MyPigButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPigButton.swift; sourceTree = "<group>"; };
 		272D31F72BBA5802001D7875 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -187,6 +189,8 @@
 		272E0E062BC9DD18008957A4 /* LastTransactionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastTransactionsTableViewCell.swift; sourceTree = "<group>"; };
 		272E0E0A2BC9DD48008957A4 /* LastTransactionTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastTransactionTableHeaderView.swift; sourceTree = "<group>"; };
 		272E0E0C2BC9DEB2008957A4 /* LastTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastTransactionView.swift; sourceTree = "<group>"; };
+		27490BBD2BCAC2D700D6A772 /* OperationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationType.swift; sourceTree = "<group>"; };
+		27490BC12BCAC49B00D6A772 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		275F91062BCA46D400F76624 /* AccountMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountMenuView.swift; sourceTree = "<group>"; };
 		27A937292BBE51ED0014C445 /* CreationConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationConfigurator.swift; sourceTree = "<group>"; };
 		27A9372C2BBE5B8B0014C445 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
@@ -540,7 +544,7 @@
 		272D31EA2BBA541C001D7875 /* Colors */ = {
 			isa = PBXGroup;
 			children = (
-				272D31EC2BBA543D001D7875 /* MyPigColors.swift */,
+				272D31EC2BBA543D001D7875 /* Colors.swift */,
 			);
 			path = Colors;
 			sourceTree = "<group>";
@@ -548,12 +552,9 @@
 		272D31EE2BBA54BC001D7875 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				27A9374E2BC100D50014C445 /* Bool */,
-				27D5D5722BBE38A900746611 /* Decimal */,
-				272D321E2BBB4F49001D7875 /* String */,
-				272D32022BBA7F31001D7875 /* UIStackView */,
-				272D31FF2BBA7EDA001D7875 /* UIView */,
-				272D31EF2BBA54C1001D7875 /* UIColors */,
+				27490BC62BCAC4C200D6A772 /* UIKit */,
+				27490BC52BCAC4BC00D6A772 /* Foundation */,
+				27490BC42BCAC4B100D6A772 /* Swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -794,6 +795,7 @@
 		272D324E2BBCC5CD001D7875 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				27490BBC2BCAC2C600D6A772 /* Enums */,
 				272E0DEA2BC8DB6F008957A4 /* Transactions+CoreDataClass.swift */,
 				272E0DEB2BC8DB6F008957A4 /* Transactions+CoreDataProperties.swift */,
 				272E0DEC2BC8DB6F008957A4 /* Goal+CoreDataClass.swift */,
@@ -924,6 +926,50 @@
 				272E0E0A2BC9DD48008957A4 /* LastTransactionTableHeaderView.swift */,
 			);
 			path = Header;
+			sourceTree = "<group>";
+		};
+		27490BBC2BCAC2C600D6A772 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				27490BBD2BCAC2D700D6A772 /* OperationType.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		27490BC32BCAC4AA00D6A772 /* Double */ = {
+			isa = PBXGroup;
+			children = (
+				27490BC12BCAC49B00D6A772 /* Double.swift */,
+			);
+			path = Double;
+			sourceTree = "<group>";
+		};
+		27490BC42BCAC4B100D6A772 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				272D321E2BBB4F49001D7875 /* String */,
+				27A9374E2BC100D50014C445 /* Bool */,
+				27490BC32BCAC4AA00D6A772 /* Double */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
+		27490BC52BCAC4BC00D6A772 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				27D5D5722BBE38A900746611 /* Decimal */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		27490BC62BCAC4C200D6A772 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				272D31FF2BBA7EDA001D7875 /* UIView */,
+				272D32022BBA7F31001D7875 /* UIStackView */,
+				272D31EF2BBA54C1001D7875 /* UIColors */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 		27A937282BBE51E10014C445 /* Configurator */ = {
@@ -1242,6 +1288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27490BC22BCAC49B00D6A772 /* Double.swift in Sources */,
 				272D324D2BBCC0F5001D7875 /* WhiteView.swift in Sources */,
 				270143A62BC4844F007E4ED2 /* GoalsRouter.swift in Sources */,
 				272D320E2BBB3F93001D7875 /* Fonts.swift in Sources */,
@@ -1265,7 +1312,7 @@
 				27A9373C2BBF26760014C445 /* TransactionContainer.swift in Sources */,
 				272E0DF32BC8DEE7008957A4 /* DetailInteractor.swift in Sources */,
 				272D32172BBB49C8001D7875 /* Home+Protocols.swift in Sources */,
-				272D31ED2BBA543D001D7875 /* MyPigColors.swift in Sources */,
+				272D31ED2BBA543D001D7875 /* Colors.swift in Sources */,
 				272D32322BBB5547001D7875 /* GreenView.swift in Sources */,
 				27A937352BBE60380014C445 /* String+Decimal.swift in Sources */,
 				272E0E0B2BC9DD48008957A4 /* LastTransactionTableHeaderView.swift in Sources */,
@@ -1300,6 +1347,7 @@
 				272E0E012BC9DC32008957A4 /* TransactionTableView.swift in Sources */,
 				270143C62BC5F022007E4ED2 /* AddButton.swift in Sources */,
 				270143BD2BC5C3C8007E4ED2 /* GoalsTableHeaderView.swift in Sources */,
+				27490BBE2BCAC2D700D6A772 /* OperationType.swift in Sources */,
 				27D5D5592BBCEED100746611 /* CreationView.swift in Sources */,
 				270143BF2BC5E43D007E4ED2 /* GoalsTableViewCell.swift in Sources */,
 				272E0DC32BC8A4EC008957A4 /* DetailConfigurator.swift in Sources */,

@@ -3,9 +3,6 @@ import Foundation
 
 final internal class DetailWorker: DetailWorkerInput {
     
-    
-    
-    
     internal var container: TransactionContainerProtocol
     internal var output: DetailWorkerOutput?
 

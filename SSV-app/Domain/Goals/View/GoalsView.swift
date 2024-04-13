@@ -24,7 +24,7 @@ final internal class GoalsView: WhiteView {
     
     required init?(coder: NSCoder) { nil }
     
-    public func update(_ goals: [Goal]) {
+    internal func update(_ goals: [Goal]) {
         tableView.update(goals)
     }
     

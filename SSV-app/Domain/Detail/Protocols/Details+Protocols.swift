@@ -15,3 +15,14 @@ internal protocol DetailWorkerInput: TransactionCreateFetcherInput, GoalUpdateFe
     var output: DetailWorkerOutput? { get set }
 
 }
+
+internal protocol DetailPresenterInput {
+    
+    func didFetchGoalUpdated(_ goal: Goal)
+    
+}
+
+internal protocol DetailPresenterOutput {
+    func load(_ goal: Goal)
+}
+

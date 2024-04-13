@@ -132,7 +132,7 @@ extension IntroView {
     private func animate() {
         DispatchQueue.main.async { [weak self] in
             UIView.animate(withDuration: 0.2) {
-                self?.topConstraint.constant = self?.topConstraint.constant ?? 0 > 0 ? -80 : 1
+                self?.topConstraint.constant = self?.topConstraint.constant ?? .zero > 0 ? -80 : 1
             }
         }
     }

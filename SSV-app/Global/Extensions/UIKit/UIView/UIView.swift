@@ -23,4 +23,16 @@ public extension UIView {
          mask.path = path.cgPath
          self.layer.mask = mask
     }
+    
+    func addShadow(color: UIColor = .black,
+                   opacity: Float = 0.4,
+                   offset: CGSize = CGSize(width: 3, height: 6),
+                   radius: CGFloat = 4) {
+        layer.shadowColor = color.cgColor
+        layer.shadowOpacity = opacity
+        layer.shadowOffset = offset
+        layer.shadowRadius = radius
+        layer.masksToBounds = false
+    }
+    
 }

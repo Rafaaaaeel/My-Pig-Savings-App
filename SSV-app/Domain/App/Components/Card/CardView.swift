@@ -121,9 +121,9 @@ final internal class CardView: GreenView {
     required init?(coder: NSCoder) { nil }
     
     internal func render(_ goal: Goal) {
-        let total = goal.goal?.doubleValue ?? 0
-        let saved = goal.value?.doubleValue ?? 0
-        progressView.percentage = [0,(saved / total)]
+        let total = goal.goal?.doubleValue ?? .zero
+        let saved = goal.value?.doubleValue ?? .zero
+        progressView.percentage = [.zero, (saved / total)]
         percentageLabel.text = (saved / total).percentageFormatted
         nameText = goal.name.orEmpty
         savedValueLabel.text = goal.value?.decimalValue.asCurrencyValue ?? .empty
@@ -138,7 +138,7 @@ extension CardView: CodableViews {
     internal func configView() {
         translatesAutoresizingMaskIntoConstraints = false
         layer.cornerRadius = 25
-        progressView.percentage = [0,0]
+        progressView.percentage = [.zero, .zero]
     }
     
     internal func setupHiearchy() {
@@ -169,15 +169,4 @@ extension CardView: CodableViews {
         NSLayoutConstraint.activate(constraints)
     }
     
-}
-
-extension Double {
-
-    var percentageFormatted: String {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .percent
-        formatter.minimumFractionDigits = 0
-        
-        return formatter.string(from: NSNumber(value: self)) ?? "0.0%"
-    }
 }

@@ -1,6 +1,3 @@
-import UIKit
-
-
 final internal class GoalsConfigurator {
     
     static internal func view() -> MyPigViewController {
