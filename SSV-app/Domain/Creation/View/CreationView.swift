@@ -28,6 +28,7 @@ final internal class CreationView: WhiteView {
 extension CreationView: CodableViews {
     
     internal func configView() {
+//        setupTouch()
         infoView.delegate = self
     }
     
