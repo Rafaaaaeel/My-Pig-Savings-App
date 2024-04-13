@@ -153,7 +153,7 @@ extension CardView: CodableViews {
     internal func setupContraints() {
         let constraints = [
             progressView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            progressView.leadingAnchor.constraint(lessThanOrEqualToSystemSpacingAfter: leadingAnchor, multiplier: 8),
+            progressView.leadingAnchor.constraint(equalToSystemSpacingAfter: leadingAnchor, multiplier: 8),
             
             percentageLabel.centerXAnchor.constraint(equalTo: progressView.centerXAnchor),
             percentageLabel.centerYAnchor.constraint(equalTo: progressView.centerYAnchor),

@@ -38,7 +38,7 @@ extension GoalsView: CodableViews {
     
     internal func setupContraints() {
         let constraints = [
-            tableView.topAnchor.constraint(greaterThanOrEqualToSystemSpacingBelow: safeAreaLayoutGuide.topAnchor, multiplier: 0),
+            tableView.topAnchor.constraint(equalToSystemSpacingBelow: safeAreaLayoutGuide.topAnchor, multiplier: 0),
             tableView.leadingAnchor.constraint(equalToSystemSpacingAfter: safeAreaLayoutGuide.leadingAnchor, multiplier: 1),
             trailingAnchor.constraint(equalToSystemSpacingAfter: tableView.trailingAnchor, multiplier: 1),
             tableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
