@@ -38,7 +38,7 @@ final internal class GoalsViewController: MyPigViewController {
 
 extension GoalsViewController: AddButtonDelegate {
     
-    func didTouchButton() {
+    internal func didTouchButton() {
         router.presentCreation()
     }
     

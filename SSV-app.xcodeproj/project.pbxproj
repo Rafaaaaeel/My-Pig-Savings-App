@@ -882,11 +882,11 @@
 		272E0DFF2BC9DC25008957A4 /* Table */ = {
 			isa = PBXGroup;
 			children = (
+				272E0E002BC9DC32008957A4 /* TransactionTableView.swift */,
 				272E0E092BC9DD31008957A4 /* Header */,
 				272E0E082BC9DD2C008957A4 /* View */,
 				272E0E052BC9DCF3008957A4 /* Cell */,
 				272E0E022BC9DC7C008957A4 /* Source */,
-				272E0E002BC9DC32008957A4 /* TransactionTableView.swift */,
 			);
 			path = Table;
 			sourceTree = "<group>";

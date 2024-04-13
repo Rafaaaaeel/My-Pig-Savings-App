@@ -15,7 +15,7 @@ public class MyPigViewController: UIViewController {
         super.viewDidLoad()
         customBackbutton()
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -37,8 +37,10 @@ public class MyPigViewController: UIViewController {
     }
     
     private func customBackbutton() {
-        let yourBackImage = Images.App.arrow_left
-        navigationItem.backBarButtonItem = UIBarButtonItem(image: yourBackImage, style: .plain, target: nil, action: nil)
+        navigationController?.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationController?.navigationBar.backIndicatorImage = Images.App.arrow_left
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.backIndicatorTransitionMaskImage = Images.App.arrow_left
     }
     
 }
